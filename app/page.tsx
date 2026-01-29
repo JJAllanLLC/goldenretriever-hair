@@ -4,20 +4,20 @@ import { HeroCarouselDots } from '@/components/HeroCarouselDots';
 export default function Home() {
   const heroImages = [
     {
-      url: "https://images.unsplash.com/photo-1611004076848-465e0bd5ffc4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80",
-      alt: "Happy Golden Retriever running toward camera in sunny field – joyful family companion",
+      url: "https://images.unsplash.com/photo-1611004076848-465e0bd5ffc4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80",
+      alt: "Happy Golden Retriever running joyfully in a sunny field – perfect family companion",
     },
     {
-      url: "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80",
-      alt: "Adorable Golden Retriever puppy close-up with playful expression",
+      url: "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3024&q=80",
+      alt: "Adorable Golden Retriever puppy close-up with sweet expression",
     },
     {
-      url: "https://images.unsplash.com/photo-1583337130417-3346a1be7adf?ixlib=rb-4.0.3&auto=format&fit=crop&q=80",
+      url: "https://images.unsplash.com/photo-1583337130417-3346a1be7adf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2964&q=80",
       alt: "Golden Retriever swimming and fetching – natural water lovers",
     },
     {
-      url: "https://images.unsplash.com/photo-1635322966219-b75ed372eb01?ixlib=rb-4.0.3&auto=format&fit=crop&q=80",
-      alt: "Golden Retriever enjoying outdoors with family – perfect gentle temperament",
+      url: "https://images.unsplash.com/photo-1635322966219-b75ed372eb01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80",
+      alt: "Golden Retriever enjoying the outdoors with family – gentle and patient temperament",
     },
   ];
 
