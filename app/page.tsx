@@ -5,19 +5,19 @@ export default function Home() {
   const heroImages = [
     {
       url: "https://images.unsplash.com/photo-1611004076848-465e0bd5ffc4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80",
-      alt: "Happy Golden Retriever running toward camera in field",
+      alt: "Happy Golden Retriever running toward camera in sunny field – joyful family companion",
     },
     {
       url: "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&q=80",
-      alt: "Adorable Golden Retriever puppy close-up",
+      alt: "Adorable Golden Retriever puppy close-up with playful expression",
     },
     {
       url: "https://images.unsplash.com/photo-1583337130417-3346a1be7adf?ixlib=rb-4.0.3&auto=format&fit=crop&q=80",
-      alt: "Golden Retriever swimming and fetching",
+      alt: "Golden Retriever swimming and fetching – natural water lovers",
     },
     {
       url: "https://images.unsplash.com/photo-1635322966219-b75ed372eb01?ixlib=rb-4.0.3&auto=format&fit=crop&q=80",
-      alt: "Golden Retriever with family enjoying the outdoors",
+      alt: "Golden Retriever enjoying outdoors with family – perfect gentle temperament",
     },
   ];
 
