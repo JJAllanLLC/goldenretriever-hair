@@ -92,6 +92,4 @@
 
 ---
 
-This document is locked in as our master plan. Save it at the root of the repo — it will guide every commit.
 
-Ready for the next move? Run the `create-next-app` command and push the skeleton to GitHub, or let me know which page/component you want code for first (Navbar, Home hero, etc.). Once the repo is live on Vercel, we can start seeing real progress instantly.
