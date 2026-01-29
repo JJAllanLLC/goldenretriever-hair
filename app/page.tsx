@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -25,7 +24,7 @@ export default function Home() {
     <>
       {/* Hero Carousel - JS-free scroll snap */}
       <section className="relative h-screen overflow-hidden">
-        <div className="flex snap-x snap-mandatory overflow-x-auto h-full scrollbar-hide">
+        <div className="flex snap-x snap-mandatory overflow-x-auto h-full hide-scrollbar">
           {heroImages.map((image, index) => (
             <div
               key={index}
@@ -53,15 +52,17 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Simple dots indicator */}
+        {/* Scroll dots indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3">
           {heroImages.map((_, index) => (
             <button
               key={index}
               className="w-3 h-3 rounded-full bg-white/70 hover:bg-white transition"
               onClick={() => {
-                document.getElementById(`slide-${index}`)?.scrollIntoView({ behavior: "smooth" });
+                const slides = document.querySelectorAll('.snap-center');
+                slides[index]?.scrollIntoView({ behavior: "smooth" });
               }}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>

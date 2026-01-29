@@ -99,7 +99,7 @@ export default function RootLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 email: "info@goldenretriever.hair",
-                contactType: ".Random Customer Service",
+                contactType: "Customer Service",
               },
             }),
           }}
