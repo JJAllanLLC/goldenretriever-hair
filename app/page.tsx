@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroCarouselDots } from "@/components/HeroCarouselDots";
 
 export default function Home() {
   const heroImages = [
@@ -52,20 +53,7 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Scroll dots indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              className="w-3 h-3 rounded-full bg-white/70 hover:bg-white transition"
-              onClick={() => {
-                const slides = document.querySelectorAll('.snap-center');
-                slides[index]?.scrollIntoView({ behavior: "smooth" });
-              }}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+        <HeroCarouselDots slideCount={heroImages.length} />
       </section>
 
       {/* Fun Facts Grid */}
