@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HeroCarouselDots } from "@/components/HeroCarouselDots";
+import { HeroCarouselDots } from '@/components/HeroCarouselDots';
 
 export default function Home() {
   const heroImages = [
@@ -29,7 +29,7 @@ export default function Home() {
           {heroImages.map((image, index) => (
             <div
               key={index}
-              className="snap-center flex-shrink-0 w-full h-full bg-cover bg-center relative"
+              className="hero-slide snap-center flex-shrink-0 w-full h-full bg-cover bg-center relative"
               style={{ backgroundImage: `url(${image.url})` }}
             >
               <div className="absolute inset-0 bg-black/40" />
