@@ -2,14 +2,14 @@ import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 async function getPost(slug: string) {
   try {
     const filePath = path.join(process.cwd(), "app", "blog", "posts", `${slug}.mdx`);
     const source = await fs.readFile(filePath, "utf8");
-    const { data } = matter(source);
-    const { default: Content } = await import(`../posts/${slug}.mdx`);
-    return { Content, metadata: data };
+    const { data, content } = matter(source);
+    return { content, metadata: data };
   } catch {
     notFound();
   }
@@ -39,14 +39,14 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const post = await getPost(slug);
   if (!post) notFound();
 
-  const { Content, metadata } = post;
+  const { content, metadata } = post;
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
       <h1 className="text-4xl font-playfair font-bold text-amber-900 mb-4">{metadata.title}</h1>
       <p className="text-gray-600 mb-8">{metadata.date}</p>
       <div className="prose prose-lg max-w-none">
-        <Content />
+        <MDXRemote source={content} />
       </div>
       {/* BreadcrumbList schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
