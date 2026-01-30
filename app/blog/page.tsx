@@ -1,12 +1,48 @@
+import fs from "fs/promises";
+import path from "path";
 import Link from "next/link";
+import matter from "gray-matter";
 
 export const metadata = {
-  title: "Golden Retriever Blog | Tips & Advice",
+  title: "Golden Retriever Blog | Care Tips, Health, Training",
   description:
-    "Expert Golden Retriever blog: puppy care, health, training, grooming tips, and more for owners.",
+    "Latest Golden Retriever advice on puppy care, health, training, and grooming. Read expert tips, practical guides, and trusted owner resources every week.",
 };
 
-export default function BlogPage() {
+type PostMeta = {
+  title: string;
+  description: string;
+  date: string;
+  slug: string;
+};
+
+async function getPosts(): Promise<PostMeta[]> {
+  const postsDir = path.join(process.cwd(), "app", "blog", "posts");
+  const files = await fs.readdir(postsDir);
+  const mdxFiles = files.filter((file) => file.endsWith(".mdx"));
+
+  const posts = await Promise.all(
+    mdxFiles.map(async (file) => {
+      const slug = file.replace(/\.mdx$/, "");
+      const filePath = path.join(postsDir, file);
+      const source = await fs.readFile(filePath, "utf8");
+      const { data } = matter(source);
+
+      return {
+        title: data.title ?? "Untitled Post",
+        description: data.description ?? "",
+        date: data.date ?? "",
+        slug,
+      };
+    })
+  );
+
+  return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+export default async function BlogPage() {
+  const posts = await getPosts();
+
   return (
     <main className="bg-amber-50/40 text-gray-900">
       <script
@@ -35,43 +71,43 @@ export default function BlogPage() {
       <section className="max-w-7xl mx-auto px-4 py-16">
         <p className="text-amber-700 font-semibold mb-3">Blog</p>
         <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-6">
-          Golden Retriever Blog – Expert Tips for Owners
+          Latest from the Golden Retriever Blog
         </h1>
         <p className="text-lg text-gray-700 max-w-3xl mb-10">
-          Practical, vet-aware advice and trustworthy tips for Golden Retriever owners.
-          Browse by category or dive into the latest posts.
+          Discover expert guidance on training, health, grooming, and puppy care.
+          Explore the newest articles and trusted tips for owners.
         </p>
 
         <div className="flex flex-wrap gap-3 mb-12">
-          <Link href="/blog/puppy-care" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
-            Puppy Care
+          <Link href="/guides" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
+            Explore Guides
           </Link>
-          <Link href="/blog/health" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
-            Health
+          <Link href="/breeders" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
+            Breeder Directory
           </Link>
-          <Link href="/blog/training" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
-            Training
+          <Link href="/products" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
+            Recommended Products
           </Link>
-          <Link href="/blog/grooming" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
-            Grooming
+          <Link href="/golden-week" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
+            Golden Week App
           </Link>
         </div>
 
         <h2 className="text-2xl font-playfair font-semibold text-amber-900 mb-6">
-          Latest Posts
+          All Posts
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <article key={index} className="bg-white rounded-xl shadow-sm border border-amber-100 p-6">
-              <div className="h-40 bg-amber-100 rounded-lg mb-4" aria-hidden="true" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post) => (
+            <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-amber-100 p-6">
+              <p className="text-sm text-amber-700 mb-2">{post.date}</p>
               <h3 className="text-xl font-semibold text-amber-900 mb-2">
-                Placeholder Post Title
+                {post.title}
               </h3>
               <p className="text-gray-700 mb-4">
-                Short summary of the post content goes here. This grid is ready for MDX.
+                {post.description}
               </p>
-              <Link href="/blog" className="text-amber-700 font-semibold hover:underline">
-                Read more
+              <Link href={`/blog/${post.slug}`} className="text-amber-700 font-semibold hover:underline">
+                Read post
               </Link>
             </article>
           ))}
