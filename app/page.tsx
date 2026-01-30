@@ -5,7 +5,7 @@ export default function Home() {
   const heroImages = [
     {
       url: "/images/hero/hero-1.png",
-      alt: "Happy Golden Retriever close-up – joyful and playful family companion",
+      alt: "Joyful Golden Retriever close-up with tongue out – happy and playful family companion",
     },
     {
       url: "/images/hero/hero-2.jpeg",
@@ -13,11 +13,11 @@ export default function Home() {
     },
     {
       url: "/images/hero/hero-3.jpeg",
-      alt: "Adorable Golden Retriever moment – intelligent and eager to please",
+      alt: "Adorable Golden Retriever in action – intelligent and eager to please",
     },
     {
-      url: "images/hero/hero-4.jpeg",
-      alt: "Golden Retriever in action – natural energy and water-loving breed",
+      url: "/images/hero/hero-4.jpeg",
+      alt: "Golden Retriever natural energy moment – perfect water-loving breed",
     },
   ];
 
