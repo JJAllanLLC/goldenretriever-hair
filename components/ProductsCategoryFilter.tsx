@@ -9,6 +9,7 @@ type Product = {
   amazonLink: string;
   category: string;
   personalComment?: string;
+  image?: string;
 };
 
 const categories = ["All", "Grooming", "Toys", "Food/Treats", "Health"] as const;
@@ -59,9 +60,19 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
 
           return (
           <article key={product.title} className="bg-white rounded-xl shadow-sm border border-amber-100 p-6">
-            <div className="h-40 bg-amber-100 rounded-lg mb-4 flex items-center justify-center text-amber-700 font-semibold">
-              Image Placeholder
-            </div>
+            {product.image ? (
+              <div className="h-40 bg-amber-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+            ) : (
+              <div className="h-40 bg-amber-100 rounded-lg mb-4 flex items-center justify-center text-amber-700 font-semibold">
+                Image Placeholder
+              </div>
+            )}
             <h3 className="text-xl font-semibold text-amber-900 mb-2">
               {product.title}
             </h3>

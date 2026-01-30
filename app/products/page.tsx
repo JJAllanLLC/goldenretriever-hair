@@ -8,6 +8,16 @@ export const metadata = {
 
 const products = [
   {
+    title: "Hill's Science Diet Large Breed Adult Dry Dog Food (Lamb Meal & Brown Rice)",
+    description:
+      "Balanced nutrition for large breed adults – supports joint health, digestion, and immune system.",
+    personalComment:
+      "Our Goldens switched to this food about one year ago and they still love it. Gentle on stomachs and is keeping their coats shiny! 🐾",
+    amazonLink: "https://amzn.to/45GjTnt",
+    image: "/images/products/hills-science-diet.png",
+    category: "Food/Treats",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
@@ -71,7 +81,9 @@ export default function ProductsPage() {
         <ProductsCategoryFilter products={products} />
 
         <p className="text-sm text-gray-600 mt-8">
-          As an Amazon Associate, we earn from qualifying purchases.
+          Personal recommendations from our Goldens – battle-tested! As an Amazon Associate,
+          we earn from qualifying purchases – supports GoldenRetriever.hair and the upcoming
+          Golden Week app.
         </p>
       </section>
     </main>
