@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { ProductsCategoryFilter } from "@/components/ProductsCategoryFilter";
 
 export const metadata = {
   title: "Best Products for Golden Retrievers",
@@ -10,32 +10,26 @@ const products = [
   {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
-    href: "https://amazon.com",
+    amazonLink: "https://amazon.com/affiliate-placeholder",
+    category: "Grooming",
   },
   {
     title: "Durable Fetch Toy",
     description: "Long-lasting rubber toy for daily exercise.",
-    href: "https://amazon.com",
+    amazonLink: "https://amazon.com/affiliate-placeholder",
+    category: "Toys",
   },
   {
     title: "Joint Support Chews",
     description: "Support mobility with vet-recommended ingredients.",
-    href: "https://amazon.com",
+    amazonLink: "https://amazon.com/affiliate-placeholder",
+    category: "Health",
   },
   {
-    title: "Waterproof Travel Bed",
-    description: "Comfortable padding for home or on the go.",
-    href: "https://amazon.com",
-  },
-  {
-    title: "Slow Feeder Bowl",
-    description: "Encourages healthy eating pace and digestion.",
-    href: "https://amazon.com",
-  },
-  {
-    title: "Everyday Grooming Kit",
-    description: "Brush, comb, and nail tools for routine care.",
-    href: "https://amazon.com",
+    title: "Premium Puppy Food",
+    description: "Balanced nutrition for growing Goldens.",
+    amazonLink: "https://amazon.com/affiliate-placeholder",
+    category: "Food/Treats",
   },
 ];
 
@@ -74,29 +68,7 @@ export default function ProductsPage() {
           Carefully curated picks for grooming, nutrition, play, and everyday care.
         </p>
 
-        <h2 className="text-2xl font-playfair font-semibold text-amber-900 mb-6">
-          Top Picks
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
-            <article key={product.title} className="bg-white rounded-xl shadow-sm border border-amber-100 p-6">
-              <div className="h-40 bg-amber-100 rounded-lg mb-4 flex items-center justify-center text-amber-700 font-semibold">
-                Image Placeholder
-              </div>
-              <h3 className="text-xl font-semibold text-amber-900 mb-2">
-                {product.title}
-              </h3>
-              <p className="text-gray-700 mb-4">{product.description}</p>
-              <Link
-                href={product.href}
-                className="text-amber-700 font-semibold hover:underline"
-                rel="nofollow sponsored"
-              >
-                View on Amazon
-              </Link>
-            </article>
-          ))}
-        </div>
+        <ProductsCategoryFilter products={products} />
 
         <p className="text-sm text-gray-600 mt-8">
           As an Amazon Associate, we earn from qualifying purchases.
