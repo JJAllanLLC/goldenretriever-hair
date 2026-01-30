@@ -1,10 +1,12 @@
-import pkg from '@next/mdx';
-const { withMDX } = pkg;
+import withMDX from '@next/mdx';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-  webpack: (config) => config,  // Dummy to force webpack (disables Turbopack for MDX)
+  webpack: (config) => {
+    // Dummy webpack function to force webpack mode (disables Turbopack for MDX compatibility)
+    return config;
+  },
 };
 
-export default withMDX()(nextConfig);
+export default withMDX(nextConfig);
