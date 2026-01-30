@@ -21,8 +21,9 @@ async function getPostSource(slug: string) {
   }
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = await getPostSource(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getPostSource(slug);
   if (!post) {
     return {};
   }
@@ -33,13 +34,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getPostSource(params.slug);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getPostSource(slug);
   if (!post) {
     notFound();
   }
 
-  const { default: PostContent } = await import(`../posts/${params.slug}.mdx`);
+  const { default: PostContent } = await import(`../posts/${slug}.mdx`);
 
   return (
     <main className="bg-amber-50/40 text-gray-900">
@@ -65,8 +67,8 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               {
                 "@type": "ListItem",
                 position: 3,
-                name: post.data.title ?? params.slug,
-                item: `https://goldenretriever.hair/blog/${params.slug}`,
+                name: post.data.title ?? slug,
+                item: `https://goldenretriever.hair/blog/${slug}`,
               },
             ],
           }),
