@@ -52,7 +52,7 @@ const products = [
       "Single-ingredient freeze-dried beef liver – high-value rewards for training.",
     personalComment:
       "Our go-to “high value” treat. We save these for moments when we really need them to listen, like recall training or new tricks. Our Goldens go nuts for these. Use sparingly! 🐾",
-    amazonLink: "https://amazon.com/your-real-affiliate-link-here",
+    amazonLink: "https://amzn.to/3MbOin7",
     image: "/images/products/stewart.jpeg",
     category: "Training",
   },
