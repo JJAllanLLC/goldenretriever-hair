@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { GuidesCategoryFilter } from "@/components/GuidesCategoryFilter";
 
 export const metadata = {
   title: "Golden Retriever Guides | Expert Care Advice",
@@ -11,31 +11,36 @@ const guides = [
     title: "Choosing a Responsible Breeder",
     description:
       "How to evaluate breeders, health testing, and red flags to avoid.",
-    href: "/guides/choosing-breeder",
+    link: "/blog/choosing-a-breeder",
+    category: "Breeder",
   },
   {
     title: "Common Health Issues",
     description:
       "Early signs, prevention tips, and vet guidance for Golden Retrievers.",
-    href: "/guides/health-issues",
+    link: "/blog/health-issues",
+    category: "Health",
   },
   {
     title: "Training & Socialization",
     description:
       "Puppy to adult training routines with positive reinforcement.",
-    href: "/guides/training-socialization",
+    link: "/blog/puppy-training",
+    category: "Training",
   },
   {
     title: "Nutrition & Feeding",
     description:
       "Food quality, portions, and ingredient tips for long-term health.",
-    href: "/guides/nutrition-feeding",
+    link: "/guides/nutrition",
+    category: "Nutrition",
   },
   {
     title: "Grooming & Coat Care",
     description:
       "Shedding management, brushing, and bathing best practices.",
-    href: "/guides/grooming-coat-care",
+    link: "/blog/grooming-shedding",
+    category: "Grooming",
   },
 ];
 
@@ -75,22 +80,7 @@ export default function GuidesPage() {
           to lifelong health, training, and care.
         </p>
 
-        <h2 className="text-2xl font-playfair font-semibold text-amber-900 mb-6">
-          Pillar Guides
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {guides.map((guide) => (
-            <article key={guide.href} className="bg-white rounded-xl shadow-sm border border-amber-100 p-6">
-              <h3 className="text-xl font-semibold text-amber-900 mb-2">
-                {guide.title}
-              </h3>
-              <p className="text-gray-700 mb-4">{guide.description}</p>
-              <Link href={guide.href} className="text-amber-700 font-semibold hover:underline">
-                Read guide
-              </Link>
-            </article>
-          ))}
-        </div>
+        <GuidesCategoryFilter guides={guides} />
       </section>
     </main>
   );
