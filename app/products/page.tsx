@@ -86,6 +86,15 @@ const products = [
     category: "Grooming",
   },
   {
+    title: "Hertzko Self-Cleaning Slicker Brush",
+    description: "Removes loose fur and minimizes shedding.",
+    personalComment:
+      "does a good job and the self cleaning option makes it a breeze. 🐾",
+    amazonLink: "https://amzn.to/3OghJ80",
+    image: "/images/products/hertzko.jpeg",
+    category: "Grooming",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
