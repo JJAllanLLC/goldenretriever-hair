@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
-import Link from "next/link";
 import matter from "gray-matter";
+import { BlogCategoryFilter } from "@/components/BlogCategoryFilter";
 
 export const metadata = {
   title: "Golden Retriever Blog | Care Tips, Health, Training",
@@ -14,6 +14,7 @@ type PostMeta = {
   description: string;
   date: string;
   slug: string;
+  category: string;
 };
 
 async function getPosts(): Promise<PostMeta[]> {
@@ -32,6 +33,7 @@ async function getPosts(): Promise<PostMeta[]> {
         title: data.title ?? "Untitled Post",
         description: data.description ?? "",
         date: data.date ?? "",
+        category: data.category ?? "Uncategorized",
         slug,
       };
     })
@@ -78,40 +80,7 @@ export default async function BlogPage() {
           Explore the newest articles and trusted tips for owners.
         </p>
 
-        <div className="flex flex-wrap gap-3 mb-12">
-          <Link href="/guides" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
-            Explore Guides
-          </Link>
-          <Link href="/breeders" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
-            Breeder Directory
-          </Link>
-          <Link href="/products" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
-            Recommended Products
-          </Link>
-          <Link href="/golden-week" className="px-4 py-2 rounded-full bg-white text-amber-800 border border-amber-200 hover:bg-amber-50">
-            Golden Week App
-          </Link>
-        </div>
-
-        <h2 className="text-2xl font-playfair font-semibold text-amber-900 mb-6">
-          All Posts
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post) => (
-            <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-amber-100 p-6">
-              <p className="text-sm text-amber-700 mb-2">{post.date}</p>
-              <h3 className="text-xl font-semibold text-amber-900 mb-2">
-                {post.title}
-              </h3>
-              <p className="text-gray-700 mb-4">
-                {post.description}
-              </p>
-              <Link href={`/blog/${post.slug}`} className="text-amber-700 font-semibold hover:underline">
-                Read post
-              </Link>
-            </article>
-          ))}
-        </div>
+        <BlogCategoryFilter posts={posts} />
       </section>
     </main>
   );
