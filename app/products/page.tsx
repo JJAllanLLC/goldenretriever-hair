@@ -37,6 +37,16 @@ const products = [
     category: "Food/Treats",
   },
   {
+    title: "Fromm Four-Star Nutritionals Surf & Turf Grain-Free Dry Dog Food",
+    description:
+      "Premium grain-free formula with salmon, chicken, and duck – real meat for picky eaters and coat health.",
+    personalComment:
+      "Great for picky eaters, and we noticed shinier coats after a few weeks. Has been successfully used to feed our puppies. 🐾",
+    amazonLink: "https://amzn.to/4kcWikm",
+    image: "/images/products/fromm.png",
+    category: "Food/Treats",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
