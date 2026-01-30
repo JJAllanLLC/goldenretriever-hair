@@ -2,6 +2,24 @@ export function Footer() {
   return (
     <footer className="bg-amber-900 text-white py-12 mt-20">
       <div className="max-w-7xl mx-auto px-4 text-center">
+        <div className="mb-8">
+          <p className="text-lg font-semibold text-amber-100 mb-4">
+            Stay updated with GoldenRetriever.hair
+          </p>
+          <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+            <input
+              type="email"
+              placeholder="Your email address"
+              className="flex-1 px-6 py-4 rounded-full text-gray-900"
+            />
+            <button
+              type="submit"
+              className="bg-amber-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-amber-800 transition"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
         <p className="text-sm">
           © {new Date().getFullYear()} GoldenRetriever.hair – Built with ❤️ by{" "}
           <a href="https://jjallan.com" className="underline hover:text-amber-300">

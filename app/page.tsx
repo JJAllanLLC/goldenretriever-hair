@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HeroCarouselDots } from '@/components/HeroCarouselDots';
+import { NewsletterForm } from "@/components/NewsletterForm";
 
 export default function Home() {
   const heroImages = [
@@ -118,6 +119,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <NewsletterForm />
 
       {/* Latest Posts Placeholder */}
       <section className="py-20">
