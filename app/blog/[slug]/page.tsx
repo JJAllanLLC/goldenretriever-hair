@@ -1,12 +1,28 @@
+import fs from "fs/promises";
+import path from "path";
+import matter from "gray-matter";
 import { notFound } from "next/navigation";
 
 async function getPost(slug: string) {
   try {
-    const { default: Content, metadata } = await import(`../posts/${slug}.mdx`);
-    return { Content, metadata };
+    const filePath = path.join(process.cwd(), "app", "blog", "posts", `${slug}.mdx`);
+    const source = await fs.readFile(filePath, "utf8");
+    const { data } = matter(source);
+    const { default: Content } = await import(`../../posts/${slug}.mdx`);
+    return { Content, metadata: data };
   } catch (error) {
     notFound();
   }
+}
+
+export async function generateStaticParams() {
+  const fsSync = require("fs");
+  const pathSync = require("path");
+  const postsDirectory = pathSync.join(process.cwd(), "app/blog/posts");
+  const filenames = fsSync.readdirSync(postsDirectory);
+  return filenames.map((file: string) => ({
+    slug: file.replace(/\.mdx$/, ""),
+  }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -15,8 +31,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return { title: "Post Not Found" };
 
   return {
-    title: post.metadata.title,
-    description: post.metadata.description,
+    title: post.metadata.title ?? "Golden Retriever Blog Post",
+    description: post.metadata.description ?? "Golden Retriever care, training, and health insights.",
   };
 }
 
