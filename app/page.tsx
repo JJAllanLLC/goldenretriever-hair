@@ -30,7 +30,7 @@ export default function Home() {
           {heroImages.map((image, index) => (
             <div
               key={index}
-              className={`snap-center flex-shrink-0 w-full h-full relative ${index === 0 ? 'bg-contain' : 'bg-cover'} bg-center bg-no-repeat`}
+              className={`hero-slide snap-center flex-shrink-0 w-full h-full relative ${index === 0 ? 'bg-contain' : 'bg-cover'} bg-center bg-no-repeat`}
               style={{ backgroundImage: `url(${image.url})` }}
             >
               <div className="absolute inset-0 bg-black/40" />
