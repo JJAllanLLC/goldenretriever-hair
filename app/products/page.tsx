@@ -14,7 +14,7 @@ const products = [
     personalComment:
       "Our Goldens switched to this food about one year ago and they still love it. Gentle on stomachs and is keeping their coats shiny! 🐾",
     amazonLink: "https://amzn.to/45GjTnt",
-    image: "/images/products/hills-science-diet.png",
+    image: "/images/products/hills_science_food.png",
     category: "Food/Treats",
   },
   {
