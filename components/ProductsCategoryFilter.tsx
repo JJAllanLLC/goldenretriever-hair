@@ -12,7 +12,7 @@ type Product = {
   image?: string;
 };
 
-const categories = ["All", "Grooming", "Toys", "Food/Treats", "Health"] as const;
+const categories = ["All", "Grooming", "Toys", "Food/Treats", "Health", "Training"] as const;
 
 export function ProductsCategoryFilter({ products }: { products: Product[] }) {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
@@ -34,6 +34,8 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
       "High-quality food and treats for Golden Retriever nutrition – what keeps our Goldens healthy and happy.",
     Health:
       "Vet-recommended health supplements for Goldens – support joints, immunity, and mobility.",
+    Training:
+      "High-value training treats and tools for Goldens – focus boosters for recall and new tricks.",
   };
 
   const toggleComment = (key: string) => {

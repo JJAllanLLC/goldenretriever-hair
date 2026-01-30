@@ -47,6 +47,16 @@ const products = [
     category: "Food/Treats",
   },
   {
+    title: "Stewart Pro-Treat Beef Liver Freeze-Dried Dog Treats",
+    description:
+      "Single-ingredient freeze-dried beef liver – high-value rewards for training.",
+    personalComment:
+      "Our go-to “high value” treat. We save these for moments when we really need them to listen, like recall training or new tricks. Our Goldens go nuts for these. Use sparingly! 🐾",
+    amazonLink: "https://amazon.com/your-real-affiliate-link-here",
+    image: "/images/products/stewart.jpeg",
+    category: "Training",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
