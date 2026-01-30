@@ -8,17 +8,23 @@ type Product = {
   description: string;
   amazonLink: string;
   category: string;
+  personalComment?: string;
 };
 
 const categories = ["All", "Grooming", "Toys", "Food/Treats", "Health"] as const;
 
 export function ProductsCategoryFilter({ products }: { products: Product[] }) {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
+  const [expandedComments, setExpandedComments] = useState<Record<string, boolean>>({});
 
   const visibleProducts =
     activeCategory === "All"
       ? products
       : products.filter((product) => product.category === activeCategory);
+
+  const toggleComment = (key: string) => {
+    setExpandedComments((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
 
   return (
     <>
@@ -46,7 +52,12 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
         Top Picks
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {visibleProducts.map((product) => (
+        {visibleProducts.map((product) => {
+          const comment = product.personalComment?.trim();
+          const isExpandable = comment ? comment.length > 150 : false;
+          const isExpanded = expandedComments[product.title] ?? false;
+
+          return (
           <article key={product.title} className="bg-white rounded-xl shadow-sm border border-amber-100 p-6">
             <div className="h-40 bg-amber-100 rounded-lg mb-4 flex items-center justify-center text-amber-700 font-semibold">
               Image Placeholder
@@ -55,6 +66,22 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
               {product.title}
             </h3>
             <p className="text-gray-700 mb-4">{product.description}</p>
+            {comment && (
+              <div className="mb-4 text-gray-700">
+                <p className={isExpandable && !isExpanded ? "line-clamp-3" : undefined}>
+                  {comment}
+                </p>
+                {isExpandable && (
+                  <button
+                    type="button"
+                    onClick={() => toggleComment(product.title)}
+                    className="mt-2 text-amber-700 font-semibold hover:underline"
+                  >
+                    {isExpanded ? "Show less" : "Read more"}
+                  </button>
+                )}
+              </div>
+            )}
             <Link
               href={product.amazonLink}
               className="text-amber-700 font-semibold hover:underline"
@@ -63,7 +90,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
               View on Amazon
             </Link>
           </article>
-        ))}
+        )})}
       </div>
     </>
   );
