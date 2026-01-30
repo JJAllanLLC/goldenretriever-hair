@@ -4,20 +4,20 @@ import { HeroCarouselDots } from '@/components/HeroCarouselDots';
 export default function Home() {
   const heroImages = [
     {
-      url: "https://images.unsplash.com/photo-1611004076848-465e0bd5ffc4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80",
-      alt: "Happy Golden Retriever running joyfully in a sunny field – perfect family companion",
+      url: "/images/hero/hero-1.png",
+      alt: "Happy Golden Retriever close-up – joyful and playful family companion",
     },
     {
-      url: "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3024&q=80",
-      alt: "Adorable Golden Retriever puppy close-up with sweet expression",
+      url: "/images/hero/hero-2.jpeg",
+      alt: "Your Golden Retriever enjoying the outdoors – gentle and loving temperament",
     },
     {
-      url: "https://images.unsplash.com/photo-1583337130417-3346a1be7adf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2964&q=80",
-      alt: "Golden Retriever swimming and fetching – natural water lovers",
+      url: "/images/hero/hero-3.jpeg",
+      alt: "Adorable Golden Retriever moment – intelligent and eager to please",
     },
     {
-      url: "https://images.unsplash.com/photo-1635322966219-b75ed372eb01?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80",
-      alt: "Golden Retriever enjoying the outdoors with family – gentle and patient temperament",
+      url: "images/hero/hero-4.jpeg",
+      alt: "Golden Retriever in action – natural energy and water-loving breed",
     },
   ];
 
