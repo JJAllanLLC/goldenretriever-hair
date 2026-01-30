@@ -22,7 +22,7 @@ export function Footer() {
         </div>
         <p className="text-sm">
           © {new Date().getFullYear()} GoldenRetriever.hair – Built with ❤️ by{" "}
-          <a href="https://jjallan.com" className="underline hover:text-amber-300">
+          <a href="https://jjallanllc.com" className="underline hover:text-amber-300">
             JJ Allan LLC
           </a>
         </p>
