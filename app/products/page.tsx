@@ -67,6 +67,16 @@ const products = [
     category: "Training",
   },
   {
+    title: "Mars Coat King Dematting Undercoat Grooming Rake Stripper Tool (20-Blade)",
+    description:
+      "Professional-grade rake for removing mats, tangles, and loose undercoat.",
+    personalComment:
+      "Used to achieve a professional looking groom. Great for getting out tangles and mats! 🐾",
+    amazonLink: "https://amzn.to/4alOERg",
+    image: "/images/products/mars.png",
+    category: "Grooming",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
