@@ -10,17 +10,15 @@ async function getPost(slug: string) {
     const { data } = matter(source);
     const { default: Content } = await import(`../../posts/${slug}.mdx`);
     return { Content, metadata: data };
-  } catch (error) {
+  } catch {
     notFound();
   }
 }
 
 export async function generateStaticParams() {
-  const fsSync = require("fs");
-  const pathSync = require("path");
-  const postsDirectory = pathSync.join(process.cwd(), "app/blog/posts");
-  const filenames = fsSync.readdirSync(postsDirectory);
-  return filenames.map((file: string) => ({
+  const postsDirectory = path.join(process.cwd(), "app", "blog", "posts");
+  const filenames = await fs.readdir(postsDirectory);
+  return filenames.map((file) => ({
     slug: file.replace(/\.mdx$/, ""),
   }));
 }
