@@ -77,6 +77,15 @@ const products = [
     category: "Grooming",
   },
   {
+    title: "FURminator Grooming Rake",
+    description: "Grooming rake to remove loose hair and tangles.",
+    personalComment:
+      "A rake actually works better than a comb. Takes out the undercoat before it goes all over the house! We use a PSI 808 rake but it looks like that model is no longer available. While we have not personally tested this one it appears it should do the job. 🐾",
+    amazonLink: "https://amzn.to/3Z92oss",
+    image: "/images/products/furminator.jpeg",
+    category: "Grooming",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
