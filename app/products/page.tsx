@@ -21,7 +21,7 @@ const products = [
     title: "Purina Pro Plan Sensitive Skin & Stomach Adult Dry Dog Food (Salmon & Rice Formula)",
     description: "Sensitive Skin, Digestive Health, Immune Support, Skin and Coat Health.",
     personalComment:
-      "Helped with Cosmo’s digestion issues that he had since he was a pup. Reliability issues as times being in stock. 🐾",
+      "Helped with Cosmo’s digestion issues that he had since he was a pup. Reliability issues at times being in stock. 🐾",
     amazonLink: "https://amzn.to/4kcP5Rk",
     image: "/images/products/purina_proplan.png",
     category: "Food/Treats",
