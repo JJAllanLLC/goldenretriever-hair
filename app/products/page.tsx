@@ -27,6 +27,16 @@ const products = [
     category: "Food/Treats",
   },
   {
+    title: "Canidae All Life Stages Multi-Protein Formula Dry Dog Food (Chicken, Turkey, Lamb Meals)",
+    description:
+      "High-protein nutrition for all life stages – real meat first ingredients for active Goldens.",
+    personalComment:
+      "We have happily fed our goldens with Multi-Protein Chicken, Turkey and Lamb Meals Formulas. Reliable all-ages option! 🐾",
+    amazonLink: "https://amzn.to/46mR3IW",
+    image: "/images/products/canidae.png",
+    category: "Food/Treats",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
