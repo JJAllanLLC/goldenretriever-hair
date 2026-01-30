@@ -24,7 +24,7 @@ export function NewsletterForm() {
           Get exclusive tips, Golden Week app updates, and more – straight to your inbox.
         </p>
         {submitted ? (
-          <p className="text-green-700 font-semibold">Thanks! You're on the list.</p>
+          <p className="text-green-700 font-semibold">Thanks! You&apos;re on the list.</p>
         ) : (
           <form onSubmit={handleSubmit} className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
             <input
