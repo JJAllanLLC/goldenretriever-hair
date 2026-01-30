@@ -23,7 +23,7 @@ const products = [
     personalComment:
       "Helped with Cosmo’s digestion issues that he had since he was a pup. Reliability issues as times being in stock. 🐾",
     amazonLink: "https://amzn.to/4kcP5Rk",
-    image: "/images/products/purina-pro-plan-sensitive.png",
+    image: "/images/products/purina_proplan.png",
     category: "Food/Treats",
   },
   {
