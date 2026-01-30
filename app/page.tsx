@@ -4,19 +4,19 @@ import { HeroCarouselDots } from '@/components/HeroCarouselDots';
 export default function Home() {
   const heroImages = [
     {
-      url: "/images/hero/hero-1.png",
+      url: "/images/hero-1.png",
       alt: "Joyful Golden Retriever close-up with tongue out – happy and playful family companion",
     },
     {
-      url: "/images/hero/hero-2.jpeg",
+      url: "/images/hero-2.jpeg",
       alt: "Your Golden Retriever enjoying the outdoors – gentle and loving temperament",
     },
     {
-      url: "/images/hero/hero-3.jpeg",
+      url: "/images/hero-3.jpeg",
       alt: "Adorable Golden Retriever in action – intelligent and eager to please",
     },
     {
-      url: "/images/hero/hero-4.jpeg",
+      url: "/images/hero-4.jpeg",
       alt: "Golden Retriever natural energy moment – perfect water-loving breed",
     },
   ];
