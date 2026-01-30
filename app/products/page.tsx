@@ -83,9 +83,6 @@ export default function ProductsPage() {
         <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-6">
           Recommended Products for Your Golden Retriever
         </h1>
-        <p className="text-lg text-gray-700 max-w-3xl mb-10">
-          Carefully curated picks for grooming, nutrition, play, and everyday care.
-        </p>
 
         <ProductsCategoryFilter products={products} />
 

@@ -23,12 +23,28 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
       ? products
       : products.filter((product) => product.category === activeCategory);
 
+  const subheadings: Record<(typeof categories)[number], string> = {
+    All:
+      "Carefully curated picks for grooming, nutrition, play, and everyday care – personal recommendations from our Goldens (Cosmo, Luna, Nala).",
+    Grooming:
+      "Top grooming picks for managing Golden Retriever shedding – our battle-tested tools for keeping coats shiny! 🐾",
+    Toys:
+      "Best toys for Golden Retriever play and exercise – durable favorites for fetch and zoomies.",
+    "Food/Treats":
+      "High-quality food and treats for Golden Retriever nutrition – what keeps our Goldens healthy and happy.",
+    Health:
+      "Vet-recommended health supplements for Goldens – support joints, immunity, and mobility.",
+  };
+
   const toggleComment = (key: string) => {
     setExpandedComments((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
   return (
     <>
+      <p className="text-lg text-gray-700 max-w-3xl mb-8">
+        {subheadings[activeCategory]}
+      </p>
       <div className="flex flex-wrap gap-3 mb-12">
         {categories.map((category) => {
           const isActive = category === activeCategory;
