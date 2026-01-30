@@ -57,6 +57,16 @@ const products = [
     category: "Training",
   },
   {
+    title: "Zuke’s Mini Naturals Training Dog Treats",
+    description:
+      "Made with high-quality real ingredients – free from artificial colors, flavors, and preservatives.",
+    personalComment:
+      "Great for training sessions. They’re small, soft, and come in flavors like chicken or peanut butter. Low calorie, so you can give multiple in a row. 🐾",
+    amazonLink: "https://amzn.to/4q830cM",
+    image: "/images/products/zukes.jpeg",
+    category: "Training",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
