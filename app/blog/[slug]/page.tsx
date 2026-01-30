@@ -8,7 +8,7 @@ async function getPost(slug: string) {
     const filePath = path.join(process.cwd(), "app", "blog", "posts", `${slug}.mdx`);
     const source = await fs.readFile(filePath, "utf8");
     const { data } = matter(source);
-    const { default: Content } = await import(`../../posts/${slug}.mdx`);
+    const { default: Content } = await import(`../posts/${slug}.mdx`);
     return { Content, metadata: data };
   } catch {
     notFound();
