@@ -39,8 +39,8 @@ export default function Home() {
                   <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-lg mb-4">
                     Welcome to GoldenRetriever.hair
                   </h1>
-                  <p className="text-xl md:text-2xl text-white drop-shadow mb-8">
-                    Your trusted resource for Golden Retriever owners – expert guides, health tips, vetted breeders, curated products, and more.
+                  <p className="text-xl md:text-2xl text-white drop-shadow-md mb-8 text-center">
+                    Your go-to spot for everything Golden Retriever – from puppy dreams to lifelong care. Discover expert guides, health tips, hand-picked products, and more for owners and admirers alike. 🐾
                   </p>
                   <Link
                     href="/guides"
