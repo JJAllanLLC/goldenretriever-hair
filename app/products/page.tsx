@@ -97,6 +97,42 @@ const products = [
     category: "Essentials",
   },
   {
+    title: "Book Placeholder 1",
+    description: "Expert guide to Golden Retriever training.",
+    personalComment:
+      "Our Goldens learned so much from this – highly recommend for new owners! 🐾",
+    amazonLink: "#",
+    image: "/images/products/book-placeholder.jpg",
+    category: "Books & Resources",
+  },
+  {
+    title: "Book Placeholder 2",
+    description: "Practical puppy care tips for growing Goldens.",
+    personalComment:
+      "Great for building routines and confidence in the first year. 🐾",
+    amazonLink: "#",
+    image: "/images/products/book-placeholder.jpg",
+    category: "Books & Resources",
+  },
+  {
+    title: "Book Placeholder 3",
+    description: "Health and wellness reference for Golden Retrievers.",
+    personalComment:
+      "We keep this handy for quick checks and peace of mind. 🐾",
+    amazonLink: "#",
+    image: "/images/products/book-placeholder.jpg",
+    category: "Books & Resources",
+  },
+  {
+    title: "Book Placeholder 4",
+    description: "Grooming and coat care handbook for Goldens.",
+    personalComment:
+      "Solid tips for brushing, bathing, and shedding season. 🐾",
+    amazonLink: "#",
+    image: "/images/products/book-placeholder.jpg",
+    category: "Books & Resources",
+  },
+  {
     title: "Mars Coat King Dematting Undercoat Grooming Rake Stripper Tool (20-Blade)",
     description:
       "Professional-grade rake for removing mats, tangles, and loose undercoat.",

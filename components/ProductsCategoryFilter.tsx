@@ -12,7 +12,7 @@ type Product = {
   image?: string;
 };
 
-const categories = ["All", "Grooming", "Toys", "Food/Treats", "Health", "Training", "Essentials"] as const;
+const categories = ["All", "Grooming", "Toys", "Food/Treats", "Health", "Training", "Essentials", "Books & Resources"] as const;
 
 export function ProductsCategoryFilter({ products }: { products: Product[] }) {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
@@ -23,7 +23,15 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
       ? products
       : products.filter((product) => product.category === activeCategory);
 
-  const categoryOrder = ["Food/Treats", "Essentials", "Training", "Grooming", "Toys", "Health"];
+  const categoryOrder = [
+    "Food/Treats",
+    "Essentials",
+    "Books & Resources",
+    "Training",
+    "Grooming",
+    "Toys",
+    "Health",
+  ];
   const sortedProducts =
     activeCategory === "All"
       ? [...visibleProducts].sort(
@@ -46,6 +54,8 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
       "High-value training treats and tools for Goldens – focus boosters for recall and new tricks.",
     Essentials:
       "Crates, beds, and travel essentials for Goldens – everyday basics for comfort and safety.",
+    "Books & Resources":
+      "Trusted books and resources for Golden Retriever care, training, and lifelong wellness.",
   };
 
   const toggleComment = (key: string) => {
