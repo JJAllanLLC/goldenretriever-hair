@@ -87,6 +87,16 @@ const products = [
     category: "Essentials",
   },
   {
+    title: "Kuranda Chewproof Elevated Dog Bed",
+    description:
+      "Durable aluminum frame and chewproof fabric – elevated for comfort and easy cleaning.",
+    personalComment:
+      "I highly recommend this one especially if your Golden is an aggressive chewer. There is no way he is going to damage this bed. Ours is over 7 years old and still looks like new. This one is built to last! 🐾",
+    amazonLink: "https://amzn.to/4tc2L33",
+    image: "/images/products/kuranda.png",
+    category: "Essentials",
+  },
+  {
     title: "Mars Coat King Dematting Undercoat Grooming Rake Stripper Tool (20-Blade)",
     description:
       "Professional-grade rake for removing mats, tangles, and loose undercoat.",
