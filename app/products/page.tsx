@@ -67,6 +67,16 @@ const products = [
     category: "Training",
   },
   {
+    title: "MidWest Homes for Pets iCrate Folding Dog Crate",
+    description:
+      "Larger size (42 x 28 x 30) – Best for home use, more room to stretch (especially for males). Smaller size (36 x 23 x 25) – Great for travel, fits most SUVs/vans.",
+    personalComment:
+      "Reliable folding crate for home or travel – our Goldens love the space! 🐾",
+    amazonLink: "https://amzn.to/4rq298l",
+    image: "/images/products/midwest.png",
+    category: "Essentials",
+  },
+  {
     title: "Mars Coat King Dematting Undercoat Grooming Rake Stripper Tool (20-Blade)",
     description:
       "Professional-grade rake for removing mats, tangles, and loose undercoat.",
