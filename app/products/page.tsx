@@ -115,6 +115,16 @@ const products = [
     category: "Grooming",
   },
   {
+    title: "Chris Christensen Ice on Ice Detangling Dog Conditioner",
+    description:
+      "Leave-in detangling conditioner – smooths out tangles and knots, easier to comb or brush through.",
+    personalComment:
+      "Just don't drop any on the floor as it can make it super slippery. 🐾 Pro-level detangler for Goldens' thick coats!",
+    amazonLink: "https://amzn.to/4q8rGle",
+    image: "/images/products/ice.png",
+    category: "Grooming",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
