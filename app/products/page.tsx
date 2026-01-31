@@ -280,6 +280,16 @@ const products = [
     category: "Health",
   },
   {
+    title: "K9 Advantix II XL Dog Vet-Recommended Flea, Tick & Mosquito Treatment & Prevention",
+    description:
+      "Shield your furry friend from pesky fleas and ticks with an effective and reliable flea and tick treatment.",
+    personalComment:
+      "Essential protection for our Goldens during outdoor adventures – vet-recommended and reliable against fleas, ticks, and mosquitoes. Keeps them safe and happy! 🐾",
+    amazonLink: "https://amzn.to/3NNTcXW",
+    image: "/images/products/tick.png",
+    category: "Health",
+  },
+  {
     title: "Premium Puppy Food",
     description: "Balanced nutrition for growing Goldens.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
