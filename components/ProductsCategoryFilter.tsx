@@ -41,21 +41,21 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
 
   const subheadings: Record<(typeof categories)[number], string> = {
     All:
-      "Carefully curated picks for grooming, nutrition, play, and everyday care – personal recommendations from our Goldens (Cosmo, Luna, Nala).",
+      "As a proud golden retriever parent, I know firsthand how much we want the absolute best for our furry companions. Whether it’s the food they eat, the toys they play with, or the grooming tools that make bath time (a little) easier, the right products can make a world of difference. This list isn’t just random picks – these are items we personally use and love with Cosmo, Luna, and Nala. 🐾",
     Grooming:
-      "Top grooming picks for managing Golden Retriever shedding – our battle-tested tools for keeping coats shiny! 🐾",
+      "Golden Retrievers shed a lot – proper grooming keeps coats shiny and homes fur-free. Here are our battle-tested tools for deshedding, brushing, and bathing. 🐾",
     Toys:
-      "Best toys for Golden Retriever play and exercise – durable favorites for fetch and zoomies.",
+      "Keep your Golden mentally stimulated and physically active with durable toys – our favorites for fetch, chew, and zoomies.",
     "Food/Treats":
-      "High-quality food and treats for Golden Retriever nutrition – what keeps our Goldens healthy and happy.",
+      "High-quality nutrition is key for Golden health – balanced food and treats that support digestion, coat shine, and energy. Our Goldens' go-to picks.",
     Health:
-      "Vet-recommended health supplements for Goldens – support joints, immunity, and mobility.",
+      "Vet-recommended supplements and treatments fairies for joints, skin, ears, and immunity – what helps our pack stay healthy and happy.",
     Training:
-      "High-value training treats and tools for Goldens – focus boosters for recall and new tricks.",
+      "Positive reinforcement tools and treats for obedience, recall, and new tricks – what works for our eager-to-please Goldens.",
     Essentials:
-      "Crates, beds, and travel essentials for Goldens – everyday basics for comfort and safety.",
+      "Must-have items for home, travel, and everyday life – crates, beds, leashes, and more for safe, comfortable Goldens.",
     "Books & Resources":
-      "Trusted books and resources for Golden Retriever care, training, and lifelong wellness.",
+      "Expert books and guides for Golden owners – timeless advice on training, health, and raising happy pups.",
   };
 
   const toggleComment = (key: string) => {
