@@ -153,6 +153,16 @@ const products = [
     category: "Health",
   },
   {
+    title: "Natural Dog Company Snout Soother Balm – Dog Nose Balm for Dry Cracked Snouts",
+    description:
+      "Moisturizing winter nose care with coconut oil & shea butter – helps with nasal hyperkeratosis (dry, thick, crusty nose).",
+    personalComment:
+      "Great for Goldens with dry or crusty noses – natural ingredients soothe and heal. Our pack loves it during dry seasons! 🐾",
+    amazonLink: "https://amzn.to/4c2ZWLv",
+    image: "/images/products/balm.jpeg",
+    category: "Health",
+  },
+  {
     title: "Premium Puppy Food",
     description: "Balanced nutrition for growing Goldens.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
