@@ -147,24 +147,6 @@ const products = [
     category: "Books & Resources",
   },
   {
-    title: "Book Placeholder 3",
-    description: "Health and wellness reference for Golden Retrievers.",
-    personalComment:
-      "We keep this handy for quick checks and peace of mind. 🐾",
-    amazonLink: "#",
-    image: "/images/products/book-placeholder.jpg",
-    category: "Books & Resources",
-  },
-  {
-    title: "Book Placeholder 4",
-    description: "Grooming and coat care handbook for Goldens.",
-    personalComment:
-      "Solid tips for brushing, bathing, and shedding season. 🐾",
-    amazonLink: "#",
-    image: "/images/products/book-placeholder.jpg",
-    category: "Books & Resources",
-  },
-  {
     title: "Mars Coat King Dematting Undercoat Grooming Rake Stripper Tool (20-Blade)",
     description:
       "Professional-grade rake for removing mats, tangles, and loose undercoat.",
@@ -233,18 +215,6 @@ const products = [
     category: "Grooming",
   },
   {
-    title: "Deshedding Brush",
-    description: "Gentle on skin, effective for double coats.",
-    amazonLink: "https://amazon.com/affiliate-placeholder",
-    category: "Grooming",
-  },
-  {
-    title: "Durable Fetch Toy",
-    description: "Long-lasting rubber toy for daily exercise.",
-    amazonLink: "https://amazon.com/affiliate-placeholder",
-    category: "Toys",
-  },
-  {
     title: "Benebone Wishbone Durable Dog Chew Toy for Aggressive Chewers",
     description: "Real-flavored nylon wishbone – long-lasting for tough chewers.",
     personalComment:
@@ -252,12 +222,6 @@ const products = [
     amazonLink: "https://amzn.to/49Ro6av",
     image: "/images/products/benebone.png",
     category: "Toys",
-  },
-  {
-    title: "Joint Support Chews",
-    description: "Support mobility with vet-recommended ingredients.",
-    amazonLink: "https://amazon.com/affiliate-placeholder",
-    category: "Health",
   },
   {
     title: "Natural Dog Company Snout Soother Balm – Dog Nose Balm for Dry Cracked Snouts",
@@ -298,12 +262,6 @@ const products = [
     amazonLink: "https://amzn.to/3NNTcXW",
     image: "/images/products/tick.png",
     category: "Health",
-  },
-  {
-    title: "Premium Puppy Food",
-    description: "Balanced nutrition for growing Goldens.",
-    amazonLink: "https://amazon.com/affiliate-placeholder",
-    category: "Food/Treats",
   },
 ];
 
