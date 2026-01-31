@@ -167,6 +167,15 @@ const products = [
     category: "Toys",
   },
   {
+    title: "Benebone Wishbone Durable Dog Chew Toy for Aggressive Chewers",
+    description: "Real-flavored nylon wishbone – long-lasting for tough chewers.",
+    personalComment:
+      "One of our dogs all-time favorites for tough chewers. Lasts a very long time! 🐾",
+    amazonLink: "https://amzn.to/49Ro6av",
+    image: "/images/products/benebone.png",
+    category: "Toys",
+  },
+  {
     title: "Joint Support Chews",
     description: "Support mobility with vet-recommended ingredients.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
