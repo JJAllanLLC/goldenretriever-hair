@@ -95,6 +95,16 @@ const products = [
     category: "Grooming",
   },
   {
+    title: "Casfuy 6-Speed Dog Nail Grinder",
+    description:
+      "One of the most powerful grinders on the market – super low noise & vibration.",
+    personalComment:
+      "I love this nail grinder. If your dog is not having it when it comes to nail clipping, a nail grinder is a great option. I absolutely LOVE this one. And it has a light which helps more than you would think. Casfuy hits a quality / price point that is hard to beat !! 🐾",
+    amazonLink: "https://amzn.to/45GP2Hp",
+    image: "/images/products/casfuy.png",
+    category: "Grooming",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
