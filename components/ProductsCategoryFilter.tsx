@@ -23,6 +23,14 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
       ? products
       : products.filter((product) => product.category === activeCategory);
 
+  const categoryOrder = ["Food/Treats", "Essentials", "Training", "Grooming", "Toys", "Health"];
+  const sortedProducts =
+    activeCategory === "All"
+      ? [...visibleProducts].sort(
+          (a, b) => categoryOrder.indexOf(a.category) - categoryOrder.indexOf(b.category)
+        )
+      : visibleProducts;
+
   const subheadings: Record<(typeof categories)[number], string> = {
     All:
       "Carefully curated picks for grooming, nutrition, play, and everyday care – personal recommendations from our Goldens (Cosmo, Luna, Nala).",
@@ -73,7 +81,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
         Top Picks
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {visibleProducts.map((product) => {
+        {sortedProducts.map((product) => {
           const comment = product.personalComment?.trim();
           const isExpandable = comment ? comment.length > 150 : false;
           const isExpanded = expandedComments[product.title] ?? false;
