@@ -67,6 +67,16 @@ const products = [
     category: "Training",
   },
   {
+    title: "Nature’s Miracle Dog Stain and Odor Remover",
+    description:
+      "Enzymatic formula eliminates stains and odors – perfect for puppy training accidents.",
+    personalComment:
+      "A must-have during training — works great for stains and odors. 🐾",
+    amazonLink: "https://amzn.to/4a29NyA",
+    image: "/images/products/stain.png",
+    category: "Training",
+  },
+  {
     title: "MidWest Homes for Pets iCrate Folding Dog Crate",
     description:
       "Larger size (42 x 28 x 30) – Best for home use, more room to stretch (especially for males). Smaller size (36 x 23 x 25) – Great for travel, fits most SUVs/vans.",
