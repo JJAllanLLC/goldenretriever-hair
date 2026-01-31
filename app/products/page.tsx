@@ -105,6 +105,16 @@ const products = [
     category: "Grooming",
   },
   {
+    title: "#1 All Systems Super Cleaning and Conditioning Pet Shampoo",
+    description:
+      "Extra-gentle, low sudsing formula – completely rinses out leaving no residue.",
+    personalComment:
+      "Our favorite shampoo for keeping Golden coats clean and conditioned – gentle, low-suds, rinses clean with no residue. Luna's coat is always shiny after bath time! 🐾",
+    amazonLink: "https://amzn.to/4rowap5",
+    image: "/images/products/allsuper.png",
+    category: "Grooming",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
