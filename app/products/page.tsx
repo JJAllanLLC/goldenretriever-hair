@@ -107,6 +107,16 @@ const products = [
     category: "Essentials",
   },
   {
+    title: "iBuddy Dog Seat Cover for Trucks with Mesh Window",
+    description:
+      "Heavy-duty protection for truck seats – mesh window for airflow and visibility.",
+    personalComment:
+      "Still going strong after 3 years — protects the seats and lets them ride in style. Just pick one that matches your vehicle and enjoy the ride. 🐾",
+    amazonLink: "https://amzn.to/4ronE9o",
+    image: "/images/products/cover.jpeg",
+    category: "Essentials",
+  },
+  {
     title: "Before and After Getting Your Puppy by Dr. Ian Dunbar",
     description:
       "The Positive Approach to Raising a Happy, Healthy, and Well-Behaved Dog.",
