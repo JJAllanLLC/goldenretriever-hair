@@ -173,6 +173,16 @@ const products = [
     category: "Health",
   },
   {
+    title: "ThunderShirt Classic Dog Anxiety Jacket (X Large)",
+    description:
+      "Gentle constant pressure calms anxiety – perfect for fireworks, storms, or separation.",
+    personalComment:
+      "A revolutionary solution for anxious Goldens. The wrap-around design applies soothing pressure – our pack stays calmer during fireworks and storms. Highly recommend for stressful events! 🐾",
+    amazonLink: "https://amzn.to/4rphVjU",
+    image: "/images/products/thunder.jpeg",
+    category: "Health",
+  },
+  {
     title: "Premium Puppy Food",
     description: "Balanced nutrition for growing Goldens.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
