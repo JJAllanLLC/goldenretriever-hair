@@ -145,6 +145,16 @@ const products = [
     category: "Grooming",
   },
   {
+    title: "Neakasa P1 Pro Pet Grooming Kit & Vacuum",
+    description:
+      "Low-noise grooming vacuum with attachments – sucks up loose fur while brushing.",
+    personalComment:
+      "Using a pet hair remover regularly helps keep your home cleaner and reduces airborne allergens. It also makes cuddling your golden a little less…furry. Produces low noise and our Goldens love getting groomed with this! Mine is 4 years old and is still going strong. 🐾",
+    amazonLink: "https://amzn.to/4qV9v3V",
+    image: "/images/products/neakasa.png",
+    category: "Grooming",
+  },
+  {
     title: "Deshedding Brush",
     description: "Gentle on skin, effective for double coats.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
