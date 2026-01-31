@@ -163,6 +163,16 @@ const products = [
     category: "Health",
   },
   {
+    title: "TrizULTRA + Keto Flush for Dogs, Cats & Horses",
+    description:
+      "Gentle ear flush for cleaning and preventing infections – antifungal and antibacterial.",
+    personalComment:
+      "Goldens are very susceptible to ear infections. This flush will keep their ears healthy – our go-to for clean, happy ears! 🐾",
+    amazonLink: "https://amzn.to/4t7BfUe",
+    image: "/images/products/flush.png",
+    category: "Health",
+  },
+  {
     title: "Premium Puppy Food",
     description: "Balanced nutrition for growing Goldens.",
     amazonLink: "https://amazon.com/affiliate-placeholder",
