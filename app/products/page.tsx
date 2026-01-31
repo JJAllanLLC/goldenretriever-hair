@@ -77,6 +77,16 @@ const products = [
     category: "Essentials",
   },
   {
+    title: "ChomChom Roller Pet Hair Remover",
+    description:
+      "Reusable roller removes embedded pet hair from couches, clothes, and car seats – no sticky tape needed.",
+    personalComment:
+      "Not a gimmick – does the trick by easily getting Golden hair off furniture and other surfaces. Our lifesaver for shedding season! 🐾",
+    amazonLink: "https://amzn.to/46qen8L",
+    image: "/images/products/chomchom.jpeg",
+    category: "Essentials",
+  },
+  {
     title: "Mars Coat King Dematting Undercoat Grooming Rake Stripper Tool (20-Blade)",
     description:
       "Professional-grade rake for removing mats, tangles, and loose undercoat.",
