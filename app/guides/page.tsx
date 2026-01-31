@@ -71,7 +71,7 @@ export default function GuidesPage() {
         }}
       />
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <p className="text-amber-700 font-semibold mb-3">Guides</p>
+        <p className="text-white drop-shadow-md font-semibold mb-3">Guides</p>
         <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-6">
           Comprehensive Guides for Golden Retriever Owners
         </h1>
