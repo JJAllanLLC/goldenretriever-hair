@@ -97,6 +97,16 @@ const products = [
     category: "Essentials",
   },
   {
+    title: "Amazon Basics Dog Poop Bags with Dispenser and Leash Clip",
+    description:
+      "Simple, reliable, and budget-friendly — gets the job done every time and at a great price.",
+    personalComment:
+      "Our everyday essential for Golden walks – leak-proof, easy-tear, and affordable. Stock up! 🐾",
+    amazonLink: "https://amzn.to/4a2RdX1",
+    image: "/images/products/bags.png",
+    category: "Essentials",
+  },
+  {
     title: "Before and After Getting Your Puppy by Dr. Ian Dunbar",
     description:
       "The Positive Approach to Raising a Happy, Healthy, and Well-Behaved Dog.",
