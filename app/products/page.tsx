@@ -97,12 +97,13 @@ const products = [
     category: "Essentials",
   },
   {
-    title: "Book Placeholder 1",
-    description: "Expert guide to Golden Retriever training.",
+    title: "Before and After Getting Your Puppy by Dr. Ian Dunbar",
+    description:
+      "The Positive Approach to Raising a Happy, Healthy, and Well-Behaved Dog.",
     personalComment:
-      "Our Goldens learned so much from this – highly recommend for new owners! 🐾",
-    amazonLink: "#",
-    image: "/images/products/book-placeholder.jpg",
+      "Fantastic for first-time puppy parents; positive and easy to follow. 🐾",
+    amazonLink: "https://amzn.to/4qUQXAK",
+    image: "/images/products/dunbar.jpeg",
     category: "Books & Resources",
   },
   {
