@@ -107,12 +107,13 @@ const products = [
     category: "Books & Resources",
   },
   {
-    title: "Book Placeholder 2",
-    description: "Practical puppy care tips for growing Goldens.",
+    title: "The Art of Raising a Puppy (Revised Edition) by Monks of New Skete",
+    description:
+      "Timeless advice on structure, trust, and routine for raising a happy, well-behaved puppy.",
     personalComment:
-      "Great for building routines and confidence in the first year. 🐾",
-    amazonLink: "#",
-    image: "/images/products/book-placeholder.jpg",
+      "A classic by the Monks of New Skete, with timeless advice on structure, trust, and routine. Essential for new Golden puppy parents! 🐾",
+    amazonLink: "https://amzn.to/4tc3u48",
+    image: "/images/products/monks.jpeg",
     category: "Books & Resources",
   },
   {
