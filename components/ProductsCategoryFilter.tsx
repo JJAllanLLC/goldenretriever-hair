@@ -64,7 +64,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
 
   return (
     <>
-      <p className="text-lg text-gray-700 max-w-3xl mb-8">
+      <p className="text-lg text-white drop-shadow-md max-w-4xl mx-auto mb-8 text-center">
         {subheadings[activeCategory]}
       </p>
       <div className="flex flex-wrap gap-3 mb-12">

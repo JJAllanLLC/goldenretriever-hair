@@ -75,7 +75,7 @@ export default async function BlogPage() {
         <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-6">
           Latest from the Golden Retriever Blog
         </h1>
-        <p className="text-lg text-gray-700 max-w-3xl mb-10">
+        <p className="text-lg text-white drop-shadow-md max-w-3xl mb-10">
           Discover expert guidance on training, health, grooming, and puppy care.
           Explore the newest articles and trusted tips for owners.
         </p>

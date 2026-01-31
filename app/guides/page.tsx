@@ -75,7 +75,7 @@ export default function GuidesPage() {
         <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-6">
           Comprehensive Guides for Golden Retriever Owners
         </h1>
-        <p className="text-lg text-gray-700 max-w-3xl mb-12">
+        <p className="text-lg text-white drop-shadow-md max-w-3xl mb-12">
           Deep-dive resources built for responsible ownership, from finding a breeder
           to lifelong health, training, and care.
         </p>

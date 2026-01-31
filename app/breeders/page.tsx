@@ -37,7 +37,7 @@ export default function BreedersPage() {
         <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-6">
           Trusted Golden Retriever Breeder Directory
         </h1>
-        <p className="text-lg text-gray-700 max-w-3xl mb-10">
+        <p className="text-lg text-white drop-shadow-md max-w-3xl mb-10">
           A curated directory designed to help families find responsible Golden Retriever
           breeders with transparent health testing and ethical practices.
         </p>

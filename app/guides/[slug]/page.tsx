@@ -67,7 +67,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
         <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mt-6 mb-4">
           {title}
         </h1>
-        <p className="text-lg text-gray-700">
+        <p className="text-lg text-white drop-shadow-md">
           This guide is coming soon. We are preparing expert-backed content to help
           you provide the best care for your Golden Retriever.
         </p>

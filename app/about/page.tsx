@@ -35,7 +35,7 @@ export default function AboutPage() {
         <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-6">
           About GoldenRetriever.hair
         </h1>
-        <div className="max-w-3xl text-lg text-gray-700 space-y-6">
+        <div className="max-w-3xl text-lg text-white drop-shadow-md space-y-6">
           <p>
             GoldenRetriever.hair is a community-first resource for owners who want
             the best for their Golden Retrievers. Our mission is to make expert
