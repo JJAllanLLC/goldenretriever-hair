@@ -299,10 +299,10 @@ export default function ProductsPage() {
 
         <ProductsCategoryFilter products={products} />
 
-        <p className="text-sm text-gray-600 mt-8">
+        <p className="text-white drop-shadow-md text-center max-w-4xl mx-auto mt-12 italic bg-amber-900/50 rounded p-4 text-base">
           Personal recommendations from our Goldens – battle-tested! As an Amazon Associate,
           we earn from qualifying purchases – supports GoldenRetriever.hair and the upcoming
-          Golden Week app.
+          Golden Week app. 🐾
         </p>
       </section>
     </main>
