@@ -12,7 +12,7 @@ type Product = {
   image?: string;
 };
 
-const categories = ["All", "Grooming", "Toys", "Food/Treats", "Health", "Training"] as const;
+const categories = ["All", "Grooming", "Toys", "Food/Treats", "Health", "Training", "Essentials"] as const;
 
 export function ProductsCategoryFilter({ products }: { products: Product[] }) {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
@@ -36,6 +36,8 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
       "Vet-recommended health supplements for Goldens – support joints, immunity, and mobility.",
     Training:
       "High-value training treats and tools for Goldens – focus boosters for recall and new tricks.",
+    Essentials:
+      "Crates, beds, and travel essentials for Goldens – everyday basics for comfort and safety.",
   };
 
   const toggleComment = (key: string) => {
