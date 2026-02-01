@@ -7,19 +7,27 @@ import Link from "next/link";
 const images = [
   {
     src: "/images/hero-1.jpg",
-    alt: "Two happy Golden Retrievers smiling close-up",
+    alt: "Two happy golden retrievers sitting side by side indoors with tongues out and joyful expressions",
   },
   {
     src: "/images/hero-2.jpeg",
-    alt: "Golden Retriever running across a sunny field",
+    alt: "Playful golden retriever close-up with tongue out and joyful expression looking up",
   },
   {
     src: "/images/hero-3.jpeg",
-    alt: "Golden Retriever swimming and fetching in water",
+    alt: "Curious golden retriever close-up with wet nose and expressive eyes looking up outdoors",
   },
   {
     src: "/images/hero-4.jpeg",
-    alt: "Golden Retriever relaxing outdoors with family",
+    alt: "Adorable golden retriever puppy sitting indoors next to stuffed mouse toy with curious expression",
+  },
+  {
+    src: "/images/hero-5.jpeg",
+    alt: "Happy golden retriever at baseball field with tongue out enjoying sunny game day",
+  },
+  {
+    src: "/images/hero-6.jpeg",
+    alt: "Relaxed golden retriever wearing gaming headphones lying on pet bed indoors",
   },
 ];
 
