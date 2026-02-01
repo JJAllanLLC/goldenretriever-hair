@@ -35,7 +35,7 @@ export default function Home() {
                 Gentle Mouth
               </h3>
               <p className="text-gray-700">
-                Known for their "soft mouth," Goldens can carry delicate items like raw eggs without breaking them.
+                Known for their &quot;soft mouth,&quot; Goldens can carry delicate items like raw eggs without breaking them.
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md text-center transition-transform hover:-translate-y-1">
@@ -80,7 +80,7 @@ export default function Home() {
                 Loyal Velcro Dogs
               </h3>
               <p className="text-gray-700">
-                Extremely loyal—they often follow owners everywhere, earning the "velcro dog" nickname.
+                Extremely loyal—they often follow owners everywhere, earning the &quot;velcro dog&quot; nickname.
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md text-center transition-transform hover:-translate-y-1">
