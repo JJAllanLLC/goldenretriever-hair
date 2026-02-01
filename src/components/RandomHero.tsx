@@ -42,32 +42,12 @@ const images = [
     alt: "Golden retriever lying on floor chewing large bone toy with focused expression",
   },
   {
-    src: "/images/hero-10.jpeg",
-    alt: "Golden retriever standing in snow looking at camera with joyful winter expression",
-  },
-  {
     src: "/images/hero-11.jpeg",
     alt: "Playful golden retriever close-up with tongue out and joyful expression",
   },
   {
-    src: "/images/hero-12.jpeg",
-    alt: "Two golden retrievers napping together on couch with peaceful content expressions",
-  },
-  {
-    src: "/images/hero-13.jpeg",
-    alt: "Content golden retriever lying on floor with stuffed toy under paw and relaxed expression",
-  },
-  {
-    src: "/images/hero-14.jpeg",
-    alt: "Golden retriever in snow with snow on nose and happy expression during winter play",
-  },
-  {
     src: "/images/hero-15.jpeg",
     alt: "Playful golden retriever close-up with tongue out and joyful expression",
-  },
-  {
-    src: "/images/hero-16.jpeg",
-    alt: "Golden retriever wearing tuxedo bow tie with cute formal pose",
   },
   {
     src: "/images/hero-17.jpeg",
@@ -78,24 +58,12 @@ const images = [
     alt: "Relaxed golden retriever resting with tennis ball next to her and content expression",
   },
   {
-    src: "/images/hero-19.jpeg",
-    alt: "Golden retriever with toy resting on paw lying down with calm relaxed look",
-  },
-  {
     src: "/images/hero-20.jpeg",
     alt: "Golden retriever looking up lovingly at young child with affectionate expression",
   },
   {
     src: "/images/hero-21.jpeg",
     alt: "Golden retriever looking up with dirt on muzzle after outdoor adventure",
-  },
-  {
-    src: "/images/hero-22.jpg",
-    alt: "Adorable golden retriever puppy giving paw with cute playful pose indoors",
-  },
-  {
-    src: "/images/hero-23.jpeg",
-    alt: "Young boy smiling with three happy golden retrievers in outdoor group portrait",
   },
 ];
 
