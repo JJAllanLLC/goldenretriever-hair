@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,9 +23,14 @@ const images = [
   },
 ];
 
-const heroIndex = Math.floor(Math.random() * images.length);
-
 export function RandomHero() {
+  const [heroIndex, setHeroIndex] = useState(0);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setHeroIndex(Math.floor(Math.random() * images.length));
+  }, []);
+
   const heroImage = images[heroIndex];
 
   return (
