@@ -66,7 +66,7 @@ export function HeroCarousel() {
                 priority={index === 0}
                 loading={index === 0 ? "eager" : "lazy"}
                 sizes="100vw"
-                className="object-contain"
+                className={`object-cover${index === 0 ? " object-top" : ""}`}
               />
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute inset-0 flex items-center justify-center px-6">
