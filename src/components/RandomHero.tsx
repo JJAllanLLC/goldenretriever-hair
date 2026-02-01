@@ -73,6 +73,30 @@ const images = [
     src: "/images/hero-17.jpeg",
     alt: "Two golden retrievers looking out window with curious expressions",
   },
+  {
+    src: "/images/hero-18.jpeg",
+    alt: "Relaxed golden retriever resting with tennis ball next to her and content expression",
+  },
+  {
+    src: "/images/hero-19.jpeg",
+    alt: "Golden retriever with toy resting on paw lying down with calm relaxed look",
+  },
+  {
+    src: "/images/hero-20.jpeg",
+    alt: "Golden retriever looking up lovingly at young child with affectionate expression",
+  },
+  {
+    src: "/images/hero-21.jpeg",
+    alt: "Golden retriever looking up with dirt on muzzle after outdoor adventure",
+  },
+  {
+    src: "/images/hero-22.jpg",
+    alt: "Adorable golden retriever puppy giving paw with cute playful pose indoors",
+  },
+  {
+    src: "/images/hero-23.jpeg",
+    alt: "Young boy smiling with three happy golden retrievers in outdoor group portrait",
+  },
 ];
 
 export function RandomHero() {
