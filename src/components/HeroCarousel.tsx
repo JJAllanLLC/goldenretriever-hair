@@ -46,7 +46,7 @@ export function HeroCarousel() {
               priority
               loading="eager"
               sizes="100vw"
-              className="object-cover object-[35%_90%]"
+              className="object-cover object-left-bottom scale-90"
             />
             <div className="absolute inset-0 bg-black/30" />
             <div className="absolute inset-0 flex items-center justify-center px-6">
