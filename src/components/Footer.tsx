@@ -10,7 +10,7 @@ export function Footer() {
             <input
               type="email"
               placeholder="Your email address"
-              className="flex-1 px-6 py-4 rounded-full text-gray-900"
+              className="flex-1 px-6 py-4 rounded-full text-gray-900 placeholder:text-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-orange-300"
             />
             <button
               type="submit"
