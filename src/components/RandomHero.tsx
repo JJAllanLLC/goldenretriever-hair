@@ -5,19 +5,19 @@ import Link from "next/link";
 
 const images = [
   {
-    src: "/images/hero/hero-1.jpg",
+    src: "/images/hero-1.png",
     alt: "Two happy Golden Retrievers smiling close-up",
   },
   {
-    src: "/images/hero/hero-2.jpg",
+    src: "/images/hero-2.jpeg",
     alt: "Golden Retriever running across a sunny field",
   },
   {
-    src: "/images/hero/hero-3.jpg",
+    src: "/images/hero-3.jpeg",
     alt: "Golden Retriever swimming and fetching in water",
   },
   {
-    src: "/images/hero/hero-4.jpg",
+    src: "/images/hero-4.jpeg",
     alt: "Golden Retriever relaxing outdoors with family",
   },
 ];
