@@ -53,6 +53,26 @@ const images = [
     src: "/images/hero-12.jpeg",
     alt: "Two golden retrievers napping together on couch with peaceful content expressions",
   },
+  {
+    src: "/images/hero-13.jpeg",
+    alt: "Content golden retriever lying on floor with stuffed toy under paw and relaxed expression",
+  },
+  {
+    src: "/images/hero-14.jpeg",
+    alt: "Golden retriever in snow with snow on nose and happy expression during winter play",
+  },
+  {
+    src: "/images/hero-15.jpeg",
+    alt: "Playful golden retriever close-up with tongue out and joyful expression",
+  },
+  {
+    src: "/images/hero-16.jpeg",
+    alt: "Golden retriever wearing tuxedo bow tie with cute formal pose",
+  },
+  {
+    src: "/images/hero-17.jpeg",
+    alt: "Two golden retrievers looking out window with curious expressions",
+  },
 ];
 
 export function RandomHero() {
