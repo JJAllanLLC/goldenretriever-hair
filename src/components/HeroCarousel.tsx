@@ -11,19 +11,19 @@ import "swiper/css/pagination";
 
 const slides = [
   {
-    src: "/images/hero/hero-1.jpg",
+    src: "/images/hero-1.png",
     alt: "Golden Retriever close-up with joyful expression",
   },
   {
-    src: "/images/hero/hero-2.jpg",
+    src: "/images/hero-2.jpeg",
     alt: "Golden Retriever running in a sunny field",
   },
   {
-    src: "/images/hero/hero-3.jpg",
+    src: "/images/hero-3.jpeg",
     alt: "Golden Retriever swimming and fetching",
   },
   {
-    src: "/images/hero/hero-4.jpg",
+    src: "/images/hero-4.jpeg",
     alt: "Golden Retriever relaxing with family outdoors",
   },
 ];
