@@ -6,7 +6,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 
 async function getPost(slug: string) {
   try {
-    const filePath = path.join(process.cwd(), "app", "blog", "posts", `${slug}.mdx`);
+    const filePath = path.join(process.cwd(), "src", "app", "blog", "posts", `${slug}.mdx`);
     const source = await fs.readFile(filePath, "utf8");
     const { data, content } = matter(source);
     return { content, metadata: data };
@@ -16,7 +16,7 @@ async function getPost(slug: string) {
 }
 
 export async function generateStaticParams() {
-  const postsDirectory = path.join(process.cwd(), "app", "blog", "posts");
+  const postsDirectory = path.join(process.cwd(), "src", "app", "blog", "posts");
   const filenames = await fs.readdir(postsDirectory);
   return filenames.map((file) => ({
     slug: file.replace(/\.mdx$/, ""),

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 type Product = {
   title: string;
@@ -99,11 +100,13 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
           return (
           <article key={product.title} className="bg-white rounded-xl shadow-sm border border-amber-100 p-6">
             {product.image ? (
-              <div className="h-40 bg-amber-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                <img
+              <div className="relative h-40 bg-amber-100 rounded-lg mb-4 overflow-hidden">
+                <Image
                   src={product.image}
                   alt={product.title}
-                  className="h-full w-full object-contain"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-contain"
                 />
               </div>
             ) : (

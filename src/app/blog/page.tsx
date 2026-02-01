@@ -18,7 +18,7 @@ type PostMeta = {
 };
 
 async function getPosts(): Promise<PostMeta[]> {
-  const postsDir = path.join(process.cwd(), "app", "blog", "posts");
+  const postsDir = path.join(process.cwd(), "src", "app", "blog", "posts");
   const files = await fs.readdir(postsDir);
   const mdxFiles = files.filter((file) => file.endsWith(".mdx"));
 
