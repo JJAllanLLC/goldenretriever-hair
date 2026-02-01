@@ -24,12 +24,16 @@ const images = [
 ];
 
 export function RandomHero() {
-  const [heroIndex, setHeroIndex] = useState(0);
+  const [heroIndex, setHeroIndex] = useState<number | null>(null);
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setHeroIndex(Math.floor(Math.random() * images.length));
   }, []);
+
+  if (heroIndex === null) {
+    return <section className="relative h-screen md:h-[80vh] w-full bg-black/30" />;
+  }
 
   const heroImage = images[heroIndex];
 
