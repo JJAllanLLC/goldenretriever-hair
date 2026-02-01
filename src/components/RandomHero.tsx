@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,7 +24,13 @@ const images = [
 ];
 
 export function RandomHero() {
-  const heroImage = images[Math.floor(Math.random() * images.length)];
+  const [heroIndex, setHeroIndex] = useState(0);
+
+  useEffect(() => {
+    setHeroIndex(Math.floor(Math.random() * images.length));
+  }, []);
+
+  const heroImage = images[heroIndex];
 
   return (
     <section className="relative h-screen md:h-[80vh] w-full">
