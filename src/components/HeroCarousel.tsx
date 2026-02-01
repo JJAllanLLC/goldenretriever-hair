@@ -58,7 +58,7 @@ export function HeroCarousel() {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={slide.src}>
-            <div className="relative h-full w-full">
+            <div className="relative h-full w-full bg-gray-900">
               <Image
                 src={slide.src}
                 alt={slide.alt}
@@ -66,7 +66,7 @@ export function HeroCarousel() {
                 priority={index === 0}
                 loading={index === 0 ? "eager" : "lazy"}
                 sizes="100vw"
-                className="object-cover"
+                className="object-contain"
               />
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute inset-0 flex items-center justify-center px-6">
