@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const images = [
   {
-    src: "/images/hero-1.png",
+    src: "/images/hero-1.jpg",
     alt: "Two happy Golden Retrievers smiling close-up",
   },
   {
