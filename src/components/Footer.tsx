@@ -21,10 +21,16 @@ export function Footer() {
           </form>
         </div>
         <p className="text-sm">
-          © {new Date().getFullYear()} GoldenRetriever.hair – Built with ❤️ by{" "}
-          <a href="https://jjallanllc.com" className="underline hover:text-amber-300">
+          © 2026 GoldenRetriever.hair — Part of the{" "}
+          <a
+            href="https://jjallanllc.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-orange-300"
+          >
             JJ Allan LLC
-          </a>
+          </a>{" "}
+          portfolio
         </p>
       </div>
     </footer>
