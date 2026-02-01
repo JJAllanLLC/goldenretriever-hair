@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,13 +24,14 @@ const images = [
 ];
 
 export function RandomHero() {
-  const [heroIndex, setHeroIndex] = useState(0);
-
-  useEffect(() => {
-    setHeroIndex(Math.floor(Math.random() * images.length));
+  const heroImage = useMemo(() => {
+    const randomValues =
+      typeof window !== "undefined" && window.crypto?.getRandomValues
+        ? window.crypto.getRandomValues(new Uint32Array(1))[0]
+        : Date.now();
+    const index = Number(randomValues % images.length);
+    return images[index];
   }, []);
-
-  const heroImage = images[heroIndex];
 
   return (
     <section className="relative h-screen md:h-[80vh] w-full">
