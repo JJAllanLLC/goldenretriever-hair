@@ -45,7 +45,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     <article className="max-w-4xl mx-auto px-4 py-12 my-12 bg-white rounded-xl shadow-2xl">
       <h1 className="text-4xl font-playfair font-bold text-amber-900 mb-4 text-center">{metadata.title}</h1>
       <p className="text-center text-gray-600 mb-8">{metadata.date}</p>
-      <div className="prose prose-lg max-w-none prose-headings:text-amber-900 prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900 prose-li:my-2">
+      <div className="prose prose-lg max-w-none text-gray-900 prose-headings:text-amber-900 prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900 prose-li:my-2">
         <MDXRemote source={content} />
       </div>
       {/* BreadcrumbList schema */}
