@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { useMDXComponents } from "@/components/mdx-components";
+import { getMDXComponents } from "@/components/mdx-components";
 
 async function getPost(slug: string) {
   try {
@@ -41,7 +41,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   if (!post) notFound();
 
   const { content, metadata } = post;
-  const components = useMDXComponents({});
+  const components = getMDXComponents({});
 
   return (
     <article className="bg-white rounded-xl shadow-2xl">
