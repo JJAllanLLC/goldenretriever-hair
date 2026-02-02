@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Image from "next/image";
 import { getMDXComponents } from "@/components/mdx-components";
 
 async function getPost(slug: string) {
@@ -46,7 +47,18 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   return (
     <article className="bg-white rounded-xl shadow-2xl">
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-5xl font-bold text-amber-900 mb-8 text-center">{metadata.title}</h1>
+      <h1 className="text-5xl font-bold text-amber-900 mb-8 text-center">{metadata.title}</h1>
+      {metadata.featuredImage && (
+        <div className="my-12 text-center">
+          <Image
+            src={metadata.featuredImage}
+            alt={metadata.featuredAlt || metadata.title}
+            width={800}
+            height={600}
+            className="rounded-lg shadow-lg mx-auto"
+          />
+        </div>
+      )}
         <p className="text-center text-gray-600 mb-12">{metadata.date}</p>
         <div className="bg-amber-50 border-l-4 border-amber-700 p-8 mb-12 rounded-r-lg">
           <p className="text-2xl font-bold text-amber-900 mb-4">Quick Tip 🐾</p>
