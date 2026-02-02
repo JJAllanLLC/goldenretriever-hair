@@ -52,10 +52,10 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       <h1 className="text-4xl md:text-5xl font-bold text-amber-900 mb-6 text-center">{metadata.title}</h1>
       <p className="text-center text-gray-600 mb-10">{metadata.date}</p>
       <div className="bg-amber-50 border-l-4 border-amber-700 p-6 mb-10 rounded-r-lg">
-        <p className="text-lg font-semibold text-amber-900 mb-2">Quick Tip 🐾</p>
-        <p className="text-lg text-gray-800">{firstParagraph}</p>
+        <p className="text-xl font-semibold text-amber-900 mb-2">Quick Tip 🐾</p>
+        <p className="text-xl text-gray-800">{firstParagraph}</p>
       </div>
-      <div className="prose prose-xl max-w-none text-gray-800 prose-headings:text-amber-900 prose-headings:font-bold prose-h2:text-3xl prose-h3:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:mt-8 prose-h3:mb-3 prose-p:my-6 prose-p:leading-relaxed prose-ul:list-none prose-ol:list-decimal prose-li:my-4 prose-li:flex prose-li:items-start prose-li:gap-3 prose-li:before:content-['🐾'] prose-li:before:text-amber-700 prose-strong:text-amber-900 prose-a:text-amber-700 prose-a:underline prose-a:decoration-amber-300">
+      <div className="prose prose-2xl max-w-none text-gray-900 prose-headings:text-amber-900 prose-headings:font-bold prose-headings:text-4xl prose-p:my-8 prose-p:first:text-2xl prose-p:first:font-bold prose-p:first:text-amber-900 prose-p:first:mb-12 prose-li:my-6 prose-li:flex prose-li:items-start prose-li:gap-4 prose-li:before:content-['🐾'] prose-li:before:mr-2 prose-li:before:text-amber-700 prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900">
         <MDXRemote source={content} />
       </div>
       {/* BreadcrumbList schema */}
