@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
 type Product = {
   title: string;
@@ -18,6 +19,21 @@ const categories = ["All", "Grooming", "Toys", "Food/Treats", "Health", "Trainin
 export function ProductsCategoryFilter({ products }: { products: Product[] }) {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
   const [expandedComments, setExpandedComments] = useState<Record<string, boolean>>({});
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const categoryParam = searchParams.get("category");
+    if (!categoryParam) return;
+
+    const normalized = categoryParam.trim().toLowerCase();
+    const matchedCategory = categories.find(
+      (category) => category.toLowerCase() === normalized
+    );
+
+    if (matchedCategory) {
+      setActiveCategory(matchedCategory);
+    }
+  }, [searchParams]);
 
   const visibleProducts =
     activeCategory === "All"
