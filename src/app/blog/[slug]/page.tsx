@@ -43,10 +43,12 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-playfair font-bold text-amber-900 mb-4">{metadata.title}</h1>
-      <p className="text-gray-600 mb-8">{metadata.date}</p>
-      <div className="prose prose-lg max-w-none">
-        <MDXRemote source={content} />
+      <div className="bg-white rounded-lg shadow-lg px-6 py-10 md:px-10">
+        <h1 className="text-4xl font-playfair font-bold text-amber-900 mb-6">{metadata.title}</h1>
+        <p className="text-gray-600 mb-8">{metadata.date}</p>
+        <div className="prose prose-lg max-w-none text-gray-800 prose-a:text-amber-800 prose-a:underline hover:prose-a:text-amber-700">
+          <MDXRemote source={content} />
+        </div>
       </div>
       {/* BreadcrumbList schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
