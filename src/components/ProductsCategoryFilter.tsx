@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 type Product = {
   title: string;
@@ -17,22 +17,20 @@ type Product = {
 const categories = ["All", "Grooming", "Toys", "Food/Treats", "Health", "Training", "Essentials", "Books & Resources"] as const;
 
 export function ProductsCategoryFilter({ products }: { products: Product[] }) {
-  const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
   const [expandedComments, setExpandedComments] = useState<Record<string, boolean>>({});
   const searchParams = useSearchParams();
+  const router = useRouter();
 
-  useEffect(() => {
+  const activeCategory = useMemo<(typeof categories)[number]>(() => {
     const categoryParam = searchParams.get("category");
-    if (!categoryParam) return;
+    if (!categoryParam) return "All";
 
     const normalized = categoryParam.trim().toLowerCase();
     const matchedCategory = categories.find(
       (category) => category.toLowerCase() === normalized
     );
 
-    if (matchedCategory) {
-      setActiveCategory(matchedCategory);
-    }
+    return matchedCategory ?? "All";
   }, [searchParams]);
 
   const visibleProducts =
@@ -91,7 +89,16 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
             <button
               key={category}
               type="button"
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {
+                const params = new URLSearchParams(searchParams.toString());
+                if (category === "All") {
+                  params.delete("category");
+                } else {
+                  params.set("category", category);
+                }
+                const query = params.toString();
+                router.push(query ? `?${query}` : "?");
+              }}
               className={`px-4 py-2 rounded-full border transition ${
                 isActive
                   ? "bg-amber-700 text-white border-amber-700"
