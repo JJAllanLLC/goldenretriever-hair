@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { ProductsCategoryFilter } from "@/components/ProductsCategoryFilter";
 
 export const metadata = {
@@ -297,7 +298,9 @@ export default function ProductsPage() {
           Recommended Products for Your Golden Retriever
         </h1>
 
-        <ProductsCategoryFilter products={products} />
+        <Suspense fallback={<div className="text-center text-gray-600">Loading products…</div>}>
+          <ProductsCategoryFilter products={products} />
+        </Suspense>
 
         <p className="text-white drop-shadow-md text-center max-w-4xl mx-auto mt-12 italic bg-amber-900/50 rounded p-4 text-base">
           Personal recommendations from our Goldens – battle-tested! As an Amazon Associate,
