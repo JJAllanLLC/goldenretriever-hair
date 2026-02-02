@@ -40,34 +40,34 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   if (!post) notFound();
 
   const { content, metadata } = post;
-  const firstParagraph =
-    content
-      .split(/\n\s*\n/)
-      .map((block) => block.trim())
-      .find((block) => block && !block.startsWith("#") && !block.startsWith("![")) ??
-    "Shedding season never ends — but a few simple habits make it way more manageable.";
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12 bg-white rounded-xl shadow-2xl">
-      <h1 className="text-4xl md:text-5xl font-bold text-amber-900 mb-6 text-center">{metadata.title}</h1>
-      <p className="text-center text-gray-600 mb-10">{metadata.date}</p>
-      <div className="bg-amber-50 border-l-4 border-amber-700 p-6 mb-10 rounded-r-lg">
-        <p className="text-xl font-semibold text-amber-900 mb-2">Quick Tip 🐾</p>
-        <p className="text-xl text-gray-800">{firstParagraph}</p>
+    <article className="bg-white rounded-xl shadow-2xl">
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <h1 className="text-5xl font-bold text-amber-900 mb-8 text-center">{metadata.title}</h1>
+        <p className="text-center text-gray-600 mb-12">{metadata.date}</p>
+        <div className="bg-amber-50 border-l-4 border-amber-700 p-8 mb-12 rounded-r-lg">
+          <p className="text-2xl font-bold text-amber-900 mb-4">Quick Tip 🐾</p>
+          <p className="text-xl text-gray-800">
+            Let&apos;s be honest – if you own a Golden Retriever, you know the struggle. Fur on the couch,
+            fur in your coffee, fur on your black pants the second you walk out the door. It&apos;s like
+            living with a walking tumbleweed factory!
+          </p>
+        </div>
+        <div className="prose prose-2xl max-w-none text-gray-900 prose-headings:text-amber-900 prose-headings:font-bold prose-headings:my-8 prose-p:my-6 prose-li:my-6 prose-li:flex prose-li:items-start prose-li:gap-4 prose-li:before:content-['🐾'] prose-li:before:text-amber-700 prose-li:before:mr-3 prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900 prose-emojis:text-2xl">
+          <MDXRemote source={content} />
+        </div>
+        {/* BreadcrumbList schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://goldenretriever.hair" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://goldenretriever.hair/blog" },
+            { "@type": "ListItem", "position": 3, "name": metadata.title },
+          ]
+        }) }} />
       </div>
-      <div className="prose prose-2xl max-w-none text-gray-900 prose-headings:text-amber-900 prose-headings:font-bold prose-headings:text-4xl prose-p:my-8 prose-p:first:text-2xl prose-p:first:font-bold prose-p:first:text-amber-900 prose-p:first:mb-12 prose-li:my-6 prose-li:flex prose-li:items-start prose-li:gap-4 prose-li:before:content-['🐾'] prose-li:before:mr-2 prose-li:before:text-amber-700 prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900">
-        <MDXRemote source={content} />
-      </div>
-      {/* BreadcrumbList schema */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://goldenretriever.hair" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://goldenretriever.hair/blog" },
-          { "@type": "ListItem", "position": 3, "name": metadata.title },
-        ]
-      }) }} />
     </article>
   );
 }
