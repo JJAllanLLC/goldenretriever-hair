@@ -49,12 +49,13 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   return (
     <article className="max-w-4xl mx-auto px-4 py-12 bg-white rounded-xl shadow-2xl">
-      <h1 className="text-4xl font-playfair font-bold text-amber-900 mb-6 text-center">{metadata.title}</h1>
+      <h1 className="text-5xl font-bold text-amber-900 mb-8 text-center">{metadata.title}</h1>
       <p className="text-center text-gray-600 mb-12">{metadata.date}</p>
-      <div className="bg-amber-50 border-l-4 border-amber-700 p-6 mb-12 rounded-r-lg">
-        <p className="text-xl font-bold text-amber-900">Quick Tip: {firstParagraph} 🐾</p>
+      <div className="bg-amber-50 border-l-4 border-amber-700 p-8 mb-12 rounded-r-lg">
+        <p className="text-2xl font-bold text-amber-900 mb-4">Quick Tip 🐾</p>
+        <p className="text-xl text-gray-800">{firstParagraph}</p>
       </div>
-      <div className="prose prose-lg max-w-none text-gray-800 prose-headings:text-amber-900 prose-strong:text-amber-900 prose-a:text-amber-700 prose-a:underline prose-li:my-4 prose-li:flex prose-li:items-start prose-li:gap-3 prose-li:before:content-['🐾'] prose-li:before:text-amber-700">
+      <div className="prose prose-2xl max-w-none text-gray-800 prose-headings:text-amber-900 prose-headings:font-bold prose-strong:text-amber-900 prose-a:text-amber-700 prose-a:underline prose-li:my-4 prose-li:flex prose-li:items-start prose-li:gap-3 prose-li:before:content-['🐾'] prose-li:before:text-amber-700">
         <MDXRemote source={content} />
       </div>
       {/* BreadcrumbList schema */}
