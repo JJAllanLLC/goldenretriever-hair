@@ -42,11 +42,14 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const { content, metadata } = post;
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12 my-12 bg-white rounded-xl shadow-2xl">
-      <h1 className="text-4xl font-playfair font-bold text-amber-900 mb-4 text-center">{metadata.title}</h1>
+    <article className="max-w-4xl mx-auto px-4 py-12 bg-white rounded-xl shadow-2xl">
+      <h1 className="text-4xl font-playfair font-bold text-amber-900 mb-6 text-center">{metadata.title}</h1>
       <p className="text-center text-gray-600 mb-8">{metadata.date}</p>
-      <div className="prose prose-lg max-w-none text-gray-900 prose-headings:text-amber-900 prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900 prose-li:my-2">
+      <div className="prose prose-lg max-w-none text-gray-800 prose-headings:text-amber-900 prose-strong:text-amber-900 prose-a:text-amber-700 prose-a:underline prose-p:first:italic prose-p:first:text-gray-700 prose-ul:list-none prose-li:flex prose-li:items-center prose-li:gap-2 prose-li:my-2 prose-li:before:content-['🐾'] prose-li:before:text-amber-700">
         <MDXRemote source={content} />
+      </div>
+      <div className="bg-amber-50 border-l-4 border-amber-700 p-6 my-8">
+        <p className="text-amber-900 font-bold">Quick Tip: Shedding season never ends – but these tricks help! 🐾</p>
       </div>
       {/* BreadcrumbList schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
