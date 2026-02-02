@@ -30,7 +30,7 @@ export function Footer() {
           >
             JJ Allan LLC
           </a>{" "}
-          portfolio
+          portfolio collection
         </p>
       </div>
     </footer>
