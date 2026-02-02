@@ -60,7 +60,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
             sanity) intact!
           </p>
         </div>
-      <div className="prose prose-2xl max-w-none text-gray-900 prose-headings:text-amber-900 prose-headings:font-bold prose-headings:text-4xl prose-headings:my-12 prose-p:my-8 prose-p:text-lg prose-p:first:text-3xl prose-p:first:font-bold prose-p:first:text-amber-900 prose-p:first:mb-12 prose-p:first:text-center prose-li:my-6 prose-li:text-lg prose-li:flex prose-li:items-start prose-li:gap-4 prose-li:before:content-['🐾'] prose-li:before:text-amber-700 prose-li:before:mr-4 prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900 prose-emojis:text-2xl">
+      <div className="prose prose-2xl max-w-none text-gray-900 prose-headings:text-amber-900 prose-headings:font-bold prose-headings:text-4xl prose-headings:my-12 prose-p:my-8 prose-p:text-lg prose-p:first:text-3xl prose-p:first:font-bold prose-p:first:text-amber-900 prose-p:first:mb-12 prose-p:first:text-center prose-li:my-6 prose-li:text-lg prose-li:flex prose-li:items-start prose-li:gap-4 prose-li:before:content-['🐾'] prose-li:before:text-amber-700 prose-li:before:mr-4 prose-li:before:text-2xl prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900 prose-emojis:text-2xl">
         <MDXRemote source={content} components={components} />
       </div>
         {/* BreadcrumbList schema */}
