@@ -1,34 +1,50 @@
+import fs from "fs/promises";
+import path from "path";
+import matter from "gray-matter";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { getMDXComponents } from "@/components/mdx-components";
 
-const guideTitles: Record<string, string> = {
-  "choosing-breeder": "Choosing a Responsible Breeder",
-  "health-issues": "Common Health Issues",
-  "training-socialization": "Training & Socialization",
-  "nutrition-feeding": "Nutrition & Feeding",
-  "grooming-coat-care": "Grooming & Coat Care",
-  "golden-retriever-grooming-guide": "Ultimate Guide to Grooming Your Golden Retriever",
-};
+async function getGuide(slug: string) {
+  try {
+    const filePath = path.join(process.cwd(), "src", "app", "guides", "posts", `${slug}.mdx`);
+    const source = await fs.readFile(filePath, "utf8");
+    const { data, content } = matter(source);
+    return { content, metadata: data };
+  } catch {
+    notFound();
+  }
+}
+
+export async function generateStaticParams() {
+  const guidesDirectory = path.join(process.cwd(), "src", "app", "guides", "posts");
+  const filenames = await fs.readdir(guidesDirectory);
+  return filenames.map((file) => ({
+    slug: file.replace(/\.mdx$/, ""),
+  }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const title = guideTitles[slug];
-  if (!title) {
-    return { title: "Guide Not Found" };
-  }
+  const guide = await getGuide(slug);
+  if (!guide) return { title: "Guide Not Found" };
+
   return {
-    title: `${title} | Golden Retriever Guides`,
+    title: guide.metadata.title ?? "Golden Retriever Guide",
     description:
+      guide.metadata.description ??
       "In-depth Golden Retriever guide with practical tips for responsible ownership, health, training, and care.",
   };
 }
 
 export default async function GuideDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const title = guideTitles[slug];
-  if (!title) {
-    notFound();
-  }
+  const guide = await getGuide(slug);
+  if (!guide) notFound();
+
+  const { content, metadata } = guide;
+  const components = getMDXComponents({});
 
   return (
     <main className="bg-amber-50/40 text-gray-900">
@@ -65,13 +81,15 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
         <Link href="/guides" className="text-amber-700 font-semibold hover:underline">
           ← Back to Guides
         </Link>
-        <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mt-6 mb-4">
-          {title}
-        </h1>
-        <p className="text-lg text-white drop-shadow-md">
-          This guide is coming soon. We are preparing expert-backed content to help
-          you provide the best care for your Golden Retriever.
-        </p>
+        <article className="mt-8 bg-white rounded-xl shadow-2xl px-6 py-10 md:px-10">
+          <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-4">
+            {metadata.title}
+          </h1>
+          {metadata.date && <p className="text-gray-600 mb-8">{metadata.date}</p>}
+          <div className="prose prose-lg max-w-none text-gray-900">
+            <MDXRemote source={content} components={components} />
+          </div>
+        </article>
       </section>
     </main>
   );
