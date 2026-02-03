@@ -7,6 +7,7 @@ const guideTitles: Record<string, string> = {
   "training-socialization": "Training & Socialization",
   "nutrition-feeding": "Nutrition & Feeding",
   "grooming-coat-care": "Grooming & Coat Care",
+  "golden-retriever-grooming-guide": "Ultimate Guide to Grooming Your Golden Retriever",
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {

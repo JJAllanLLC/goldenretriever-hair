@@ -42,6 +42,13 @@ const guides = [
     link: "/blog/grooming-shedding",
     category: "Grooming",
   },
+  {
+    title: "Ultimate Guide to Grooming Your Golden Retriever",
+    description:
+      "Professional grooming guide with tools, routines, coat care, and mistakes to avoid.",
+    link: "/guides/golden-retriever-grooming-guide",
+    category: "Grooming",
+  },
 ];
 
 export default function GuidesPage() {
