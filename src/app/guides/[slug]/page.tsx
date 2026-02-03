@@ -70,7 +70,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
               {
                 "@type": "ListItem",
                 position: 3,
-                name: title,
+                name: metadata.title ?? "Guide",
                 item: `https://goldenretriever.hair/guides/${slug}`,
               },
             ],
