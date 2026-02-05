@@ -15,6 +15,8 @@ type PostMeta = {
   date: string;
   slug: string;
   category: string;
+  featuredImage?: string;
+  featuredAlt?: string;
 };
 
 async function getPosts(): Promise<PostMeta[]> {
@@ -35,6 +37,8 @@ async function getPosts(): Promise<PostMeta[]> {
         date: data.date ?? "",
         category: data.category ?? "Uncategorized",
         slug,
+        featuredImage: data.featuredImage,
+        featuredAlt: data.featuredAlt,
       };
     })
   );

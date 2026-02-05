@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 type PostMeta = {
   title: string;
@@ -9,9 +10,11 @@ type PostMeta = {
   date: string;
   slug: string;
   category: string;
+  featuredImage?: string;
+  featuredAlt?: string;
 };
 
-const categories = ["All", "Health", "Grooming", "Training", "Breeder"] as const;
+const categories = ["All", "Fun", "Health", "Grooming", "Training", "Breeder"] as const;
 
 export function BlogCategoryFilter({ posts }: { posts: PostMeta[] }) {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
@@ -48,17 +51,30 @@ export function BlogCategoryFilter({ posts }: { posts: PostMeta[] }) {
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {visiblePosts.map((post) => (
-          <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-amber-100 p-6">
-            <p className="text-sm text-amber-700 mb-2">{post.date}</p>
-            <h3 className="text-xl font-semibold text-amber-900 mb-2">
-              {post.title}
-            </h3>
-            <p className="text-gray-700 mb-4">
-              {post.description}
-            </p>
-            <Link href={`/blog/${post.slug}`} className="text-amber-700 font-semibold hover:underline">
-              Read post
-            </Link>
+          <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-amber-100 overflow-hidden">
+            {post.featuredImage && (
+              <div className="relative h-48 bg-amber-100">
+                <Image
+                  src={post.featuredImage}
+                  alt={post.featuredAlt ?? post.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
+            )}
+            <div className="p-6">
+              <p className="text-sm text-amber-700 mb-2">{post.date}</p>
+              <h3 className="text-xl font-semibold text-amber-900 mb-2">
+                {post.title}
+              </h3>
+              <p className="text-gray-700 mb-4 line-clamp-3">
+                {post.description}
+              </p>
+              <Link href={`/blog/${post.slug}`} className="text-amber-700 font-semibold hover:underline">
+                Read post
+              </Link>
+            </div>
           </article>
         ))}
       </div>
