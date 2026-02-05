@@ -30,11 +30,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const guide = await getGuide(slug);
   if (!guide) return { title: "Guide Not Found" };
 
+  const title = guide.metadata.title ?? "Golden Retriever Guide";
+  const description =
+    guide.metadata.description ??
+    "In-depth Golden Retriever guide with practical tips for responsible ownership, health, training, and care.";
+  const featuredImage = guide.metadata.featuredImage;
+
   return {
-    title: guide.metadata.title ?? "Golden Retriever Guide",
-    description:
-      guide.metadata.description ??
-      "In-depth Golden Retriever guide with practical tips for responsible ownership, health, training, and care.",
+    title,
+    description,
+    openGraph: featuredImage
+      ? {
+          title,
+          description,
+          images: [
+            {
+              url: featuredImage.startsWith("/") ? `https://goldenretriever.hair${featuredImage}` : featuredImage,
+              width: 800,
+              height: 600,
+              alt: guide.metadata.featuredAlt ?? title,
+            },
+          ],
+        }
+      : undefined,
   };
 }
 
@@ -88,6 +106,15 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
           {metadata.date && <p className="text-gray-600 mb-8">{metadata.date}</p>}
           <div className="prose prose-lg max-w-none text-gray-900">
             <MDXRemote source={content} components={components} />
+          </div>
+          <div className="mt-12 pt-8 border-t border-amber-100 text-center">
+            <p className="text-gray-600 mb-2">
+              Track daily moments with your Golden —{" "}
+              <Link href="/golden-week" className="text-amber-700 font-semibold hover:underline">
+                Golden Week app
+              </Link>{" "}
+              coming soon. Join the waitlist!
+            </p>
           </div>
         </article>
       </section>

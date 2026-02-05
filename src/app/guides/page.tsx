@@ -1,57 +1,54 @@
+import fs from "fs/promises";
+import path from "path";
+import matter from "gray-matter";
 import { GuidesCategoryFilter } from "@/components/GuidesCategoryFilter";
 
 export const metadata = {
   title: "Golden Retriever Guides | Expert Care Advice",
   description:
-    "In-depth Golden Retriever guides on health, training, breeders, products, and lifelong care.",
+    "In-depth Golden Retriever guides on health, training, breeders, adoption, grooming, and lifelong care.",
 };
 
-const guides = [
-  {
-    title: "Choosing a Responsible Breeder",
-    description:
-      "How to evaluate breeders, health testing, and red flags to avoid.",
-    link: "/blog/choosing-a-breeder",
-    category: "Breeder",
-  },
-  {
-    title: "Common Health Issues",
-    description:
-      "Early signs, prevention tips, and vet guidance for Golden Retrievers.",
-    link: "/blog/health-issues",
-    category: "Health",
-  },
-  {
-    title: "Training & Socialization",
-    description:
-      "Puppy to adult training routines with positive reinforcement.",
-    link: "/blog/puppy-training",
-    category: "Training",
-  },
-  {
-    title: "Nutrition & Feeding",
-    description:
-      "Food quality, portions, and ingredient tips for long-term health.",
-    link: "/guides/nutrition",
-    category: "Nutrition",
-  },
-  {
-    title: "Grooming & Coat Care",
-    description:
-      "Shedding management, brushing, and bathing best practices.",
-    link: "/blog/grooming-shedding",
-    category: "Grooming",
-  },
-  {
-    title: "Ultimate Guide to Grooming Your Golden Retriever",
-    description:
-      "Professional grooming guide with tools, routines, coat care, and mistakes to avoid.",
-    link: "/guides/golden-retriever-grooming-guide",
-    category: "Grooming",
-  },
-];
+type GuideMeta = {
+  title: string;
+  description: string;
+  date: string;
+  slug: string;
+  category: string;
+  featuredImage?: string;
+  featuredAlt?: string;
+};
 
-export default function GuidesPage() {
+async function getGuides(): Promise<GuideMeta[]> {
+  const guidesDir = path.join(process.cwd(), "src", "app", "guides", "posts");
+  const files = await fs.readdir(guidesDir);
+  const mdxFiles = files.filter((file) => file.endsWith(".mdx"));
+
+  const guides = await Promise.all(
+    mdxFiles.map(async (file) => {
+      const slug = file.replace(/\.mdx$/, "");
+      const filePath = path.join(guidesDir, file);
+      const source = await fs.readFile(filePath, "utf8");
+      const { data } = matter(source);
+
+      return {
+        title: data.title ?? "Untitled Guide",
+        description: data.description ?? "",
+        date: data.date ?? "",
+        slug,
+        category: data.category ?? "General",
+        featuredImage: data.featuredImage,
+        featuredAlt: data.featuredAlt,
+      };
+    })
+  );
+
+  return guides.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+export default async function GuidesPage() {
+  const guides = await getGuides();
+
   return (
     <main className="bg-amber-50/40 text-gray-900">
       <script
@@ -83,8 +80,8 @@ export default function GuidesPage() {
           Comprehensive Guides for Golden Retriever Owners
         </h1>
         <p className="text-lg text-white drop-shadow-md max-w-3xl mb-12">
-          Deep-dive resources built for responsible ownership, from finding a breeder
-          to lifelong health, training, and care.
+          Deep-dive resources built for responsible ownership, from adoption and puppy care
+          to training, grooming, and lifelong health.
         </p>
 
         <GuidesCategoryFilter guides={guides} />
