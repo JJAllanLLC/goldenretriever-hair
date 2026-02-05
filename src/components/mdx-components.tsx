@@ -1,9 +1,11 @@
 import type { MDXComponents } from "mdx/types";
 
-type MDXComponentsOptions = MDXComponents & { metadata?: { date?: string; author?: string } };
+type Metadata = { date?: string; author?: string };
 
-export function getMDXComponents(components: MDXComponentsOptions = {}): MDXComponents {
-  const { metadata, ...rest } = components as MDXComponentsOptions;
+export function getMDXComponents(
+  components: MDXComponents = {},
+  metadata?: Metadata
+): MDXComponents {
   return {
     h1: ({ children }) => (
       <div className="mb-10">
@@ -31,6 +33,6 @@ export function getMDXComponents(components: MDXComponentsOptions = {}): MDXComp
       </a>
     ),
     strong: ({ children }) => <strong className="text-amber-900 font-bold">{children}</strong>,
-    ...rest,
+    ...components,
   };
 }
