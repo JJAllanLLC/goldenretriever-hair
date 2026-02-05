@@ -55,7 +55,7 @@ export default async function BreedersPage() {
             "@type": "BreadcrumbList",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://goldenretriever.hair/" },
-              { "@type": "ListItem", position: 2, name: "Breeder Directory", item: "https://goldenretriever.hair/breeders" },
+              { "@type": "ListItem", position: 2, name: "Finding a Golden Puppy", item: "https://goldenretriever.hair/breeders" },
             ],
           }),
         }}
