@@ -1,9 +1,19 @@
 import type { MDXComponents } from "mdx/types";
 
-export function getMDXComponents(components: MDXComponents): MDXComponents {
+type MDXComponentsOptions = MDXComponents & { metadata?: { date?: string; author?: string } };
+
+export function getMDXComponents(components: MDXComponentsOptions = {}): MDXComponents {
+  const { metadata, ...rest } = components as MDXComponentsOptions;
   return {
     h1: ({ children }) => (
-      <h1 className="text-5xl font-bold text-amber-900 mb-8 text-center">{children}</h1>
+      <div className="mb-10">
+        <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-2">{children}</h1>
+        {(metadata?.date || metadata?.author) && (
+          <p className="text-gray-600 text-sm md:text-base">
+            {[metadata?.date, metadata?.author].filter(Boolean).join(" · ")}
+          </p>
+        )}
+      </div>
     ),
     h2: ({ children }) => <h2 className="text-4xl font-bold text-amber-900 my-12">{children}</h2>,
     h3: ({ children }) => <h3 className="text-3xl font-bold text-amber-900 my-10">{children}</h3>,
@@ -21,6 +31,6 @@ export function getMDXComponents(components: MDXComponents): MDXComponents {
       </a>
     ),
     strong: ({ children }) => <strong className="text-amber-900 font-bold">{children}</strong>,
-    ...components,
+    ...rest,
   };
 }

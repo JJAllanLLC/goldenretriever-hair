@@ -2,6 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getMDXComponents } from "@/components/mdx-components";
@@ -62,7 +63,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   if (!guide) notFound();
 
   const { content, metadata } = guide;
-  const components = getMDXComponents({});
+  const components = getMDXComponents({ metadata });
 
   return (
     <main className="bg-amber-50/40 text-gray-900">
@@ -99,22 +100,33 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
         <Link href="/guides" className="text-amber-700 font-semibold hover:underline">
           ← Back to Guides
         </Link>
-        <article className="mt-8 bg-white rounded-xl shadow-2xl px-6 py-10 md:px-10">
-          <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-4">
-            {metadata.title}
-          </h1>
-          {metadata.date && <p className="text-gray-600 mb-8">{metadata.date}</p>}
-          <div className="prose prose-lg max-w-none text-gray-900">
-            <MDXRemote source={content} components={components} />
-          </div>
-          <div className="mt-12 pt-8 border-t border-amber-100 text-center">
-            <p className="text-gray-600 mb-2">
-              Track daily moments with your Golden —{" "}
-              <Link href="/golden-week" className="text-amber-700 font-semibold hover:underline">
-                Golden Week app
-              </Link>{" "}
-              coming soon. Join the waitlist!
-            </p>
+        <article className="mt-8 bg-white rounded-xl shadow-2xl overflow-hidden">
+          <div className="px-6 py-10 md:px-10">
+            {metadata.featuredImage && (
+              <div className="mb-8 -mx-6 md:-mx-10">
+                <div className="relative w-full aspect-video md:aspect-[21/9]">
+                  <Image
+                    src={metadata.featuredImage}
+                    alt={metadata.featuredAlt ?? metadata.title ?? "Guide"}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 896px"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            )}
+            <div className="prose prose-lg max-w-none text-gray-900 prose-headings:text-amber-900 prose-headings:font-bold prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900">
+              <MDXRemote source={content} components={components} />
+            </div>
+            <div className="mt-12 pt-8 border-t border-amber-100 text-center">
+              <p className="text-gray-600 mb-2">
+                Track daily moments with your Golden —{" "}
+                <Link href="/golden-week" className="text-amber-700 font-semibold hover:underline">
+                  Golden Week app
+                </Link>{" "}
+                coming soon. Join the waitlist!
+              </p>
+            </div>
           </div>
         </article>
       </section>
