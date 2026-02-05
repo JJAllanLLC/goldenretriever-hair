@@ -1,45 +1,50 @@
+import fs from "fs/promises";
+import path from "path";
+import matter from "gray-matter";
 import Link from "next/link";
+import Image from "next/image";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { getMDXComponents } from "@/components/mdx-components";
 
-export const metadata = {
-  title: "Golden Retriever Breeder Directory | Paid Listings",
-  description:
-    "Advertised Golden Retriever breeder directory with paid listings, community comments, and transparency for informed decisions.",
-};
+async function getBreederContent() {
+  const filePath = path.join(process.cwd(), "src", "app", "breeders", "breeder.mdx");
+  const source = await fs.readFile(filePath, "utf8");
+  const { data, content } = matter(source);
+  return { content, metadata: data };
+}
 
-const breeders = [
-  {
-    name: "Sunrise Goldens",
-    location: "Austin, TX",
-    website: "https://example.com",
-  },
-  {
-    name: "Meadowbrook Retrievers",
-    location: "Nashville, TN",
-    website: "https://example.com",
-  },
-  {
-    name: "Prairie Lane Goldens",
-    location: "Boise, ID",
-    website: "https://example.com",
-  },
-  {
-    name: "Coastal Golden Co.",
-    location: "Charleston, SC",
-    website: "https://example.com",
-  },
-  {
-    name: "Maple Ridge Retrievers",
-    location: "Columbus, OH",
-    website: "https://example.com",
-  },
-  {
-    name: "Highland Goldens",
-    location: "Denver, CO",
-    website: "https://example.com",
-  },
-];
+export async function generateMetadata() {
+  const { metadata } = await getBreederContent();
+  const title = metadata.title ?? "Finding a Responsible Golden Retriever Breeder";
+  const description =
+    metadata.description ??
+    "Educational guide to ethical Golden Retriever sources — no endorsements or paid ads.";
+  const featuredImage = metadata.featuredImage;
 
-export default function BreedersPage() {
+  return {
+    title,
+    description,
+    openGraph: featuredImage
+      ? {
+          title,
+          description,
+          images: [
+            {
+              url: featuredImage.startsWith("/") ? `https://goldenretriever.hair${featuredImage}` : featuredImage,
+              width: 800,
+              height: 600,
+              alt: metadata.featuredAlt ?? title,
+            },
+          ],
+        }
+      : undefined,
+  };
+}
+
+export default async function BreedersPage() {
+  const { content, metadata } = await getBreederContent();
+  const components = getMDXComponents({});
+
   return (
     <main className="bg-amber-50/40 text-gray-900">
       <script
@@ -49,100 +54,47 @@ export default function BreedersPage() {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://goldenretriever.hair/",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: "Breeders",
-                item: "https://goldenretriever.hair/breeders",
-              },
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://goldenretriever.hair/" },
+              { "@type": "ListItem", position: 2, name: "Breeder Directory", item: "https://goldenretriever.hair/breeders" },
             ],
           }),
         }}
       />
-      <section className="max-w-7xl mx-auto px-4 py-16">
-        <p className="text-white drop-shadow-md font-semibold mb-3">Breeder Directory</p>
-        <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-4">
-          Advertised Golden Retriever Breeder Listings
-        </h1>
-        <p className="text-lg text-white drop-shadow-md max-w-3xl mb-6">
-          Advertised breeder directory – listings are paid advertisements and not personally vetted by
-          GoldenRetriever.hair. User comments help community decide.
-        </p>
-        <p className="text-white drop-shadow-md font-semibold max-w-4xl mb-10">
-          These are paid advertisements. We have not personally used these breeders. Rely on user reviews
-          and your own research.
-        </p>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {breeders.map((breeder) => (
-            <article
-              key={breeder.name}
-              className="bg-white rounded-xl shadow-sm border border-amber-100 p-6"
-            >
-              <div className="flex items-start justify-between gap-4 mb-3">
-                <h2 className="text-xl font-semibold text-amber-900">{breeder.name}</h2>
-                <span className="text-xs font-semibold uppercase tracking-wide bg-amber-100 text-amber-900 px-2 py-1 rounded-full">
-                  Paid Listing
-                </span>
+      <section className="max-w-4xl mx-auto px-4 py-16">
+        <Link href="/guides" className="text-amber-700 font-semibold hover:underline">
+          ← Guides
+        </Link>
+        <article className="mt-8 bg-white rounded-xl shadow-2xl overflow-hidden">
+          <div className="px-6 py-10 md:px-10">
+            <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-4">
+              {metadata.title}
+            </h1>
+            {metadata.featuredImage && (
+              <div className="my-8 text-center">
+                <Image
+                  src={metadata.featuredImage}
+                  alt={metadata.featuredAlt || metadata.title}
+                  width={800}
+                  height={600}
+                  className="rounded-lg shadow-lg mx-auto"
+                />
               </div>
-              <p className="text-gray-700 mb-3">{breeder.location}</p>
-              <a
-                href={breeder.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-amber-700 font-semibold hover:underline"
-              >
-                Visit website
-              </a>
-
-              <div className="mt-6 border-t border-amber-100 pt-4">
-                <h3 className="text-sm font-semibold text-amber-900 mb-2">User comments</h3>
-                <p className="text-sm text-gray-600 mb-3">
-                  Reviews are moderated for accuracy and community trust.
-                </p>
-                <form className="space-y-3">
-                  <input
-                    type="text"
-                    placeholder="Your name"
-                    className="w-full rounded-lg border border-amber-200 px-3 py-2 text-sm"
-                  />
-                  <textarea
-                    placeholder="Share your experience (public)"
-                    rows={3}
-                    className="w-full rounded-lg border border-amber-200 px-3 py-2 text-sm"
-                  />
-                  <button
-                    type="submit"
-                    className="w-full bg-amber-700 text-white text-sm font-semibold py-2 rounded-lg hover:bg-amber-800 transition"
-                  >
-                    Submit comment
-                  </button>
-                </form>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div id="advertise" className="bg-amber-100/70 border border-amber-200 rounded-xl p-6">
-          <h2 className="text-2xl font-playfair font-semibold text-amber-900 mb-2">
-            Promote your breeder listing
-          </h2>
-          <p className="text-gray-700 mb-4">
-            Paid submissions are coming soon with options for premium placement and profile features.
-          </p>
-          <Link
-            href="#advertise"
-            className="inline-flex items-center justify-center bg-amber-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-amber-800 transition"
-          >
-            Join the paid listing waitlist
-          </Link>
-        </div>
+            )}
+            {metadata.date && <p className="text-gray-600 mb-8">{metadata.date}</p>}
+            <div className="prose prose-lg max-w-none text-gray-900 prose-headings:text-amber-900 prose-headings:font-bold prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900">
+              <MDXRemote source={content} components={components} />
+            </div>
+            <div className="mt-12 pt-8 border-t border-amber-100 text-center">
+              <p className="text-gray-600 mb-2">
+                Track daily moments with your Golden —{" "}
+                <Link href="/golden-week" className="text-amber-700 font-semibold hover:underline">
+                  Golden Week app
+                </Link>{" "}
+                coming soon. Join the waitlist!
+              </p>
+            </div>
+          </div>
+        </article>
       </section>
     </main>
   );
