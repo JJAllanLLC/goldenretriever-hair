@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "About GoldenRetriever.hair",
   description:
@@ -22,24 +24,35 @@ export default function AboutPage() {
                 you through practical, real-world advice.
               </p>
               <p>
-                The #1 question we get? &quot;We're thinking about our first dog — everyone says Goldens are the best
-                with families and young kids, but I have so many questions and don't know where to start.&quot;
+                The #1 question we get? &quot;We&apos;re thinking about our first dog — everyone says Goldens are the
+                best with families and young kids, but I have so many questions and don&apos;t know where to start.&quot;
               </p>
               <p>
-                That's exactly why this site exists. Start here — whether you're researching breeders/rescues, prepping
-                for puppy day, or navigating training and grooming. Adding a Golden to your family is a decision you'll
-                never regret — they're loyal, affectionate, and pure happiness on four legs.
+                That&apos;s exactly why this site exists. Start here — whether you&apos;re researching
+                breeders/rescues, prepping for puppy day, or navigating training and grooming. Adding a Golden to your
+                family is a decision you&apos;ll never regret — they&apos;re loyal, affectionate, and pure happiness on
+                four legs.
               </p>
               <p>
-                We're constantly adding new blogs, guides, and features (more stories, tools, and surprises coming
-                soon), so check back often — there's always something fresh for Golden lovers.
+                We&apos;re constantly adding new blogs, guides, and features (more stories, tools, and surprises coming
+                soon), so check back often — there&apos;s always something fresh for Golden lovers.
               </p>
               <p>
-                Ready to dive in? Explore the <a href="/guides">Guides</a> for in-depth advice,{" "}
-                <a href="/products">Products</a> for my personally tested recommendations, or <a href="/blog">Blog</a>{" "}
+                Ready to dive in? Explore the{" "}
+                <Link href="/guides" className="text-amber-700 underline hover:text-amber-900">
+                  Guides
+                </Link>{" "}
+                for in-depth advice,{" "}
+                <Link href="/products" className="text-amber-700 underline hover:text-amber-900">
+                  Products
+                </Link>{" "}
+                for my personally tested recommendations, or{" "}
+                <Link href="/blog" className="text-amber-700 underline hover:text-amber-900">
+                  Blog
+                </Link>{" "}
                 for relatable stories.
               </p>
-              <p>Dont forget to subscribe for our newsletter for updates.</p>
+              <p>Don&apos;t forget to subscribe for our newsletter for updates.</p>
               <p>
                 And keep an eye out for my upcoming <strong>Golden</strong> mobile app — designed to capture those daily
                 joyful moments with your Golden.
