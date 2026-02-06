@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Golden Week App | Coming Soon for Goldens",
+  title: "Golden Mobile App | Coming Soon for Goldens",
   description:
-    "Golden Week – the ultimate mobile app for Golden Retriever owners: health tracking, community, training tips.",
+    "Golden Mobile App – the ultimate mobile app for Golden Retriever owners: health tracking, community, training tips.",
 };
 
 export default function GoldenWeekPage() {
@@ -23,7 +23,7 @@ export default function GoldenWeekPage() {
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Golden Week",
+                name: "Golden Mobile App",
                 item: "https://goldenretriever.hair/golden-week",
               },
             ],
@@ -31,9 +31,9 @@ export default function GoldenWeekPage() {
         }}
       />
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <p className="text-white drop-shadow-md font-semibold mb-3">Golden Week App</p>
+        <p className="text-white drop-shadow-md font-semibold mb-3">Golden Mobile App</p>
         <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-6">
-          Golden Week – The Ultimate App for Golden Lovers
+          Golden Mobile App – The Ultimate App for Golden Lovers
         </h1>
         <p className="text-lg text-white drop-shadow-md max-w-3xl mb-10">
           The upcoming Golden Retriever mobile app is perfect for sharing photos,
