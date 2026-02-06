@@ -23,7 +23,7 @@ export function Navbar() {
             <Link href="/guides" className="text-gray-700 hover:text-amber-700 font-medium">Guides</Link>
             <Link href="/breeders" className="text-gray-700 hover:text-amber-700 font-medium">Finding a Golden Puppy</Link>
             <Link href="/products" className="text-gray-700 hover:text-amber-700 font-medium">Products</Link>
-            <Link href="/golden-week" className="text-amber-700 font-semibold hover:underline">Golden Week App</Link>
+            <Link href="/golden-week" className="text-amber-700 font-semibold hover:underline">Golden Mobile App</Link>
             <Link href="/about" className="text-gray-700 hover:text-amber-700 font-medium">About</Link>
           </nav>
 
@@ -54,7 +54,7 @@ export function Navbar() {
               <Link href="/guides" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Guides</Link>
               <Link href="/breeders" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Finding a Golden Puppy</Link>
               <Link href="/products" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
-              <Link href="/golden-week" className="block px-3 py-2 text-amber-700 font-semibold hover:underline" onClick={() => setMobileMenuOpen(false)}>Golden Week App</Link>
+              <Link href="/golden-week" className="block px-3 py-2 text-amber-700 font-semibold hover:underline" onClick={() => setMobileMenuOpen(false)}>Golden Mobile App</Link>
               <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
             </div>
           </nav>
