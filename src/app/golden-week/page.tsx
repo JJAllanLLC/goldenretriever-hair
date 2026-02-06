@@ -36,9 +36,9 @@ export default function GoldenWeekPage() {
           Golden Week – The Ultimate App for Golden Lovers
         </h1>
         <p className="text-lg text-white drop-shadow-md max-w-3xl mb-10">
-          The upcoming Golden Week app brings health tracking, training support,
-          and a welcoming community into one place. Built for responsible Golden
-          Retriever owners who want to celebrate every stage of life.
+          The upcoming Golden Retriever mobile app is perfect for sharing photos,
+          entering fun contests with prizes, and celebrating the joy of life with
+          your Golden. Built for Golden lovers who want to capture every stage of life.
         </p>
 
         <div className="bg-white rounded-xl shadow-sm border border-amber-100 p-8 mb-12">
