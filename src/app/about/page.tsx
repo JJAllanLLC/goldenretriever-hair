@@ -12,8 +12,10 @@ export default function AboutPage() {
       <section className="max-w-4xl mx-auto px-4 py-16">
         <article className="bg-white rounded-xl shadow-2xl overflow-hidden">
           <div className="px-6 py-10 md:px-10">
-            <div className="prose prose-lg max-w-none text-gray-900 prose-headings:text-amber-900 prose-headings:font-bold prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900">
-              <h1>About GoldenRetriever.hair</h1>
+            <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-8 text-center">
+              About GoldenRetriever.hair
+            </h1>
+            <div className="max-w-3xl mx-auto text-lg text-gray-800 space-y-6">
               <p>
                 Our deep love for Golden Retrievers inspired me to create this one-stop hub — a place where owners (and
                 future owners) can find everything needed to give these amazing dogs the best life possible.
