@@ -62,7 +62,7 @@ export default function GoldenWeekPage() {
 
         <div>
           <h2 className="text-2xl font-playfair font-semibold text-amber-900 mb-4">
-            App Preview Mockups
+            App Preview
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {Array.from({ length: 3 }).map((_, index) => (
@@ -70,7 +70,7 @@ export default function GoldenWeekPage() {
                 key={index}
                 className="h-64 bg-amber-100 border border-amber-200 rounded-xl flex items-center justify-center text-amber-700 font-semibold"
               >
-                Mockup Placeholder
+                coming soon
               </div>
             ))}
           </div>
