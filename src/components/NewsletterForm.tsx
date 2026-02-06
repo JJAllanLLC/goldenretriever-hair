@@ -49,7 +49,13 @@ export function NewsletterForm({
 
   if (status === "success") {
     return (
-      <p className="text-amber-100 font-semibold">
+      <p
+        className={
+          isFooter
+            ? "text-amber-100 font-semibold"
+            : "text-white font-semibold drop-shadow-md"
+        }
+      >
         Thanks! Check your inbox for a welcome note from us.
       </p>
     );
@@ -61,7 +67,7 @@ export function NewsletterForm({
         className={
           isFooter
             ? "text-base sm:text-lg text-amber-100 font-medium mb-4 px-2"
-            : "text-lg text-white drop-shadow-md mb-4 px-2"
+            : "text-lg text-white font-medium drop-shadow-md mb-4 px-2"
         }
       >
         {TEASER}
@@ -79,14 +85,14 @@ export function NewsletterForm({
           disabled={status === "loading"}
           className={
             isFooter
-              ? "flex-1 px-6 py-4 rounded-full border border-amber-300 bg-white/10 text-white placeholder:text-amber-200/80 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-70"
-              : "flex-1 px-6 py-4 rounded-full border border-amber-200 text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 disabled:opacity-70"
+              ? "flex-1 px-6 py-4 rounded-full border-2 border-amber-300 bg-white/10 text-white placeholder:text-white focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-amber-900 focus:border-amber-400 disabled:opacity-70"
+              : "flex-1 px-6 py-4 rounded-full border-2 border-amber-300 bg-black/20 text-white placeholder:text-white focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-black/30 focus:border-amber-400 disabled:opacity-70"
           }
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-semibold transition disabled:opacity-70 whitespace-nowrap focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
+          className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-semibold transition disabled:opacity-70 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-transparent"
         >
           {status === "loading" ? "Subscribing…" : "Subscribe"}
         </button>
@@ -94,7 +100,13 @@ export function NewsletterForm({
       {status === "error" && message && (
         <p className="mt-2 text-red-200 text-sm">{message}</p>
       )}
-      <p className="text-xs sm:text-sm text-amber-200/80 mt-3 px-2">
+      <p
+        className={
+          isFooter
+            ? "text-xs sm:text-sm text-amber-200/80 mt-3 px-2"
+            : "text-xs sm:text-sm text-white/90 mt-3 px-2 drop-shadow-sm"
+        }
+      >
         {DISCLAIMER}
       </p>
       {isFooter && (
