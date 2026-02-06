@@ -3,7 +3,10 @@
 import { useState } from "react";
 
 const TEASER =
-  "Subscribe for Golden tips, app updates, giveaway entries.";
+  "Free Newsletter: Golden stories, tips & more — plus automatic entry to win a custom mug with your Golden's photo!";
+
+const DISCLAIMER =
+  "One entry per subscriber; winner announced monthly.";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -53,17 +56,19 @@ export function NewsletterForm({
   }
 
   return (
-    <div className={isHero ? "max-w-md mx-auto" : ""}>
-      {!isFooter && (
-        <p className="text-lg text-white drop-shadow-md mb-4">{TEASER}</p>
-      )}
-      <form
-        onSubmit={handleSubmit}
+    <div className={`w-full text-center ${isHero ? "max-w-md mx-auto" : ""}`}>
+      <p
         className={
           isFooter
-            ? "max-w-md mx-auto flex flex-col sm:flex-row gap-4"
-            : "flex flex-col sm:flex-row gap-4"
+            ? "text-base sm:text-lg text-amber-100 font-medium mb-4 px-2"
+            : "text-lg text-white drop-shadow-md mb-4 px-2"
         }
+      >
+        {TEASER}
+      </p>
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-md mx-auto flex flex-col sm:flex-row gap-4"
       >
         <input
           type="email"
@@ -74,14 +79,14 @@ export function NewsletterForm({
           disabled={status === "loading"}
           className={
             isFooter
-              ? "flex-1 px-6 py-4 rounded-full border border-orange-300 bg-white/10 text-white placeholder:text-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-orange-300 disabled:opacity-70"
+              ? "flex-1 px-6 py-4 rounded-full border border-amber-300 bg-white/10 text-white placeholder:text-amber-200/80 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:border-amber-400 disabled:opacity-70"
               : "flex-1 px-6 py-4 rounded-full border border-amber-200 text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400 disabled:opacity-70"
           }
         />
         <button
           type="submit"
           disabled={status === "loading"}
-          className="bg-amber-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-amber-800 transition disabled:opacity-70 whitespace-nowrap"
+          className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-semibold transition disabled:opacity-70 whitespace-nowrap focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
         >
           {status === "loading" ? "Subscribing…" : "Subscribe"}
         </button>
@@ -89,10 +94,11 @@ export function NewsletterForm({
       {status === "error" && message && (
         <p className="mt-2 text-red-200 text-sm">{message}</p>
       )}
+      <p className="text-xs sm:text-sm text-amber-200/80 mt-3 px-2">
+        {DISCLAIMER}
+      </p>
       {isFooter && (
-        <p className="text-sm text-amber-200/90 mt-3">
-          No spam – unsubscribe anytime.
-        </p>
+        <p className="text-xs text-amber-200/70 mt-1">No spam – unsubscribe anytime.</p>
       )}
     </div>
   );
