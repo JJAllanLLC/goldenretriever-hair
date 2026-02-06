@@ -20,8 +20,8 @@ export default function AboutPage() {
               </p>
               <p>
                 From getting your first puppy to daily care, training, the best products, fun stories, and adorable
-                pictures — it's all here. Goldens have brought so much joy to our life, and we want to share that with
-                you through practical, real-world advice.
+                pictures — it&apos;s all here. Goldens have brought so much joy to our life, and we want to share that
+                with you through practical, real-world advice.
               </p>
               <p>
                 The #1 question we get? &quot;We&apos;re thinking about our first dog — everyone says Goldens are the
