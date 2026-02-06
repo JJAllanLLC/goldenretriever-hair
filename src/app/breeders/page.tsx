@@ -86,11 +86,13 @@ export default async function BreedersPage() {
             </div>
             <div className="mt-12 pt-8 border-t border-amber-100 text-center">
               <p className="text-gray-600 mb-2">
-                Track daily moments with your Golden —{" "}
+                P.S. If you&apos;re obsessed with capturing those daily Golden moments, keep an eye out for my upcoming
+                Golden Retriever mobile app — perfect for sharing photos, entering fun contests with prizes, and
+                celebrating the joy of life with your Golden. Coming soon —{" "}
                 <Link href="/golden-week" className="text-amber-700 font-semibold hover:underline">
-                  Golden Week app
-                </Link>{" "}
-                coming soon. Join the waitlist!
+                  join the newsletter for exclusive updates and waitlist access
+                </Link>
+                !
               </p>
             </div>
           </div>
