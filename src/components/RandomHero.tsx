@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { NewsletterForm } from "./NewsletterForm";
 
 const images = [
   {
@@ -109,6 +110,9 @@ export function RandomHero() {
             >
               Explore Guides
             </Link>
+            <div className="mt-10 pt-8 border-t border-white/30">
+              <NewsletterForm variant="hero" />
+            </div>
           </div>
         </div>
       </div>
