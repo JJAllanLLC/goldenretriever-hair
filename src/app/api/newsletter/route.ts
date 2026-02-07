@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
     );
 
     const senderEmail =
-      process.env.BREVO_SENDER_EMAIL || "hello@goldenretriever.hair";
+      process.env.BREVO_SENDER_EMAIL || "GoldenOfTheMonth@jjallanllc.com";
     const senderName =
       process.env.BREVO_SENDER_NAME || "GoldenRetriever.hair";
 
