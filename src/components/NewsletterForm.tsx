@@ -33,10 +33,19 @@ export function NewsletterForm({
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
         setStatus("error");
-        setMessage(data?.error || "Something went wrong. Please try again.");
+        setMessage(
+          typeof data?.error === "string"
+            ? data.error
+            : "Something went wrong. Please try again."
+        );
         return;
       }
       setStatus("success");
+      setMessage(
+        typeof data?.message === "string"
+          ? data.message
+          : "Subscribed! Check inbox for welcome + giveaway entry."
+      );
       setEmail("");
     } catch {
       setStatus("error");
@@ -56,7 +65,7 @@ export function NewsletterForm({
             : "text-white font-semibold drop-shadow-md"
         }
       >
-        Thanks! Check your inbox for a welcome note from us.
+        {message || "Subscribed! Check inbox for welcome + giveaway entry."}
       </p>
     );
   }

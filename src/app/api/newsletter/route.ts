@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import * as Brevo from "@getbrevo/brevo";
 import { getWelcomeEmailHtml, WELCOME_EMAIL_SUBJECT } from "@/lib/welcome-email";
 
-const BREVO_LIST_ID = 2; // "GoldenRetriever.hair" list – create in Brevo if needed and set ID here
-
 function isValidEmail(value: string): boolean {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(value?.trim() ?? "");
@@ -29,10 +27,28 @@ export async function POST(request: NextRequest) {
     }
 
     const apiKey = process.env.BREVO_API_KEY;
+    const listIdRaw = process.env.BREVO_LIST_ID;
+    const listId = listIdRaw ? parseInt(listIdRaw, 10) : 2;
+
+    console.log(
+      "Newsletter API: BREVO_API_KEY present:",
+      !!apiKey,
+      "BREVO_LIST_ID:",
+      process.env.BREVO_LIST_ID ?? "(using default 2)"
+    );
+
     if (!apiKey) {
-      console.error("BREVO_API_KEY is not set.");
+      console.error("Newsletter API: BREVO_API_KEY is not set.");
       return NextResponse.json(
-        { error: "Newsletter signup is temporarily unavailable." },
+        { error: "Server config error — contact site owner." },
+        { status: 500 }
+      );
+    }
+
+    if (!listId || Number.isNaN(listId)) {
+      console.error("Newsletter API: BREVO_LIST_ID missing or invalid.");
+      return NextResponse.json(
+        { error: "Server config error — contact site owner." },
         { status: 500 }
       );
     }
@@ -42,12 +58,11 @@ export async function POST(request: NextRequest) {
 
     const createContact = new Brevo.CreateContact();
     createContact.email = email;
-    createContact.listIds = [BREVO_LIST_ID];
+    createContact.listIds = [listId];
     createContact.updateEnabled = true;
 
     await contactsApi.createContact(createContact);
 
-    // Send welcome transactional email
     const transactionalApi = new Brevo.TransactionalEmailsApi();
     transactionalApi.setApiKey(
       Brevo.TransactionalEmailsApiApiKeys.apiKey,
@@ -66,24 +81,50 @@ export async function POST(request: NextRequest) {
     sendSmtpEmail.to = [{ email }];
 
     await transactionalApi.sendTransacEmail(sendSmtpEmail);
+
+    return NextResponse.json({
+      success: true,
+      message:
+        "Subscribed! Check inbox for welcome + giveaway entry.",
+    });
   } catch (err: unknown) {
-    const brevoError = err as { response?: { body?: { code?: string; message?: string } } };
+    const brevoError = err as {
+      response?: { body?: { code?: string; message?: string }; status?: number };
+    };
     const code = brevoError?.response?.body?.code;
     const message = brevoError?.response?.body?.message ?? "";
+    const status = brevoError?.response?.status;
 
-    if (code === "duplicate_parameter" || message?.toLowerCase().includes("already exist")) {
+    console.error("Newsletter API error (full):", err);
+
+    if (
+      code === "duplicate_parameter" ||
+      message?.toLowerCase().includes("already exist") ||
+      status === 400
+    ) {
       return NextResponse.json(
-        { error: "This email is already on our list. Check your inbox for our welcome message." },
+        {
+          error:
+            "Already subscribed — thanks for being a Golden fan!",
+        },
         { status: 409 }
       );
     }
 
-    console.error("Newsletter API error:", err);
+    if (status === 401 || message?.toLowerCase().includes("unauthorized")) {
+      return NextResponse.json(
+        { error: "Brevo error: invalid key." },
+        { status: 500 }
+      );
+    }
+
+    const safeDetail =
+      typeof message === "string" && message.length < 200
+        ? message
+        : "Check server logs.";
     return NextResponse.json(
-      { error: "Something went wrong. Please try again later." },
+      { error: `Brevo error: ${safeDetail}` },
       { status: 500 }
     );
   }
-
-  return NextResponse.json({ success: true });
 }
