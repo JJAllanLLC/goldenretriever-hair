@@ -40,28 +40,19 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "GoldenRetriever.hair",
+    title: "Golden Retriever Guides, Tips & Products | GoldenRetriever.hair",
     description:
       "The ultimate resource for Golden Retriever lovers – guides, products, breeders, and more.",
     url: "https://goldenretriever.hair",
     siteName: "GoldenRetriever.hair",
-    images: [
-      {
-        url: "/og-image.jpg", // We'll add this image later
-        width: 1200,
-        height: 630,
-        alt: "Happy Golden Retriever running in field",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GoldenRetriever.hair",
+    title: "Golden Retriever Guides, Tips & Products | GoldenRetriever.hair",
     description:
       "Expert guides, vetted breeders, and curated products for Golden Retriever owners.",
-    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,

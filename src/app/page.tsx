@@ -1,9 +1,22 @@
+import Link from "next/link";
 import { RandomHero } from "@/components/RandomHero";
 
 export default function Home() {
   return (
     <>
       <RandomHero />
+
+      <p className="text-center py-6 bg-amber-50/90 text-gray-800 text-lg">
+        Explore our{" "}
+        <Link href="/guides/golden-retriever-grooming-guide" className="text-amber-700 hover:text-amber-900 underline font-medium">
+          grooming guide
+        </Link>{" "}
+        and read the latest{" "}
+        <Link href="/blog" className="text-amber-700 hover:text-amber-900 underline font-medium">
+          blog posts
+        </Link>
+        .
+      </p>
 
       <section className="py-20 bg-amber-50">
         <div className="max-w-7xl mx-auto px-4">
