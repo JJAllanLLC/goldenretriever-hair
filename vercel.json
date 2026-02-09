@@ -1,0 +1,85 @@
+{
+    "redirects": [
+      // Homepage (already automatic, but explicit for safety)
+      { "source": "/", "destination": "/", "permanent": true },
+  
+      // Old services / grooming page → Guides index
+      { "source": "/home/services/", "destination": "/guides", "permanent": true },
+  
+      // Old history post → new blog (adjust slug if needed)
+      { "source": "/history-of-the-golden-retriever/", "destination": "/blog/history-of-the-golden-retriever", "permanent": true },
+  
+      // Old games/activities post → new blog
+      { "source": "/golden-retriever-games-and-activities/", "destination": "/blog/golden-retriever-games-and-activities", "permanent": true },
+  
+      // Old food guide → Nutrition & Feeding Guide
+      { "source": "/best-food-for-golden-retrievers/", "destination": "/guides/nutrition-feeding-guide", "permanent": true },
+  
+      // Old breeder selection → Finding a Golden Puppy
+      { "source": "/golden-retriever-breeder-selection/", "destination": "/finding-a-golden-puppy", "permanent": true },
+  
+      // Old grooming page → Ultimate Grooming Guide
+      { "source": "/grooming-golden-retrievers/", "destination": "/guides/ultimate-guide-to-grooming", "permanent": true },
+  
+      // Old bathing tips → Grooming Guide
+      { "source": "/tips-for-bathing-a-golden-retriever/", "destination": "/guides/ultimate-guide-to-grooming", "permanent": true },
+  
+      // Old recommended products → Products page
+      { "source": "/recommended-products-for-your-golden-retriever/", "destination": "/products", "permanent": true },
+  
+      // Old coat/grooming post → Grooming Guide
+      { "source": "/the-golden-retriever-coat-understanding-grooming-needs-for-every-season/", "destination": "/guides/ultimate-guide-to-grooming", "permanent": true },
+  
+      // Old Halloween post → Blog index
+      { "source": "/halloween-costume-ideas-for-your-golden-retriever/", "destination": "/blog", "permanent": true },
+  
+      // Old rescue/adoption post → Rescue & Adoption Guide
+      { "source": "/golden-retriever-rescue-the-process-of-rescuing-a-golden-retriever-and-the-benefits-of-adopting-a-rescue-dog/", "destination": "/guides/golden-retriever-rescue-adoption-guide", "permanent": true },
+  
+      // Old benefits post → Blog index
+      { "source": "/the-benefits-of-owning-a-golden-retriever-an-exploration-of-the-many-ways-that-owning-a-golden-retriever-can-improve-your-life/", "destination": "/blog", "permanent": true },
+  
+      // Old hip dysplasia → Guides index
+      { "source": "/hip-dysplasia-in-golden-retrievers/", "destination": "/guides", "permanent": true },
+  
+      // Old second Golden post → Blog index
+      { "source": "/adding-a-second-golden-retriever-to-your-household/", "destination": "/blog", "permanent": true },
+  
+      // Old calming techniques → Blog index
+      { "source": "/effective-techniques-to-calm-down-your-golden-retriever/", "destination": "/blog", "permanent": true },
+  
+      // Old pet insurance → Products page
+      { "source": "/golden-retriever-pet-insurance/", "destination": "/products", "permanent": true },
+  
+      // Old allergies → Guides index
+      { "source": "/golden-retriever-allergies/", "destination": "/guides", "permanent": true },
+  
+      // Old heat cycle → Guides index
+      { "source": "/golden-retriever-heat-cycle-care/", "destination": "/guides", "permanent": true },
+  
+      // Old socialization → Guides index
+      { "source": "/golden-retriever-socialization/", "destination": "/guides", "permanent": true },
+  
+      // Old personality traits → Blog index
+      { "source": "/golden-retriever-personality-traits/", "destination": "/blog", "permanent": true },
+  
+      // Old traveling/living → Blog index
+      { "source": "/tips-for-traveling-and-living-with-your-golden-retriever/", "destination": "/blog", "permanent": true },
+  
+      // Old garden post → Blog index
+      { "source": "/keep-golden-retriever-out-of-garden/", "destination": "/blog", "permanent": true },
+  
+      // Old bell potty training → Guides index
+      { "source": "/potty-train-your-golden-retriever-to-ring-a-bell/", "destination": "/guides", "permanent": true },
+  
+      // Old popular names → Blog index
+      { "source": "/the-most-popular-golden-retriever-names-of-2023/", "destination": "/blog", "permanent": true },
+  
+      // Old crate training → Guides index
+      { "source": "/crate-training-a-golden-retriever/", "destination": "/guides", "permanent": true },
+  
+      // Catch-all for any old /?p=XXX or unknown pages → homepage
+      { "source": "/?p=:id", "destination": "/", "permanent": true },
+      { "source": "/category/:path*", "destination": "/guides", "permanent": true }
+    ]
+  }
