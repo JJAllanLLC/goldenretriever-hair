@@ -26,7 +26,7 @@
     { "source": "/potty-train-your-golden-retriever-to-ring-a-bell/", "destination": "/guides", "permanent": true },
     { "source": "/the-most-popular-golden-retriever-names-of-2023/", "destination": "/blog", "permanent": true },
     { "source": "/crate-training-a-golden-retriever/", "destination": "/guides", "permanent": true },
-    { "source": "/?p=:id", "destination": "/", "permanent": true },
+    { "source": "/", "destination": "/", "has": [{ "type": "query", "key": "p" }], "permanent": true },
     { "source": "/category/:path*", "destination": "/guides", "permanent": true }
   ]
 }
