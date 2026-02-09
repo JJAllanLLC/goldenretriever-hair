@@ -56,8 +56,7 @@ export default function AboutPage() {
               </p>
               <p>Don&apos;t forget to subscribe for our newsletter for updates.</p>
               <p>
-                And keep an eye out for my upcoming <strong>Golden</strong> mobile app — designed to capture those daily
-                joyful moments with your Golden.
+                And stay tuned for our upcoming Golden of the Month contest — a fun community way to share your favorite Golden moments!
               </p>
               <p>🐾 GoldenRetriever.hair</p>
             </div>
