@@ -86,7 +86,7 @@ export default async function BreedersPage() {
             </div>
             <div className="mt-12 pt-8 border-t border-amber-100 text-center">
               <p className="text-gray-600 mb-2">
-                P.S. If you&apos;re obsessed with capturing those daily Golden moments, keep an eye out for our upcoming Golden of the Month contest — a community celebration where you can upload your favorite photos, vote for the best, and see winners showcased on the site! Winners get featured on the homepage, added to our permanent Hall of Fame, and a chance at prizes like custom mugs and shirts with their Golden&apos;s photo.
+                P.S. If you&apos;re obsessed with capturing those daily Golden moments, keep an eye out for our upcoming Golden of the Month contest — a community celebration where you can upload your favorite photos, vote for the best, and see winners showcased on the site!
               </p>
               <p className="text-gray-600 mb-2">
                 Coming soon —{" "}
