@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function GoldenWeekPage() {
   return (
-    <main className="bg-amber-50/40 text-gray-900 min-h-screen">
+    <main className="bg-gray-900 min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -44,22 +44,24 @@ export default function GoldenWeekPage() {
           />
         </div>
 
-        <p className="text-amber-700 font-semibold mb-2 text-center">Coming Soon</p>
-        <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-8 text-center">
+        <p className="text-amber-400 font-semibold mb-2 text-center text-base md:text-lg [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
+          Coming Soon
+        </p>
+        <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-400 mb-8 text-center [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
           Golden of the Month
         </h1>
 
-        <div className="prose prose-lg max-w-none text-gray-800 space-y-6 mb-12">
-          <p>
+        <div className="prose prose-lg max-w-none space-y-6 mb-12">
+          <p className="text-gray-100 text-base md:text-lg leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
             Golden of the Month is coming soon — our brand-new community contest where you can upload your favorite Golden photos, vote for the best, and see winners showcased on the site!
           </p>
-          <p>
+          <p className="text-gray-100 text-base md:text-lg leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
             The winner each month gets featured on the homepage and added to our permanent Hall of Fame.
           </p>
-          <p>
+          <p className="text-gray-100 text-base md:text-lg leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
             Stay tuned for more details, including how to enter and the chance to win prizes like custom mugs and shirts with your Golden&apos;s photo.
           </p>
-          <p>
+          <p className="text-gray-100 text-base md:text-lg leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
             Sign up for the newsletter below to be the first to know when we launch — we&apos;ll announce everything there!
           </p>
         </div>
