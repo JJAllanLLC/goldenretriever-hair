@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Golden Mobile App | Coming Soon for Goldens",
+  title: "Golden Retriever Mobile App | Coming Soon | GoldenRetriever.hair",
   description:
     "Golden Mobile App – the ultimate mobile app for Golden Retriever owners: health tracking, community, training tips.",
 };

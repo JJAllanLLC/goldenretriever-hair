@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "About GoldenRetriever.hair",
+  title: "About Us | Golden Retriever Tips & Community | GoldenRetriever.hair",
   description:
-    "Meet the passion behind GoldenRetriever.hair — your one-stop hub for everything Golden Retriever, from puppy tips to training, products, and heartwarming stories.",
+    "Meet the team behind GoldenRetriever.hair — your hub for Golden Retriever guides, puppy tips, training, products, and heartwarming stories. Start here.",
 };
 
 export default function AboutPage() {

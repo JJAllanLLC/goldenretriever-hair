@@ -123,6 +123,26 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               { "@type": "ListItem", "position": 3, "name": metadata.title },
             ]
           }) }} />
+          {/* Article schema */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Article",
+                headline: metadata.title,
+                description: metadata.description ?? "Golden Retriever care, training, and health insights.",
+                image: metadata.featuredImage
+                  ? (metadata.featuredImage.startsWith("/")
+                      ? `https://goldenretriever.hair${metadata.featuredImage}`
+                      : metadata.featuredImage)
+                  : undefined,
+                datePublished: metadata.date ?? undefined,
+                author: { "@type": "Organization", name: "GoldenRetriever.hair" },
+                publisher: { "@type": "Organization", name: "GoldenRetriever.hair", url: "https://goldenretriever.hair" },
+              }),
+            }}
+          />
         </div>
       </article>
     </div>

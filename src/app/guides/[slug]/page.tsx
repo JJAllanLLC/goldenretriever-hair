@@ -96,6 +96,27 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: metadata.title ?? "Guide",
+            description:
+              metadata.description ??
+              "In-depth Golden Retriever guide with practical tips for responsible ownership, health, training, and care.",
+            image: metadata.featuredImage
+              ? (metadata.featuredImage.startsWith("/")
+                  ? `https://goldenretriever.hair${metadata.featuredImage}`
+                  : metadata.featuredImage)
+              : undefined,
+            datePublished: metadata.date ?? undefined,
+            author: { "@type": "Organization", name: "GoldenRetriever.hair" },
+            publisher: { "@type": "Organization", name: "GoldenRetriever.hair", url: "https://goldenretriever.hair" },
+          }),
+        }}
+      />
       <section className="max-w-4xl mx-auto px-4 py-16">
         <Link href="/guides" className="text-amber-700 font-semibold hover:underline">
           ← Back to Guides

@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "GoldenRetriever.hair | Your Trusted Resource for Golden Retriever Owners",
+    default: "Golden Retriever Guides, Tips & Products | GoldenRetriever.hair",
     template: "%s | GoldenRetriever.hair",
   },
   description:

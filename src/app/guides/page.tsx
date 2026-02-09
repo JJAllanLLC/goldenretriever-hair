@@ -6,7 +6,7 @@ import { GuidesCategoryFilter } from "@/components/GuidesCategoryFilter";
 export const metadata = {
   title: "Golden Retriever Guides | Expert Care Advice",
   description:
-    "In-depth Golden Retriever guides on health, training, breeders, adoption, grooming, and lifelong care.",
+    "In-depth Golden Retriever guides on health, training, breeders, adoption, grooming, and lifelong care. Expert advice for responsible owners.",
 };
 
 type GuideMeta = {
