@@ -1,12 +1,15 @@
+import Image from "next/image";
+import { NewsletterForm } from "@/components/NewsletterForm";
+
 export const metadata = {
-  title: "Golden Retriever Mobile App | Coming Soon | GoldenRetriever.hair",
+  title: "Golden of the Month | Coming Soon | GoldenRetriever.hair",
   description:
-    "Golden Mobile App – the ultimate mobile app for Golden Retriever owners: health tracking, community, training tips.",
+    "Golden of the Month — our community contest to upload your favorite Golden photos, vote for the best, and see winners showcased. Sign up to be notified at launch.",
 };
 
 export default function GoldenWeekPage() {
   return (
-    <main className="bg-amber-50/40 text-gray-900">
+    <main className="bg-amber-50/40 text-gray-900 min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -23,57 +26,49 @@ export default function GoldenWeekPage() {
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Golden Mobile App",
+                name: "Golden of the Month",
                 item: "https://goldenretriever.hair/golden-week",
               },
             ],
           }),
         }}
       />
-      <section className="max-w-7xl mx-auto px-4 py-16">
-        <p className="text-white drop-shadow-md font-semibold mb-3">Golden Mobile App</p>
-        <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-6">
-          Golden Mobile App – The Ultimate App for Golden Lovers
-        </h1>
-        <p className="text-lg text-white drop-shadow-md max-w-3xl mb-10">
-          The upcoming Golden Retriever mobile app is perfect for sharing photos,
-          entering fun contests with prizes, and celebrating the joy of life with
-          your Golden. Built for Golden lovers who want to capture every stage of life.
-        </p>
-
-        <div className="bg-white rounded-xl shadow-sm border border-amber-100 p-8 mb-12">
-          <h2 className="text-2xl font-playfair font-semibold text-amber-900 mb-4">
-            Join the Waitlist
-          </h2>
-          <p className="text-gray-700 mb-6">
-            Get early access updates, launch perks, and a first look at new features.
-          </p>
-          <form className="flex flex-col sm:flex-row gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-6 py-4 rounded-full text-gray-900 flex-1 border border-amber-200"
-            />
-            <button className="bg-amber-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-amber-800 transition">
-              Join Waitlist
-            </button>
-          </form>
+      <section className="max-w-3xl mx-auto px-4 py-12 md:py-16">
+        <div className="relative w-full aspect-[3/2] max-h-[320px] rounded-xl overflow-hidden mb-10 bg-amber-100 border border-amber-200">
+          <Image
+            src="/images/threegoldens.jpeg"
+            alt="Golden of the Month — coming soon"
+            fill
+            sizes="(max-width: 768px) 100vw, 672px"
+            className="object-cover"
+          />
         </div>
 
-        <div>
-          <h2 className="text-2xl font-playfair font-semibold text-amber-900 mb-4">
-            App Preview
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {Array.from({ length: 3 }).map((_, index) => (
-              <div
-                key={index}
-                className="h-64 bg-amber-100 border border-amber-200 rounded-xl flex items-center justify-center text-amber-700 font-semibold"
-              >
-                coming soon
-              </div>
-            ))}
-          </div>
+        <p className="text-amber-700 font-semibold mb-2 text-center">Coming Soon</p>
+        <h1 className="text-4xl md:text-5xl font-playfair font-bold text-amber-900 mb-8 text-center">
+          Golden of the Month
+        </h1>
+
+        <div className="prose prose-lg max-w-none text-gray-800 space-y-6 mb-12">
+          <p>
+            Golden of the Month is coming soon — our brand-new community contest where you can upload your favorite Golden photos, vote for the best, and see winners showcased on the site!
+          </p>
+          <p>
+            The winner each month gets featured on the homepage and added to our permanent Hall of Fame.
+          </p>
+          <p>
+            Stay tuned for more details, including how to enter and the chance to win prizes like custom mugs and shirts with your Golden&apos;s photo.
+          </p>
+          <p>
+            Sign up for the newsletter below to be the first to know when we launch — we&apos;ll announce everything there!
+          </p>
+        </div>
+
+        <div className="bg-white rounded-xl shadow-sm border border-amber-100 p-6 md:p-8">
+          <p className="text-center text-amber-900 font-semibold text-lg mb-6">
+            Get notified when Golden of the Month launches!
+          </p>
+          <NewsletterForm variant="footer" />
         </div>
       </section>
     </main>
