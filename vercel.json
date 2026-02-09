@@ -1,6 +1,5 @@
 {
   "redirects": [
-    { "source": "/", "destination": "/", "permanent": true },
     { "source": "/home/services/", "destination": "/guides", "permanent": true },
     { "source": "/history-of-the-golden-retriever/", "destination": "/blog/history-of-the-golden-retriever", "permanent": true },
     { "source": "/golden-retriever-games-and-activities/", "destination": "/blog/golden-retriever-games-and-activities", "permanent": true },
