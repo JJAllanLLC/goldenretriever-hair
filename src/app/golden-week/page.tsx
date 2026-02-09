@@ -66,11 +66,11 @@ export default function GoldenWeekPage() {
           </p>
         </div>
 
-        <div className="bg-white rounded-xl shadow-sm border border-amber-100 p-6 md:p-8">
-          <p className="text-center text-amber-900 font-semibold text-lg mb-6">
+        <div className="bg-gray-900/80 rounded-xl shadow-md border border-amber-200/30 p-6 md:p-8 [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]">
+          <p className="text-center text-gray-100 font-semibold text-lg mb-6">
             Get notified when Golden of the Month launches!
           </p>
-          <NewsletterForm variant="footer" />
+          <NewsletterForm variant="dark" />
         </div>
       </section>
     </main>
