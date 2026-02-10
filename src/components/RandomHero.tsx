@@ -83,7 +83,7 @@ export function RandomHero() {
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-2">
               Everything Golden Retrievers
             </h1>
-            <p className="text-lg md:text-xl text-white drop-shadow-md mb-4">
+            <p className="text-base md:text-lg text-white/90 font-normal drop-shadow-md mb-4">
               Plus our monthly Golden of the Month photo competition — coming soon.
             </p>
           </div>
@@ -111,7 +111,7 @@ export function RandomHero() {
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-2">
               Everything Golden Retrievers
             </h1>
-            <p className="text-lg md:text-xl text-white drop-shadow-md mb-4">
+            <p className="text-base md:text-lg text-white/90 font-normal drop-shadow-md mb-4">
               Plus our monthly Golden of the Month photo competition — coming soon.
             </p>
             <p className="text-xl md:text-2xl text-white drop-shadow-md mb-8">
