@@ -1,10 +1,17 @@
 import Link from "next/link";
 import { RandomHero } from "@/components/RandomHero";
+import { NewsletterForm } from "@/components/NewsletterForm";
 
 export default function Home() {
   return (
     <>
       <RandomHero />
+
+      <section className="bg-amber-50/90 py-8 px-4">
+        <div className="max-w-md mx-auto text-center">
+          <NewsletterForm variant="footer" />
+        </div>
+      </section>
 
       <p className="text-center py-6 bg-amber-50/90 text-gray-800 text-lg">
         Explore our{" "}

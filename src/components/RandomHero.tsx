@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { NewsletterForm } from "./NewsletterForm";
 
 const images = [
   {
@@ -81,9 +80,12 @@ export function RandomHero() {
       <section className="relative h-screen md:h-[80vh] w-full bg-black/30">
         <div className="absolute inset-0 flex items-center justify-center px-6">
           <div className="max-w-4xl text-center">
-            <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-4">
-              Everything Golden Retrievers — and the Monthly Competition That Celebrates Them
+            <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-2">
+              Everything Golden Retrievers
             </h1>
+            <p className="text-lg md:text-xl text-white drop-shadow-md mb-4">
+              Plus our monthly Golden of the Month photo competition — coming soon.
+            </p>
           </div>
         </div>
       </section>
@@ -106,11 +108,14 @@ export function RandomHero() {
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 flex items-center justify-center px-6">
           <div className="max-w-4xl text-center">
-            <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-4">
-              Everything Golden Retrievers — and the Monthly Competition That Celebrates Them
+            <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-2">
+              Everything Golden Retrievers
             </h1>
+            <p className="text-lg md:text-xl text-white drop-shadow-md mb-4">
+              Plus our monthly Golden of the Month photo competition — coming soon.
+            </p>
             <p className="text-xl md:text-2xl text-white drop-shadow-md mb-8">
-              Trusted guides, grooming tips, and resources for every stage of Golden life. Plus, a monthly photo competition where one Golden is crowned and immortalized.
+              Trusted guides, grooming tips, and resources for every stage of Golden life.
             </p>
             <Link
               href="/golden-week"
@@ -118,9 +123,6 @@ export function RandomHero() {
             >
               Golden of the Month — Coming Soon
             </Link>
-            <div className="mt-10 pt-8 border-t border-white/30">
-              <NewsletterForm variant="hero" />
-            </div>
           </div>
         </div>
       </div>
