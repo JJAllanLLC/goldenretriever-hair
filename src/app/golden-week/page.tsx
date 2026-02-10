@@ -53,16 +53,21 @@ export default function GoldenWeekPage() {
 
         <div className="prose prose-lg max-w-none space-y-6 mb-12">
           <p className="text-gray-100 text-base md:text-lg leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
-            Golden of the Month is coming soon — our brand-new community contest where you can upload your favorite Golden photos, vote for the best, and see winners showcased on the site!
+            Golden of the Month is our upcoming community photo contest built to celebrate Golden Retrievers and the people who love them. Upload your favorite Golden photos, vote throughout the month, and see winners showcased on the site.
           </p>
+
+          <h2 className="text-xl md:text-2xl font-playfair font-bold text-amber-400 mt-8 mb-4 [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
+            How it works
+          </h2>
+          <ul className="text-gray-100 text-base md:text-lg leading-relaxed space-y-2 [text-shadow:0_1px_2px_rgba(0,0,0,0.5)] list-disc list-inside">
+            <li>Upload a photo of your Golden Retriever</li>
+            <li>The community votes throughout the month</li>
+            <li>One Golden is crowned each month and featured on the homepage</li>
+            <li>Winners are added to our permanent Hall of Fame</li>
+          </ul>
+
           <p className="text-gray-100 text-base md:text-lg leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
-            The winner each month gets featured on the homepage and added to our permanent Hall of Fame.
-          </p>
-          <p className="text-gray-100 text-base md:text-lg leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
-            Stay tuned for more details, including how to enter and the chance to win prizes like custom mugs and shirts with your Golden&apos;s photo.
-          </p>
-          <p className="text-gray-100 text-base md:text-lg leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.5)]">
-            Sign up for the newsletter below to be the first to know when we launch — we&apos;ll announce everything there!
+            We&apos;ll share full details when submissions open.
           </p>
         </div>
 
@@ -72,6 +77,10 @@ export default function GoldenWeekPage() {
           </p>
           <NewsletterForm variant="dark" />
         </div>
+
+        <p className="text-center text-gray-500 text-sm mt-10 mb-4">
+          Already subscribed? You&apos;re all set — we&apos;ll email you the moment Golden of the Month launches.
+        </p>
       </section>
     </main>
   );
