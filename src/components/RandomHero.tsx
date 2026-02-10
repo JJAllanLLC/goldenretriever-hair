@@ -77,7 +77,17 @@ export function RandomHero() {
   }, []);
 
   if (heroIndex === null) {
-    return <section className="relative h-screen md:h-[80vh] w-full bg-black/30" />;
+    return (
+      <section className="relative h-screen md:h-[80vh] w-full bg-black/30">
+        <div className="absolute inset-0 flex items-center justify-center px-6">
+          <div className="max-w-4xl text-center">
+            <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-4">
+              Welcome to GoldenRetriever.hair
+            </h1>
+          </div>
+        </div>
+      </section>
+    );
   }
 
   const heroImage = images[heroIndex];
