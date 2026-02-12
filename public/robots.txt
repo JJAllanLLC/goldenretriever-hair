@@ -1,0 +1,11 @@
+# robots.txt for GoldenRetriever.hair
+# Controls search engine crawlers for better crawling and indexing.
+
+User-agent: *
+Allow: /
+
+# Optional: Block API routes (they return JSON, not indexable content)
+# Uncomment if you want to reduce crawl noise from bots hitting endpoints
+# Disallow: /api/
+
+Sitemap: https://goldenretriever.hair/sitemap.xml
