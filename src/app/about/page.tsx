@@ -17,12 +17,12 @@ export default function AboutPage() {
             </h1>
             <div className="max-w-3xl mx-auto text-lg text-gray-800 space-y-6">
               <p>
-                Our deep love for Golden Retrievers inspired me to create this one-stop hub — a place where owners (and
+                Our deep love for Golden Retrievers inspired the creation of this one-stop hub — a place where owners (and
                 future owners) can find everything needed to give these amazing dogs the best life possible.
               </p>
               <p>
                 From getting your first puppy to daily care, training, the best products, fun stories, and adorable
-                pictures — it&apos;s all here. Goldens have brought so much joy to our life, and we want to share that
+                pictures — it&apos;s all here. Goldens have brought so much joy to their lives, and we want to share that
                 with you through practical, real-world advice.
               </p>
               <p>
@@ -34,6 +34,18 @@ export default function AboutPage() {
                 breeders/rescues, prepping for puppy day, or navigating training and grooming. Adding a Golden to your
                 family is a decision you&apos;ll never regret — they&apos;re loyal, affectionate, and pure happiness on
                 four legs.
+              </p>
+              <p>
+                Behind the scenes: A team of passionate Golden Retriever experts (nutritionists, trainers, long-time breeders, and owners) reached out to JJ Allan of JJ Allan LLC to help build, support, and maintain the site. They wanted a trusted, modern platform to share breed-specific knowledge and community resources. You can learn more about JJ Allan LLC at{" "}
+                <Link
+                  href="https://jjallanllc.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-amber-700 underline hover:text-amber-900"
+                >
+                  jjallanllc.com
+                </Link>
+                {" "}— including the upcoming Golden Week mobile app (coming soon) for even more Golden fun!
               </p>
               <p>
                 We&apos;re constantly adding new blogs, guides, and features (more stories, tools, and surprises coming
@@ -48,7 +60,7 @@ export default function AboutPage() {
                 <Link href="/products" className="text-amber-700 underline hover:text-amber-900">
                   Products
                 </Link>{" "}
-                for my personally tested recommendations, or{" "}
+                for carefully tested recommendations, or{" "}
                 <Link href="/blog" className="text-amber-700 underline hover:text-amber-900">
                   Blog
                 </Link>{" "}
@@ -57,6 +69,9 @@ export default function AboutPage() {
               <p>Don&apos;t forget to subscribe for our newsletter for updates.</p>
               <p>
                 And stay tuned for our upcoming Golden of the Month contest — a fun community way to share your favorite Golden moments!
+              </p>
+              <p className="text-sm text-gray-600">
+                As an Amazon Associate, GoldenRetriever.hair earns from qualifying purchases at no extra cost to you. The site is owned and operated by JJ Allan LLC.
               </p>
               <p>🐾 GoldenRetriever.hair</p>
             </div>
