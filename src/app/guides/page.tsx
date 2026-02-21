@@ -43,7 +43,11 @@ async function getGuides(): Promise<GuideMeta[]> {
     })
   );
 
-  return guides.sort((a, b) => (a.date < b.date ? 1 : -1));
+  const sorted = guides.sort((a, b) => (a.date < b.date ? 1 : -1));
+  const flagshipSlug = "best-dog-food-golden-retrievers-2026";
+  const flagship = sorted.find((g) => g.slug === flagshipSlug);
+  const rest = sorted.filter((g) => g.slug !== flagshipSlug);
+  return flagship ? [flagship, ...rest] : sorted;
 }
 
 export default async function GuidesPage() {

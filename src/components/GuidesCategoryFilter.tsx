@@ -66,6 +66,11 @@ export function GuidesCategoryFilter({ guides }: { guides: Guide[] }) {
               </div>
             )}
             <div className="p-6">
+              {guide.slug === "best-dog-food-golden-retrievers-2026" && (
+                <span className="inline-block bg-amber-100 text-amber-800 text-xs font-medium px-2 py-1 rounded mb-2">
+                  Flagship Guide
+                </span>
+              )}
               {guide.date && <p className="text-sm text-amber-700 mb-2">{guide.date}</p>}
               <h3 className="text-xl font-semibold text-amber-900 mb-2">
                 {guide.title}
