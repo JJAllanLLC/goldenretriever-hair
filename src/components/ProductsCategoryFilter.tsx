@@ -122,7 +122,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
           return (
           <article key={product.title} className="bg-white rounded-xl shadow-sm border border-amber-100 p-6">
             {product.image ? (
-              <div className="relative h-40 bg-amber-100 rounded-lg mb-4 overflow-hidden">
+              <div className="relative h-40 bg-white border border-gray-200 rounded-lg mb-4 overflow-hidden">
                 <Image
                   src={product.image}
                   alt={product.title}
@@ -132,7 +132,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
                 />
               </div>
             ) : (
-              <div className="h-40 bg-amber-100 rounded-lg mb-4 flex items-center justify-center text-amber-700 font-semibold">
+              <div className="h-40 bg-gray-50 border border-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-500 font-semibold">
                 Image Placeholder
               </div>
             )}
