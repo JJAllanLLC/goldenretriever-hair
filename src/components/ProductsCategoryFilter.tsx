@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -138,7 +137,14 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
               </div>
             )}
             <h3 className="text-xl font-semibold text-amber-900 mb-2">
-              {product.title}
+              <a
+                href={product.amazonLink}
+                target="_blank"
+                rel="noopener noreferrer nofollow sponsored"
+                className="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+              >
+                {product.title}
+              </a>
             </h3>
             <p className="text-gray-700 mb-4">{product.description}</p>
             {comment && (
@@ -157,13 +163,14 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
                 )}
               </div>
             )}
-            <Link
+            <a
               href={product.amazonLink}
-              className="text-amber-700 font-semibold hover:underline"
-              rel="nofollow sponsored"
+              target="_blank"
+              rel="noopener noreferrer nofollow sponsored"
+              className="text-sm text-gray-600 hover:text-blue-600 hover:underline"
             >
               View on Amazon
-            </Link>
+            </a>
           </article>
         )})}
       </div>
