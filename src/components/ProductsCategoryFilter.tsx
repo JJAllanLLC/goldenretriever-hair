@@ -141,7 +141,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
                 href={product.amazonLink}
                 target="_blank"
                 rel="noopener noreferrer nofollow sponsored"
-                className="text-blue-700 hover:text-blue-900 hover:underline font-medium"
+                className="text-blue-800 hover:text-blue-950 hover:underline font-medium"
               >
                 {product.title}
               </a>
