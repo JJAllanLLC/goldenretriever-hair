@@ -141,7 +141,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
                 href={product.amazonLink}
                 target="_blank"
                 rel="noopener noreferrer nofollow sponsored"
-                className="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                className="text-blue-700 hover:text-blue-900 hover:underline font-medium"
               >
                 {product.title}
               </a>
@@ -167,7 +167,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
               href={product.amazonLink}
               target="_blank"
               rel="noopener noreferrer nofollow sponsored"
-              className="text-sm text-gray-600 hover:text-blue-600 hover:underline"
+              className="text-sm text-gray-600 hover:text-blue-700 hover:underline"
             >
               View on Amazon
             </a>
