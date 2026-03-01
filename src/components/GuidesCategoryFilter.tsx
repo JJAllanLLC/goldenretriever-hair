@@ -71,7 +71,6 @@ export function GuidesCategoryFilter({ guides }: { guides: Guide[] }) {
                   Flagship Guide
                 </span>
               )}
-              {guide.date && <p className="text-sm text-amber-700 mb-2">{guide.date}</p>}
               <h3 className="text-xl font-semibold text-amber-900 mb-2">
                 {guide.title}
               </h3>

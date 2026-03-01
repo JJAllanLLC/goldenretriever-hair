@@ -64,7 +64,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   if (!guide) notFound();
 
   const { content, metadata } = guide;
-  const components = getMDXComponents({}, metadata);
+  const components = getMDXComponents({}, { ...metadata, date: undefined });
 
   return (
     <main className="bg-amber-50/40 text-gray-900">
