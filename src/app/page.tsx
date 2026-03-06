@@ -7,6 +7,38 @@ export default function Home() {
     <>
       <RandomHero />
 
+      <section className="block md:hidden mt-8 mb-8 px-4">
+        <h2 className="text-2xl font-bold text-center text-amber-900 mb-6">
+          Start Here for Golden Retriever Owners
+        </h2>
+        <div className="grid grid-cols-2 gap-4">
+          <Link
+            href="/guides/golden-retriever-feeding-chart"
+            className="bg-amber-100 border border-amber-200 rounded-xl p-6 text-center font-semibold text-amber-900 shadow-sm active:scale-[0.98] transition-transform"
+          >
+            Feeding Chart
+          </Link>
+          <Link
+            href="/guides/golden-retriever-grooming-guide"
+            className="bg-amber-100 border border-amber-200 rounded-xl p-6 text-center font-semibold text-amber-900 shadow-sm active:scale-[0.98] transition-transform"
+          >
+            Grooming Guide
+          </Link>
+          <Link
+            href="/breeders"
+            className="bg-amber-100 border border-amber-200 rounded-xl p-6 text-center font-semibold text-amber-900 shadow-sm active:scale-[0.98] transition-transform"
+          >
+            Find a Golden Retriever Breeder
+          </Link>
+          <Link
+            href="/products"
+            className="bg-amber-100 border border-amber-200 rounded-xl p-6 text-center font-semibold text-amber-900 shadow-sm active:scale-[0.98] transition-transform"
+          >
+            Recommended Products
+          </Link>
+        </div>
+      </section>
+
       <section className="bg-amber-50/90 py-8 px-4">
         <div className="max-w-md mx-auto text-center">
           <NewsletterForm variant="light" />
