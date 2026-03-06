@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,12 +20,12 @@ export function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
             <Link href="/" className="text-gray-700 hover:text-amber-700 font-medium">Home</Link>
-            <Link href="/blog" className="text-gray-700 hover:text-amber-700 font-medium">Blog</Link>
-            <Link href="/guides" className="text-gray-700 hover:text-amber-700 font-medium">Guides</Link>
+            <Link href="/blog" className="text-gray-700 hover:text-amber-700 font-medium" onClick={() => trackEvent("blog_click", { event_category: "navigation", event_label: "Blog" })}>Blog</Link>
+            <Link href="/guides" className="text-gray-700 hover:text-amber-700 font-medium" onClick={() => trackEvent("guides_click", { event_category: "navigation", event_label: "Guides" })}>Guides</Link>
             <Link href="/breeders" className="text-gray-700 hover:text-amber-700 font-medium">Finding a Golden Puppy</Link>
-            <Link href="/products" className="text-gray-700 hover:text-amber-700 font-medium">Products</Link>
-            <Link href="/golden-week" className="text-amber-700 font-semibold hover:underline">Golden of the Month</Link>
-            <Link href="/about" className="text-gray-700 hover:text-amber-700 font-medium">About</Link>
+            <Link href="/products" className="text-gray-700 hover:text-amber-700 font-medium" onClick={() => trackEvent("products_click", { event_category: "navigation", event_label: "Products" })}>Products</Link>
+            <Link href="/golden-week" className="text-amber-700 font-semibold hover:underline" onClick={() => trackEvent("golden_month_click", { event_category: "navigation", event_label: "Golden of the Month" })}>Golden of the Month</Link>
+            <Link href="/about" className="text-gray-700 hover:text-amber-700 font-medium" onClick={() => trackEvent("about_click", { event_category: "navigation", event_label: "About" })}>About</Link>
           </nav>
 
           {/* Mobile Hamburger */}
@@ -50,12 +51,12 @@ export function Navbar() {
           <nav className="md:hidden bg-amber-50 border-t border-amber-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-              <Link href="/blog" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-              <Link href="/guides" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Guides</Link>
+              <Link href="/blog" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => { trackEvent("blog_click", { event_category: "navigation", event_label: "Blog" }); setMobileMenuOpen(false); }}>Blog</Link>
+              <Link href="/guides" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => { trackEvent("guides_click", { event_category: "navigation", event_label: "Guides" }); setMobileMenuOpen(false); }}>Guides</Link>
               <Link href="/breeders" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Finding a Golden Puppy</Link>
-              <Link href="/products" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Products</Link>
-              <Link href="/golden-week" className="block px-3 py-2 text-amber-700 font-semibold hover:underline" onClick={() => setMobileMenuOpen(false)}>Golden of the Month</Link>
-              <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
+              <Link href="/products" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => { trackEvent("products_click", { event_category: "navigation", event_label: "Products" }); setMobileMenuOpen(false); }}>Products</Link>
+              <Link href="/golden-week" className="block px-3 py-2 text-amber-700 font-semibold hover:underline" onClick={() => { trackEvent("golden_month_click", { event_category: "navigation", event_label: "Golden of the Month" }); setMobileMenuOpen(false); }}>Golden of the Month</Link>
+              <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => { trackEvent("about_click", { event_category: "navigation", event_label: "About" }); setMobileMenuOpen(false); }}>About</Link>
             </div>
           </nav>
         )}
