@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 const TEASER =
   "Free Newsletter: Golden stories, tips & more — plus automatic entry to win a custom mug with your Golden's photo!";
@@ -12,8 +13,12 @@ type Status = "idle" | "loading" | "success" | "error";
 
 export function NewsletterForm({
   variant = "footer",
+  onSuccess,
+  trackSuccessEvent,
 }: {
   variant?: "footer" | "hero" | "standalone" | "dark" | "light";
+  onSuccess?: () => void;
+  trackSuccessEvent?: { event: string; category: string; label: string };
 }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
@@ -47,6 +52,13 @@ export function NewsletterForm({
           : "Subscribed! Check inbox for welcome + giveaway entry."
       );
       setEmail("");
+      onSuccess?.();
+      if (trackSuccessEvent) {
+        trackEvent(trackSuccessEvent.event, {
+          event_category: trackSuccessEvent.category,
+          event_label: trackSuccessEvent.label,
+        });
+      }
     } catch {
       setStatus("error");
       setMessage("Something went wrong. Please try again.");

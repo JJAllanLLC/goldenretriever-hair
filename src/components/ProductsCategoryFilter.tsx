@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
+import { trackEvent } from "@/lib/analytics";
 
 type Product = {
   title: string;
@@ -142,6 +143,10 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
                 target="_blank"
                 rel="noopener noreferrer nofollow sponsored"
                 className="text-blue-800 hover:text-blue-950 hover:underline font-medium"
+                onClick={() => {
+                  trackEvent("product_click", { event_category: "product", event_label: product.title });
+                  trackEvent("affiliate_click", { event_category: "affiliate", event_label: product.title });
+                }}
               >
                 {product.title}
               </a>
@@ -168,6 +173,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
               target="_blank"
               rel="noopener noreferrer nofollow sponsored"
               className="text-sm text-gray-600 hover:text-blue-700 hover:underline"
+              onClick={() => trackEvent("affiliate_click", { event_category: "affiliate", event_label: product.title })}
             >
               View on Amazon
             </a>

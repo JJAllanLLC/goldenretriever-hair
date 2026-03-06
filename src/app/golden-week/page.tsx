@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { GoldenWeekAnalytics } from "@/components/GoldenWeekAnalytics";
 
 export const metadata = {
   title: "Golden of the Month | Coming Soon | GoldenRetriever.hair",
@@ -34,6 +35,7 @@ export default function GoldenWeekPage() {
         }}
       />
       <section className="max-w-3xl mx-auto px-4 py-12 md:py-16">
+        <GoldenWeekAnalytics />
         <div className="relative w-full aspect-[3/2] max-h-[320px] rounded-xl overflow-hidden mb-10 bg-amber-100 border border-amber-200">
           <Image
             src="/images/threegoldens.jpeg"
@@ -75,7 +77,14 @@ export default function GoldenWeekPage() {
           <p className="text-center text-gray-100 font-semibold text-lg mb-6">
             Get notified when Golden of the Month launches!
           </p>
-          <NewsletterForm variant="dark" />
+          <NewsletterForm
+          variant="dark"
+          trackSuccessEvent={{
+            event: "golden_submit_click",
+            category: "golden_of_month",
+            label: "submit_entry",
+          }}
+        />
         </div>
 
         <p className="text-center text-gray-500 text-sm mt-10 mb-4">

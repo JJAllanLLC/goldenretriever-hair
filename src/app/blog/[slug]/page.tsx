@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Image from "next/image";
 import { getMDXComponents } from "@/components/mdx-components";
+import { BlogPageAnalytics } from "@/components/BlogPageAnalytics";
 
 async function getPost(slug: string) {
   try {
@@ -67,6 +68,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <BlogPageAnalytics title={metadata.title ?? "Blog Post"} />
       <Link href="/blog" className="text-amber-700 font-semibold hover:underline">
         ← Back to Blog
       </Link>

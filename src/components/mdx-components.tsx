@@ -1,4 +1,5 @@
 import type { MDXComponents } from "mdx/types";
+import { trackEvent } from "@/lib/analytics";
 
 type Metadata = { date?: string; author?: string };
 
@@ -27,11 +28,27 @@ export function getMDXComponents(
         <span>{children}</span>
       </li>
     ),
-    a: ({ children, href }) => (
-      <a href={href} className="text-amber-700 underline hover:text-amber-900">
-        {children}
-      </a>
-    ),
+    a: ({ children, href, className, ...props }) => {
+      const isAffiliate = href && String(href).includes("amzn.to");
+      return (
+        <a
+          href={href}
+          className={className ?? "text-amber-700 underline hover:text-amber-900"}
+          onClick={
+            isAffiliate
+              ? (e) =>
+                  trackEvent("affiliate_click", {
+                    event_category: "affiliate",
+                    event_label: (e.currentTarget as HTMLAnchorElement).textContent?.trim() || "Amazon",
+                  })
+              : undefined
+          }
+          {...props}
+        >
+          {children}
+        </a>
+      );
+    },
     strong: ({ children }) => <strong className="text-amber-900 font-bold">{children}</strong>,
     ...components,
   };

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getMDXComponents } from "@/components/mdx-components";
+import { GuidePageAnalytics } from "@/components/GuidePageAnalytics";
 
 async function getGuide(slug: string) {
   try {
@@ -119,6 +120,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
         }}
       />
       <section className="max-w-4xl mx-auto px-4 py-16">
+        <GuidePageAnalytics title={metadata.title ?? "Guide"} />
         <Link href="/guides" className="text-amber-700 font-semibold hover:underline">
           ← Back to Guides
         </Link>
