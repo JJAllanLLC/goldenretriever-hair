@@ -155,7 +155,7 @@ export default function PrivacyPolicyPage() {
         <p>If you have questions about this Privacy Policy or how we handle data, you can contact us at:</p>
         <ul>
           <li>
-            <strong>Email:</strong> <code>legal@goldenretriever.hair</code>
+            <strong>Email:</strong> <code>goldenofthemonth@jjallanllc.com</code>
           </li>
         </ul>
         <p>We will do our best to respond to reasonable privacy-related requests in a timely manner.</p>

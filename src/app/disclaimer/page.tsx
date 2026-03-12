@@ -169,7 +169,7 @@ export default function DisclaimerPage() {
         <p>If you have questions about this Disclaimer, you can contact us at:</p>
         <ul>
           <li>
-            <strong>Email:</strong> <code>legal@goldenretriever.hair</code>
+            <strong>Email:</strong> <code>goldenofthemonth@jjallanllc.com</code>
           </li>
         </ul>
         <p>

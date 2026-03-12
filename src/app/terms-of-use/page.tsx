@@ -165,7 +165,7 @@ export default function TermsOfUsePage() {
         <p>If you have questions about these Terms of Use, you can contact us at:</p>
         <ul>
           <li>
-            <strong>Email:</strong> <code>legal@goldenretriever.hair</code>
+            <strong>Email:</strong> <code>goldenofthemonth@jjallanllc.com</code>
           </li>
         </ul>
         <p>

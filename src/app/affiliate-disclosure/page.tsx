@@ -107,7 +107,7 @@ export default function AffiliateDisclosurePage() {
         <p>If you have any questions about this Affiliate Disclosure, please contact:</p>
         <ul>
           <li>
-            <strong>Email:</strong> <code>legal@goldenretriever.hair</code>
+            <strong>Email:</strong> <code>goldenofthemonth@jjallanllc.com</code>
           </li>
         </ul>
         <p>
