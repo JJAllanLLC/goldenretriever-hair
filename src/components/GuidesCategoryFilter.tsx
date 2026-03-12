@@ -14,7 +14,7 @@ type Guide = {
   featuredAlt?: string;
 };
 
-const categories = ["All", "Adoption", "Puppy", "Training", "Grooming", "Nutrition", "Breeder", "Health"] as const;
+const categories = ["All", "Puppy", "Adoption", "Training", "Grooming", "Nutrition", "Health", "Breed"] as const;
 
 export function GuidesCategoryFilter({ guides }: { guides: Guide[] }) {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>("All");
