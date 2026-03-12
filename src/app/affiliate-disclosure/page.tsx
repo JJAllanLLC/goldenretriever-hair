@@ -9,9 +9,12 @@ export const metadata: Metadata = {
 export default function AffiliateDisclosurePage() {
   return (
     <main className="bg-amber-50/40 text-gray-900">
-      <section className="max-w-2xl mx-auto px-4 py-16 prose prose-lg prose-amber">
-        <h1>Affiliate Disclosure</h1>
-        <p>
+      <section className="max-w-3xl mx-auto px-4 py-16">
+        <div className="bg-white/95 rounded-2xl shadow-sm border border-amber-100 px-6 py-10 md:px-10 md:py-12 space-y-6 text-base leading-relaxed text-slate-800">
+        <h1 className="text-3xl md:text-4xl font-playfair font-semibold text-amber-900">
+          Affiliate Disclosure
+        </h1>
+        <p className="text-sm text-slate-500">
           <em>Last updated: March 25, 2026</em>
         </p>
         <p>
@@ -20,7 +23,9 @@ export default function AffiliateDisclosurePage() {
           this content, some links on the Site are <strong>affiliate links</strong>.
         </p>
         <p>This page explains how those affiliate relationships work and what they mean for you.</p>
-        <h2>Amazon Services LLC Associates Program</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          Amazon Services LLC Associates Program
+        </h2>
         <p>
           GoldenRetriever.hair participates in the Amazon Services LLC Associates Program, an affiliate advertising
           program designed to provide a means for sites to earn advertising fees by advertising and linking to
@@ -30,7 +35,9 @@ export default function AffiliateDisclosurePage() {
           This means that when you click on certain links to Amazon and make a qualifying purchase, we may earn a
           small commission. This commission does <strong>not</strong> change the price you pay.
         </p>
-        <h2>Other Affiliate Links and Recommendations</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          Other Affiliate Links and Recommendations
+        </h2>
         <p>
           In addition to Amazon Associates, we may occasionally participate in other affiliate or partner programs.
           In all cases:
@@ -55,7 +62,9 @@ export default function AffiliateDisclosurePage() {
           Affiliate status does <strong>not</strong> change our commitment to providing honest, evidence-informed
           recommendations.
         </p>
-        <h2>How Affiliate Links Are Used on the Site</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          How Affiliate Links Are Used on the Site
+        </h2>
         <p>You may see affiliate links:</p>
         <ul>
           <li>In product recommendation sections of guides (for example, brush or food roundups).</li>
@@ -71,7 +80,9 @@ export default function AffiliateDisclosurePage() {
           If you prefer not to use affiliate links, you can always search for the same products independently by
           name.
         </p>
-        <h2>Your Choice and Transparency</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          Your Choice and Transparency
+        </h2>
         <p>Using affiliate links is <strong>optional</strong> for you:</p>
         <ul>
           <li>You are never required to purchase anything to use the Site.</li>
@@ -92,7 +103,7 @@ export default function AffiliateDisclosurePage() {
           If you have questions about a specific recommendation or link, you can contact us and we’ll do our best to
           clarify why it was included.
         </p>
-        <h2>Contact</h2>
+        <h2 className="text-xl font-semibold text-amber-900">Contact</h2>
         <p>If you have any questions about this Affiliate Disclosure, please contact:</p>
         <ul>
           <li>
@@ -103,6 +114,7 @@ export default function AffiliateDisclosurePage() {
           Thank you for supporting GoldenRetriever.hair and helping us continue to publish in-depth resources for
           Golden Retriever owners.
         </p>
+        </div>
       </section>
     </main>
   );

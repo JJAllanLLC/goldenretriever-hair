@@ -9,9 +9,12 @@ export const metadata: Metadata = {
 export default function TermsOfUsePage() {
   return (
     <main className="bg-amber-50/40 text-gray-900">
-      <section className="max-w-2xl mx-auto px-4 py-16 prose prose-lg prose-amber">
-        <h1>Terms of Use</h1>
-        <p>
+      <section className="max-w-3xl mx-auto px-4 py-16">
+        <div className="bg-white/95 rounded-2xl shadow-sm border border-amber-100 px-6 py-10 md:px-10 md:py-12 space-y-6 text-base leading-relaxed text-slate-800">
+        <h1 className="text-3xl md:text-4xl font-playfair font-semibold text-amber-900">
+          Terms of Use
+        </h1>
+        <p className="text-sm text-slate-500">
           <em>Last updated: March 25, 2026</em>
         </p>
         <p>
@@ -19,7 +22,9 @@ export default function TermsOfUsePage() {
           <strong>Terms of Use</strong> (“Terms”) govern your use of the Site. By accessing or using the Site, you
           agree to be bound by these Terms. If you do not agree, please do not use the Site.
         </p>
-        <h2>1. Acceptance of Terms</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          1. Acceptance of Terms
+        </h2>
         <p>By visiting, browsing, or using the Site in any way, you:</p>
         <ul>
           <li>
@@ -32,7 +37,9 @@ export default function TermsOfUsePage() {
           We may modify these Terms at any time by posting an updated version on this page. Your continued use of the
           Site after changes are posted constitutes your acceptance of the revised Terms.
         </p>
-        <h2>2. Informational Nature of the Site</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          2. Informational Nature of the Site
+        </h2>
         <p>
           GoldenRetriever.hair provides <strong>educational content</strong> about Golden Retrievers, including guides,
           articles, and product recommendations. The Site does <strong>not</strong> provide veterinary, medical, legal,
@@ -49,7 +56,9 @@ export default function TermsOfUsePage() {
         <p>
           For more details, see our <a href="/disclaimer">Disclaimer</a>.
         </p>
-        <h2>3. Intellectual Property</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          3. Intellectual Property
+        </h2>
         <p>Unless otherwise noted, all content on the Site is the intellectual property of GoldenRetriever.hair or its content providers, including:</p>
         <ul>
           <li>Text, articles, and guides.</li>
@@ -80,7 +89,9 @@ export default function TermsOfUsePage() {
           <li>Any activity conducted through your devices or internet connection while accessing the Site.</li>
           <li>Ensuring that your use of the Site is compatible with your local laws and regulations.</li>
         </ul>
-        <h2>5. Third-Party Links and Affiliate Relationships</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          5. Third-Party Links and Affiliate Relationships
+        </h2>
         <p>
           The Site may contain links to third-party websites, products, or services, including{" "}
           <strong>affiliate links</strong>. These are provided for convenience and informational purposes.
@@ -95,7 +106,9 @@ export default function TermsOfUsePage() {
           For additional information, see our <a href="/affiliate-disclosure">Affiliate Disclosure</a> and{" "}
           <a href="/privacy-policy">Privacy Policy</a>.
         </p>
-        <h2>6. Limitation of Liability</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          6. Limitation of Liability
+        </h2>
         <p>
           To the fullest extent permitted by law, GoldenRetriever.hair, its owners, contributors, and affiliates shall{" "}
           <strong>not be liable</strong> for any direct, indirect, incidental, consequential, or special damages
@@ -114,7 +127,9 @@ export default function TermsOfUsePage() {
           If you are dissatisfied with any part of the Site or these Terms, your sole and exclusive remedy is to stop
           using the Site.
         </p>
-        <h2>7. Indemnification</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          7. Indemnification
+        </h2>
         <p>
           You agree to <strong>indemnify and hold harmless</strong> GoldenRetriever.hair, its owners, contributors,
           and affiliates from and against any claims, liabilities, damages, losses, and expenses (including reasonable
@@ -125,7 +140,9 @@ export default function TermsOfUsePage() {
           <li>Your violation of these Terms.</li>
           <li>Your violation of any rights of another person or entity.</li>
         </ul>
-        <h2>8. Changes to the Site</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          8. Changes to the Site
+        </h2>
         <p>We reserve the right to:</p>
         <ul>
           <li>Modify, update, or discontinue any part of the Site at any time, with or without notice.</li>
@@ -133,14 +150,18 @@ export default function TermsOfUsePage() {
           <li>Update or remove guides, articles, or other materials as needed.</li>
         </ul>
         <p>We are not liable to you or any third party for any modification, suspension, or discontinuance of the Site or its content.</p>
-        <h2>9. Governing Law</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          9. Governing Law
+        </h2>
         <p>
           These Terms are governed by and construed in accordance with the laws of the jurisdiction in which
           GoldenRetriever.hair is operated, without regard to conflict-of-law principles. Any disputes arising under
           or related to these Terms shall be resolved in the appropriate courts of that jurisdiction, where allowed by
           law.
         </p>
-        <h2>10. Contact</h2>
+        <h2 className="text-xl font-semibold text-amber-900">
+          10. Contact
+        </h2>
         <p>If you have questions about these Terms of Use, you can contact us at:</p>
         <ul>
           <li>
@@ -151,6 +172,7 @@ export default function TermsOfUsePage() {
           We encourage you to review these Terms regularly so you understand the conditions that apply to your use of
           GoldenRetriever.hair.
         </p>
+        </div>
       </section>
     </main>
   );
