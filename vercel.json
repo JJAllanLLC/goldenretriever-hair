@@ -2,8 +2,8 @@
   "redirects": [
     {"source": "/home/services/", "destination": "/guides", "permanent": true},
     {"source": "/home/services", "destination": "/guides", "permanent": true},
-    {"source": "/history-of-the-golden-retriever/", "destination": "/blog", "permanent": true},
-    {"source": "/history-of-the-golden-retriever", "destination": "/blog", "permanent": true},
+    {"source": "/history-of-the-golden-retriever/", "destination": "/guides/history-of-the-golden-retriever", "permanent": true},
+    {"source": "/history-of-the-golden-retriever", "destination": "/guides/history-of-the-golden-retriever", "permanent": true},
     {"source": "/golden-retriever-games-and-activities/", "destination": "/blog", "permanent": true},
     {"source": "/golden-retriever-games-and-activities", "destination": "/blog", "permanent": true},
     {"source": "/best-food-for-golden-retrievers/", "destination": "/guides/best-dog-food-golden-retrievers-2026", "permanent": true},
