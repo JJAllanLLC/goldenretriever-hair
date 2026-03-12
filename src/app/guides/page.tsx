@@ -44,7 +44,7 @@ async function getGuides(): Promise<GuideMeta[]> {
   );
 
   const sorted = guides.sort((a, b) => (a.date < b.date ? 1 : -1));
-  const flagshipSlug = "best-dog-food-golden-retrievers-2026";
+  const flagshipSlug = "history-of-the-golden-retriever";
   const flagship = sorted.find((g) => g.slug === flagshipSlug);
   const rest = sorted.filter((g) => g.slug !== flagshipSlug);
   return flagship ? [flagship, ...rest] : sorted;
