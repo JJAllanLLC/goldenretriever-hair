@@ -44,10 +44,27 @@ async function getGuides(): Promise<GuideMeta[]> {
   );
 
   const sorted = guides.sort((a, b) => (a.date < b.date ? 1 : -1));
-  const flagshipSlug = "history-of-the-golden-retriever";
-  const flagship = sorted.find((g) => g.slug === flagshipSlug);
-  const rest = sorted.filter((g) => g.slug !== flagshipSlug);
-  return flagship ? [flagship, ...rest] : sorted;
+
+  const flagshipSlugs = [
+    "history-of-the-golden-retriever",
+    "best-dog-food-golden-retrievers-2026",
+    "golden-retriever-grooming-guide",
+    "golden-retriever-shedding-guide",
+    "golden-retriever-training-guide",
+  ];
+
+  const flagshipGuides: GuideMeta[] = [];
+
+  for (const slug of flagshipSlugs) {
+    const match = sorted.find((g) => g.slug === slug);
+    if (match && !flagshipGuides.includes(match)) {
+      flagshipGuides.push(match);
+    }
+  }
+
+  const rest = sorted.filter((g) => !flagshipSlugs.includes(g.slug));
+
+  return [...flagshipGuides, ...rest];
 }
 
 export default async function GuidesPage() {
