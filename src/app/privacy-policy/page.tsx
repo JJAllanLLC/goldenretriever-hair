@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-sm text-slate-500">
-            <em>Last updated: March 25, 2026</em>
+          <em>Last updated: March 12, 2026</em>
           </p>
           <p>
             GoldenRetriever.hair (“we”, “our”, or “us”) respects your privacy. This{" "}

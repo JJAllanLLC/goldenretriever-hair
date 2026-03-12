@@ -15,7 +15,7 @@ export default function TermsOfUsePage() {
           Terms of Use
         </h1>
         <p className="text-sm text-slate-500">
-          <em>Last updated: March 25, 2026</em>
+          <em>Last updated: March 12, 2026</em>
         </p>
         <p>
           Welcome to GoldenRetriever.hair (<code>https://goldenretriever.hair</code>, the “Site”). These{" "}

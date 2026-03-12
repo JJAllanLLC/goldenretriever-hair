@@ -15,7 +15,7 @@ export default function AffiliateDisclosurePage() {
           Affiliate Disclosure
         </h1>
         <p className="text-sm text-slate-500">
-          <em>Last updated: March 25, 2026</em>
+          <em>Last updated: March 12, 2026</em>
         </p>
         <p>
           GoldenRetriever.hair provides <strong>research-driven guides and product recommendations</strong> to

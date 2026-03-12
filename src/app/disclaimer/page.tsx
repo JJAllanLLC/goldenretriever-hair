@@ -15,7 +15,7 @@ export default function DisclaimerPage() {
           Disclaimer
         </h1>
         <p className="text-sm text-slate-500">
-          <em>Last updated: March 25, 2026</em>
+          <em>Last updated: March 12, 2026</em>
         </p>
         <p>
           The information on GoldenRetriever.hair is created to help owners make{" "}
