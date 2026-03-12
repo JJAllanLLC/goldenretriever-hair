@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function TermsOfUsePage() {
   return (
     <main className="bg-amber-50/40 text-gray-900">
-      <section className="max-w-3xl mx-auto px-4 py-16 prose prose-amber">
+      <section className="max-w-2xl mx-auto px-4 py-16 prose prose-lg prose-amber">
         <h1>Terms of Use</h1>
         <p>
           <em>Last updated: March 25, 2026</em>
@@ -19,7 +19,6 @@ export default function TermsOfUsePage() {
           <strong>Terms of Use</strong> (“Terms”) govern your use of the Site. By accessing or using the Site, you
           agree to be bound by these Terms. If you do not agree, please do not use the Site.
         </p>
-        <hr />
         <h2>1. Acceptance of Terms</h2>
         <p>By visiting, browsing, or using the Site in any way, you:</p>
         <ul>
@@ -33,7 +32,6 @@ export default function TermsOfUsePage() {
           We may modify these Terms at any time by posting an updated version on this page. Your continued use of the
           Site after changes are posted constitutes your acceptance of the revised Terms.
         </p>
-        <hr />
         <h2>2. Informational Nature of the Site</h2>
         <p>
           GoldenRetriever.hair provides <strong>educational content</strong> about Golden Retrievers, including guides,
@@ -51,7 +49,6 @@ export default function TermsOfUsePage() {
         <p>
           For more details, see our <a href="/disclaimer">Disclaimer</a>.
         </p>
-        <hr />
         <h2>3. Intellectual Property</h2>
         <p>Unless otherwise noted, all content on the Site is the intellectual property of GoldenRetriever.hair or its content providers, including:</p>
         <ul>
@@ -70,7 +67,6 @@ export default function TermsOfUsePage() {
           <li>Sell, license, or otherwise commercially exploit any content from the Site.</li>
           <li>Use our name, logo, or branding in a way that suggests sponsorship or endorsement without consent.</li>
         </ul>
-        <hr />
         <h2>4. User Responsibilities</h2>
         <p>When using the Site, you agree not to:</p>
         <ul>
@@ -84,7 +80,6 @@ export default function TermsOfUsePage() {
           <li>Any activity conducted through your devices or internet connection while accessing the Site.</li>
           <li>Ensuring that your use of the Site is compatible with your local laws and regulations.</li>
         </ul>
-        <hr />
         <h2>5. Third-Party Links and Affiliate Relationships</h2>
         <p>
           The Site may contain links to third-party websites, products, or services, including{" "}
@@ -100,7 +95,6 @@ export default function TermsOfUsePage() {
           For additional information, see our <a href="/affiliate-disclosure">Affiliate Disclosure</a> and{" "}
           <a href="/privacy-policy">Privacy Policy</a>.
         </p>
-        <hr />
         <h2>6. Limitation of Liability</h2>
         <p>
           To the fullest extent permitted by law, GoldenRetriever.hair, its owners, contributors, and affiliates shall{" "}
@@ -120,7 +114,6 @@ export default function TermsOfUsePage() {
           If you are dissatisfied with any part of the Site or these Terms, your sole and exclusive remedy is to stop
           using the Site.
         </p>
-        <hr />
         <h2>7. Indemnification</h2>
         <p>
           You agree to <strong>indemnify and hold harmless</strong> GoldenRetriever.hair, its owners, contributors,
@@ -132,7 +125,6 @@ export default function TermsOfUsePage() {
           <li>Your violation of these Terms.</li>
           <li>Your violation of any rights of another person or entity.</li>
         </ul>
-        <hr />
         <h2>8. Changes to the Site</h2>
         <p>We reserve the right to:</p>
         <ul>
@@ -141,7 +133,6 @@ export default function TermsOfUsePage() {
           <li>Update or remove guides, articles, or other materials as needed.</li>
         </ul>
         <p>We are not liable to you or any third party for any modification, suspension, or discontinuance of the Site or its content.</p>
-        <hr />
         <h2>9. Governing Law</h2>
         <p>
           These Terms are governed by and construed in accordance with the laws of the jurisdiction in which
@@ -149,7 +140,6 @@ export default function TermsOfUsePage() {
           or related to these Terms shall be resolved in the appropriate courts of that jurisdiction, where allowed by
           law.
         </p>
-        <hr />
         <h2>10. Contact</h2>
         <p>If you have questions about these Terms of Use, you can contact us at:</p>
         <ul>

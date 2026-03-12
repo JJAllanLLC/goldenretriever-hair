@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function DisclaimerPage() {
   return (
     <main className="bg-amber-50/40 text-gray-900">
-      <section className="max-w-3xl mx-auto px-4 py-16 prose prose-amber">
+      <section className="max-w-2xl mx-auto px-4 py-16 prose prose-lg prose-amber">
         <h1>Disclaimer</h1>
         <p>
           <em>Last updated: March 25, 2026</em>
@@ -23,7 +23,6 @@ export default function DisclaimerPage() {
         <p>
           By using <code>https://goldenretriever.hair</code> (the “Site”), you agree to the terms below.
         </p>
-        <hr />
         <h2>Educational Purposes Only</h2>
         <p>All content on GoldenRetriever.hair is provided for general informational and educational purposes.</p>
         <ul>
@@ -36,7 +35,6 @@ export default function DisclaimerPage() {
           Every dog is an individual, and only a licensed veterinarian who has examined your dog can provide
           recommendations tailored to their specific health, medical history, and environment.
         </p>
-        <hr />
         <h2>No Veterinary-Client-Patient Relationship</h2>
         <p>
           Using this Site, reading its content, or contacting us does <strong>not</strong> create a
@@ -54,7 +52,6 @@ export default function DisclaimerPage() {
           For any decision that could affect your dog’s health, you should consult a{" "}
           <strong>licensed veterinarian</strong> in your area.
         </p>
-        <hr />
         <h2>Not Medical or Legal Advice</h2>
         <p>The Site may occasionally discuss:</p>
         <ul>
@@ -77,7 +74,6 @@ export default function DisclaimerPage() {
           Always seek appropriate professional advice before acting on information that could affect your dog’s
           health, safety, or your legal responsibilities.
         </p>
-        <hr />
         <h2>Consult a Veterinarian for Medical Concerns</h2>
         <p>
           If you have questions or concerns about your dog’s health, behavior, or well-being, you should:
@@ -90,7 +86,6 @@ export default function DisclaimerPage() {
           </li>
         </ul>
         <p>Do not delay or avoid seeking veterinary care because of something you read on this Site.</p>
-        <hr />
         <h2>Accuracy and Completeness</h2>
         <p>We aim to keep information on GoldenRetriever.hair:</p>
         <ul>
@@ -108,7 +103,6 @@ export default function DisclaimerPage() {
           We make <strong>no guarantees</strong> about the completeness, reliability, or accuracy of the information on
           the Site. You use the content at your own discretion and risk.
         </p>
-        <hr />
         <h2>External Links and Third-Party Content</h2>
         <p>The Site may link to:</p>
         <ul>
@@ -124,7 +118,6 @@ export default function DisclaimerPage() {
           You should review the <strong>privacy policies, terms, and disclosures</strong> of any external site you
           visit.
         </p>
-        <hr />
         <h2>Limitation of Liability</h2>
         <p>
           To the fullest extent permitted by law, GoldenRetriever.hair, its owners, contributors, and affiliates:
@@ -147,14 +140,12 @@ export default function DisclaimerPage() {
           Your use of the Site is at your own risk. If you are not willing to accept this limitation of liability, you
           should not use the Site.
         </p>
-        <hr />
         <h2>Changes to This Disclaimer</h2>
         <p>
           We may update this Disclaimer from time to time. When we do, we will revise the <strong>“Last updated”</strong>{" "}
           date at the top of this page. Your continued use of the Site after changes are posted constitutes acceptance
           of the updated Disclaimer.
         </p>
-        <hr />
         <h2>Contact</h2>
         <p>If you have questions about this Disclaimer, you can contact us at:</p>
         <ul>

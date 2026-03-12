@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function AffiliateDisclosurePage() {
   return (
     <main className="bg-amber-50/40 text-gray-900">
-      <section className="max-w-3xl mx-auto px-4 py-16 prose prose-amber">
+      <section className="max-w-2xl mx-auto px-4 py-16 prose prose-lg prose-amber">
         <h1>Affiliate Disclosure</h1>
         <p>
           <em>Last updated: March 25, 2026</em>
@@ -20,7 +20,6 @@ export default function AffiliateDisclosurePage() {
           this content, some links on the Site are <strong>affiliate links</strong>.
         </p>
         <p>This page explains how those affiliate relationships work and what they mean for you.</p>
-        <hr />
         <h2>Amazon Services LLC Associates Program</h2>
         <p>
           GoldenRetriever.hair participates in the Amazon Services LLC Associates Program, an affiliate advertising
@@ -31,7 +30,6 @@ export default function AffiliateDisclosurePage() {
           This means that when you click on certain links to Amazon and make a qualifying purchase, we may earn a
           small commission. This commission does <strong>not</strong> change the price you pay.
         </p>
-        <hr />
         <h2>Other Affiliate Links and Recommendations</h2>
         <p>
           In addition to Amazon Associates, we may occasionally participate in other affiliate or partner programs.
@@ -57,7 +55,6 @@ export default function AffiliateDisclosurePage() {
           Affiliate status does <strong>not</strong> change our commitment to providing honest, evidence-informed
           recommendations.
         </p>
-        <hr />
         <h2>How Affiliate Links Are Used on the Site</h2>
         <p>You may see affiliate links:</p>
         <ul>
@@ -74,7 +71,6 @@ export default function AffiliateDisclosurePage() {
           If you prefer not to use affiliate links, you can always search for the same products independently by
           name.
         </p>
-        <hr />
         <h2>Your Choice and Transparency</h2>
         <p>Using affiliate links is <strong>optional</strong> for you:</p>
         <ul>
@@ -96,7 +92,6 @@ export default function AffiliateDisclosurePage() {
           If you have questions about a specific recommendation or link, you can contact us and we’ll do our best to
           clarify why it was included.
         </p>
-        <hr />
         <h2>Contact</h2>
         <p>If you have any questions about this Affiliate Disclosure, please contact:</p>
         <ul>

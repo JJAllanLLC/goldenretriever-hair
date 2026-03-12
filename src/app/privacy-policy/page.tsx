@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <main className="bg-amber-50/40 text-gray-900">
-      <section className="max-w-3xl mx-auto px-4 py-16 prose prose-amber">
+      <section className="max-w-2xl mx-auto px-4 py-16 prose prose-lg prose-amber">
         <h1>Privacy Policy</h1>
         <p>
           <em>Last updated: March 25, 2026</em>
@@ -23,7 +23,6 @@ export default function PrivacyPolicyPage() {
           By using the Site, you agree to the practices described here. If you do not agree, please discontinue use
           of the Site.
         </p>
-        <hr />
         <h2>Information We Collect</h2>
         <p>
           We do not ask casual visitors to create accounts or submit extensive personal details. However, we may
@@ -48,7 +47,6 @@ export default function PrivacyPolicyPage() {
           </li>
         </ul>
         <p>This usage data is typically collected through <strong>cookies and similar technologies</strong>.</p>
-        <hr />
         <h2>Cookies and Tracking Technologies</h2>
         <p>The Site uses <strong>cookies</strong> and similar technologies to:</p>
         <ul>
@@ -60,7 +58,6 @@ export default function PrivacyPolicyPage() {
           You can control or disable cookies through your browser settings. If you block cookies, some parts of the
           Site may not function optimally, but core content should remain accessible.
         </p>
-        <hr />
         <h2>Google Analytics</h2>
         <p>We use <strong>Google Analytics</strong> and similar analytics tools to understand aggregate visitor behavior.</p>
         <p>Google Analytics uses cookies and other identifiers to:</p>
@@ -78,7 +75,6 @@ export default function PrivacyPolicyPage() {
           also opt out of Google Analytics by using the official browser add‑on or your browser’s
           tracking-prevention settings.
         </p>
-        <hr />
         <h2>How We Use Information</h2>
         <p>We use the information we collect to:</p>
         <ul>
@@ -92,7 +88,6 @@ export default function PrivacyPolicyPage() {
           advertising programs (such as Amazon Associates) that track clicks and qualifying purchases, but these
           programs do not provide us with your full payment details or other sensitive information.
         </p>
-        <hr />
         <h2>Data Sharing</h2>
         <p>We may share limited information with:</p>
         <ul>
@@ -106,7 +101,6 @@ export default function PrivacyPolicyPage() {
           </li>
         </ul>
         <p>We do not share email lists or visitor information with unrelated third parties for their own marketing purposes.</p>
-        <hr />
         <h2>Data Retention</h2>
         <p>We keep information:</p>
         <ul>
@@ -120,7 +114,6 @@ export default function PrivacyPolicyPage() {
           If you subscribe to our newsletter, your email address is stored until you unsubscribe or we close the
           mailing list.
         </p>
-        <hr />
         <h2>Your Choices</h2>
         <p>You can:</p>
         <ul>
@@ -135,21 +128,18 @@ export default function PrivacyPolicyPage() {
             where technically feasible and not required to be kept for legal reasons.
           </li>
         </ul>
-        <hr />
         <h2>Children’s Privacy</h2>
         <p>
           The Site is intended for adults and responsible owners. We do not knowingly collect personal information
           from children under 13. If you believe we have collected information from a child, please contact us so we
           can review and, if appropriate, delete it.
         </p>
-        <hr />
         <h2>Changes to This Policy</h2>
         <p>
           We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws.
           When we make material changes, we will update the <strong>“Last updated”</strong> date at the top of this
           page. Continued use of the Site after changes are posted constitutes acceptance of the revised policy.
         </p>
-        <hr />
         <h2>Contact Us</h2>
         <p>If you have questions about this Privacy Policy or how we handle data, you can contact us at:</p>
         <ul>
