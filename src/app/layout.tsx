@@ -77,6 +77,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        <meta name="p:domain_verify" content="c35dbb707d1d9858316f3985265f3f44" />
         {/* Basic structured data for organization */}
         <script
           type="application/ld+json"
