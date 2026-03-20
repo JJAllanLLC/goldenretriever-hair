@@ -51,6 +51,7 @@ async function getGuides(): Promise<GuideMeta[]> {
     "golden-retriever-grooming-guide",
     "golden-retriever-shedding-guide",
     "golden-retriever-training-guide",
+    "should-you-get-two-golden-retrievers",
   ];
 
   const flagshipGuides: GuideMeta[] = [];

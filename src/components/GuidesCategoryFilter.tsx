@@ -66,7 +66,7 @@ export function GuidesCategoryFilter({ guides }: { guides: Guide[] }) {
               </div>
             )}
             <div className="p-6">
-              {["history-of-the-golden-retriever", "best-dog-food-golden-retrievers-2026", "golden-retriever-grooming-guide", "golden-retriever-shedding-guide", "golden-retriever-training-guide"].includes(
+              {["history-of-the-golden-retriever", "best-dog-food-golden-retrievers-2026", "golden-retriever-grooming-guide", "golden-retriever-shedding-guide", "golden-retriever-training-guide", "should-you-get-two-golden-retrievers"].includes(
                 guide.slug
               ) && (
                 <span className="inline-block bg-amber-100 text-amber-800 text-xs font-medium px-2 py-1 rounded mb-2">
