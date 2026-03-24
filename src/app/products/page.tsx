@@ -78,6 +78,16 @@ const products = [
     category: "Training",
   },
   {
+    title: "Extra Large Puppy Training Pads (50 Pack)",
+    description:
+      "Extra-large puppy pads with quick-dry absorbency and leak protection for easier early potty training cleanup.",
+    personalComment:
+      "Helpful during early potty training when accidents are still happening. The extra-large size gives growing Golden puppies more room and helps protect floors. 🐾",
+    amazonLink: "https://amzn.to/3NmK5Ob",
+    image: "/images/products/puppy_pads.jpeg",
+    category: "Puppy",
+  },
+  {
     title: "MidWest Homes for Pets iCrate Folding Dog Crate",
     description:
       "Larger size (42 x 28 x 30) – Best for home use, more room to stretch (especially for males). Smaller size (36 x 23 x 25) – Great for travel, fits most SUVs/vans.",

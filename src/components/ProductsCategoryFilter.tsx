@@ -14,7 +14,7 @@ type Product = {
   image?: string;
 };
 
-const categories = ["All", "Grooming", "Toys", "Food/Treats", "Health", "Training", "Essentials", "Books & Resources"] as const;
+const categories = ["All", "Puppy", "Grooming", "Toys", "Food/Treats", "Health", "Training", "Essentials", "Books & Resources"] as const;
 
 export function ProductsCategoryFilter({ products }: { products: Product[] }) {
   const [expandedComments, setExpandedComments] = useState<Record<string, boolean>>({});
@@ -39,6 +39,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
       : products.filter((product) => product.category === activeCategory);
 
   const categoryOrder = [
+    "Puppy",
     "Food/Treats",
     "Essentials",
     "Books & Resources",
@@ -57,6 +58,8 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
   const subheadings: Record<(typeof categories)[number], string> = {
     All:
       "As a proud golden retriever parent, I know firsthand how much we want the absolute best for our furry companions. Whether it’s the food they eat, the toys they play with, or the grooming tools that make bath time (a little) easier, the right products can make a world of difference. This list isn’t just random picks – these are items we personally use. 🐾",
+    Puppy:
+      "Early puppy months are messy and fast-moving. These practical tools help with potty training, routine building, and easier cleanup while your Golden learns.",
     Grooming:
       "As we all know, Goldens are heavy shedders – they shed like crazy! However, with the right grooming tools, you can greatly reduce the shedding and keep your Golden looking their best. 🐾",
     Toys:
