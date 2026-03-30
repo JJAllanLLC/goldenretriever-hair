@@ -300,6 +300,14 @@ const products = [
     image: "/images/products/hot_spot.png",
     category: "Health",
   },
+  {
+    title: "Virbac C.E.T. Enzymatic Dog Toothpaste",
+    description:
+      "Veterinarian-recommended enzymatic toothpaste that helps reduce plaque and tartar while freshening breath. Safe for daily use and ideal for maintaining long-term dental health in Golden Retrievers.",
+    amazonLink: "https://amzn.to/47vXWbG",
+    image: "/images/products/toothpaste.jpeg",
+    category: "Health",
+  },
 ];
 
 export default function ProductsPage() {
