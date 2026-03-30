@@ -48,6 +48,15 @@ const products = [
     category: "Food/Treats",
   },
   {
+    title: "Gamma2 Vittles Vault Stackable Dog Food Storage Container",
+    description:
+      "Airtight dog food storage container that keeps kibble fresh, prevents moisture, and protects against pests. Ideal for storing large-breed dog food bags.",
+    personalComment: "Great for keeping large bags of dog food fresh and organized.",
+    amazonLink: "https://amzn.to/4thEWGn",
+    image: "/images/products/food_storage.jpeg",
+    category: "Food/Treats",
+  },
+  {
     title: "Stewart Pro-Treat Beef Liver Freeze-Dried Dog Treats",
     description:
       "Single-ingredient freeze-dried beef liver – high-value rewards for training.",
