@@ -57,6 +57,15 @@ const products = [
     category: "Food/Treats",
   },
   {
+    title: "Outward Hound Fun Feeder Slo Bowl (Large, 4-Cup)",
+    description:
+      "Slow feeder dog bowl that helps prevent fast eating, supports better digestion, and reduces risk of bloating. Ideal for Golden Retrievers that eat too quickly.",
+    personalComment: "Great for slowing down meals and improving feeding habits.",
+    amazonLink: "https://amzn.to/4rYY3Ur",
+    image: "/images/products/slow_feeder.jpeg",
+    category: "Food/Treats",
+  },
+  {
     title: "Stewart Pro-Treat Beef Liver Freeze-Dried Dog Treats",
     description:
       "Single-ingredient freeze-dried beef liver – high-value rewards for training.",
