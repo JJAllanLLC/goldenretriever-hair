@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Image from "next/image";
 import { ProductsCategoryFilter } from "@/components/ProductsCategoryFilter";
 
 export const metadata = {
@@ -294,6 +295,14 @@ const products = [
   },
 ];
 
+const skinHotSpotCareProduct = {
+  title: "Vetericyn Plus Dog Wound Care Spray",
+  description:
+    "Gentle antimicrobial spray that helps clean wounds, soothe irritated skin, and support healing for issues like hot spots, cuts, and skin irritation. Safe, non-toxic, and a great addition to your Golden Retriever first-aid kit.",
+  amazonLink: "https://amzn.to/4viPOFV",
+  image: "/images/products/hot_spot.png",
+};
+
 export default function ProductsPage() {
   return (
     <main className="bg-amber-50/40 text-gray-900">
@@ -329,6 +338,42 @@ export default function ProductsPage() {
         <Suspense fallback={<div className="text-center text-gray-600">Loading products…</div>}>
           <ProductsCategoryFilter products={products} />
         </Suspense>
+
+        <h2 className="text-2xl font-playfair font-semibold text-amber-900 mb-6 mt-12">
+          Skin & Hot Spot Care
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article className="bg-white rounded-xl shadow-sm border border-amber-100 p-6">
+            <div className="relative h-40 bg-white border border-gray-200 rounded-lg mb-4 overflow-hidden">
+              <Image
+                src={skinHotSpotCareProduct.image}
+                alt={skinHotSpotCareProduct.title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 33vw"
+                className="object-contain"
+              />
+            </div>
+            <h3 className="text-xl font-semibold text-amber-900 mb-2">
+              <a
+                href={skinHotSpotCareProduct.amazonLink}
+                target="_blank"
+                rel="noopener noreferrer nofollow sponsored"
+                className="text-blue-800 hover:text-blue-950 hover:underline font-medium"
+              >
+                {skinHotSpotCareProduct.title}
+              </a>
+            </h3>
+            <p className="text-gray-700 mb-4">{skinHotSpotCareProduct.description}</p>
+            <a
+              href={skinHotSpotCareProduct.amazonLink}
+              target="_blank"
+              rel="noopener noreferrer nofollow sponsored"
+              className="text-sm text-gray-600 hover:text-blue-700 hover:underline"
+            >
+              View on Amazon
+            </a>
+          </article>
+        </div>
 
         <p className="text-white drop-shadow-md text-center max-w-4xl mx-auto mt-12 italic bg-amber-900/50 rounded p-4 text-base">
           Personal recommendations from our Goldens – battle-tested! As an Amazon Associate,
