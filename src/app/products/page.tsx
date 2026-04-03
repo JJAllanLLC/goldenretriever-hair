@@ -224,6 +224,16 @@ const products = [
     category: "Grooming",
   },
   {
+    title: "Wet Ones for Pets Antibacterial Dog Wipes",
+    description:
+      "Antibacterial wipes for fast paw and coat wipe-downs—help lift dirt and reduce bacteria between baths, without the hassle of a full wash. Aloe vera keeps contact gentle on skin. Ideal for itchy paws, allergy-prone Goldens, and daily cleaning after walks or yard time.",
+    personalComment:
+      "Handy by the door for muddy paws and quick wipe-downs when you want less pollen and grit tracked inside. 🐾",
+    amazonLink: "https://amzn.to/4s91ckF",
+    image: "/images/products/paw_wipes.jpeg",
+    category: "Grooming",
+  },
+  {
     title: "Chris Christensen Ice on Ice Detangling Dog Conditioner",
     description:
       "Leave-in detangling conditioner – smooths out tangles and knots, easier to comb or brush through.",
