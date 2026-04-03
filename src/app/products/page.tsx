@@ -234,6 +234,14 @@ const products = [
     category: "Grooming",
   },
   {
+    title: "Burt's Bees for Pets Nose & Paw Balm",
+    description:
+      "Moisturizing balm for dry, cracked paw pads and rough nose skin, formulated with beeswax and cocoa butter to soothe and protect. Helps shield pads from cold weather, salt, ice-melt, and rough surfaces while supporting a healthier moisture barrier. Useful for seasonal dryness or routine care after long walks on pavement or trails.",
+    amazonLink: "https://amzn.to/4vaOKUm",
+    image: "/images/products/paw_balm.jpeg",
+    category: "Grooming",
+  },
+  {
     title: "Chris Christensen Ice on Ice Detangling Dog Conditioner",
     description:
       "Leave-in detangling conditioner – smooths out tangles and knots, easier to comb or brush through.",
