@@ -45,7 +45,7 @@
   <text x="500" y="144" text-anchor="middle" class="t sub">Feeding, sleep &amp; care by age</text>
   <rect x="340" y="168" width="320" height="3" rx="1.5" fill="#C89B3C"/>
 
-  <!-- Food: fixed block zone = 452 + 38 = 232px; labels x=0; blocks at x=80; summaries x=340 -->
+  <!-- Food: fixed block zone 232px (4x52 + 3x8); labels x=0; blocks at x=80; summaries at x=340 -->
   <g transform="translate(40, 214)">
     <text x="0" y="0" class="t food-h">Daily food (visual)</text>
     <text x="0" y="28" class="t legend">Each block &#8776; 1 cup | Solid = typical | Faded = flexible / split meals</text>
