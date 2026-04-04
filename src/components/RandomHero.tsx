@@ -84,7 +84,7 @@ export function RandomHero() {
               Everything Golden Retrievers
             </h1>
             <p className="text-base md:text-lg text-white/90 font-normal drop-shadow-md mb-4">
-              Plus our monthly Golden of the Month photo competition — coming soon.
+              Get the free Owner Cheat Sheet when you join the newsletter — feeding, sleep, and care at a glance.
             </p>
           </div>
         </div>
@@ -112,16 +112,16 @@ export function RandomHero() {
               Everything Golden Retrievers
             </h1>
             <p className="text-base md:text-lg text-white/90 font-normal drop-shadow-md mb-4">
-              Plus our monthly Golden of the Month photo competition — coming soon.
+              Get the free Owner Cheat Sheet when you join the newsletter — feeding, sleep, and care at a glance.
             </p>
             <p className="text-xl md:text-2xl text-white drop-shadow-md mb-8">
               Trusted guides, grooming tips, and resources for every stage of Golden life.
             </p>
             <Link
-              href="/golden-week"
+              href="/#newsletter"
               className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition"
             >
-              Golden of the Month — Coming Soon
+              Get the Cheat Sheet
             </Link>
           </div>
         </div>

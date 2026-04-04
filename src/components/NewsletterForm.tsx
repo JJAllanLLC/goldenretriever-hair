@@ -3,11 +3,18 @@
 import { useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 
-const TEASER =
-  "Free Newsletter: Golden stories, tips & more — plus automatic entry to win a custom mug with your Golden's photo!";
+const HEADLINE = "Free Golden Retriever Cheat Sheet (instant access)";
 
-const DISCLAIMER =
-  "One entry per subscriber; winner announced monthly.";
+const BODY_P1 =
+  "Get the exact daily feeding, sleep, and care guide used by experienced Golden owners.";
+
+const BODY_P2 =
+  "Join the newsletter and get immediate access — plus tips, training advice, and real-world Golden insights.";
+
+const SMALL_TEXT = "No spam — unsubscribe anytime.";
+
+const SUCCESS_FALLBACK =
+  "Subscribed! Check your inbox for your welcome email with the cheat sheet link.";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -47,9 +54,7 @@ export function NewsletterForm({
       }
       setStatus("success");
       setMessage(
-        typeof data?.message === "string"
-          ? data.message
-          : "Subscribed! Check inbox for welcome + giveaway entry."
+        typeof data?.message === "string" ? data.message : SUCCESS_FALLBACK
       );
       setEmail("");
       onSuccess?.();
@@ -70,6 +75,33 @@ export function NewsletterForm({
   const isDark = variant === "dark";
   const isLight = variant === "light";
 
+  const headlineClass =
+    isLight
+      ? "text-lg sm:text-xl text-amber-900 font-bold mb-3 px-2"
+      : isDark
+        ? "text-lg sm:text-xl text-gray-100 font-bold mb-3 px-2 [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]"
+        : isFooter
+          ? "text-lg sm:text-xl text-amber-100 font-bold mb-3 px-2"
+          : "text-xl sm:text-2xl text-white font-bold drop-shadow-md mb-3 px-2";
+
+  const bodyClass =
+    isLight
+      ? "text-base sm:text-lg text-amber-900 font-medium mb-3 px-2 leading-relaxed"
+      : isDark
+        ? "text-base sm:text-lg text-gray-100 font-medium mb-3 px-2 leading-relaxed [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]"
+        : isFooter
+          ? "text-base sm:text-lg text-amber-100 font-medium mb-3 px-2 leading-relaxed"
+          : "text-base sm:text-lg text-white font-medium drop-shadow-md mb-3 px-2 leading-relaxed";
+
+  const smallClass =
+    isLight
+      ? "text-xs sm:text-sm text-gray-600 mt-3 px-2"
+      : isDark
+        ? "text-xs sm:text-sm text-gray-300 mt-3 px-2 [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]"
+        : isFooter
+          ? "text-xs sm:text-sm text-amber-200/80 mt-3 px-2"
+          : "text-xs sm:text-sm text-white/90 mt-3 px-2 drop-shadow-sm";
+
   if (status === "success") {
     return (
       <p
@@ -83,26 +115,16 @@ export function NewsletterForm({
                 : "text-white font-semibold drop-shadow-md"
         }
       >
-        {message || "Subscribed! Check inbox for welcome + giveaway entry."}
+        {message || SUCCESS_FALLBACK}
       </p>
     );
   }
 
   return (
     <div className={`w-full text-center ${isHero || isDark || isLight ? "max-w-md mx-auto" : ""}`}>
-      <p
-        className={
-          isLight
-            ? "text-base sm:text-lg text-amber-900 font-medium mb-4 px-2"
-            : isDark
-              ? "text-base sm:text-lg text-gray-100 font-medium mb-4 px-2 [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]"
-              : isFooter
-                ? "text-base sm:text-lg text-amber-100 font-medium mb-4 px-2"
-                : "text-lg text-white font-medium drop-shadow-md mb-4 px-2"
-        }
-      >
-        {TEASER}
-      </p>
+      <p className={headlineClass}>{HEADLINE}</p>
+      <p className={bodyClass}>{BODY_P1}</p>
+      <p className={bodyClass}>{BODY_P2}</p>
       <form
         onSubmit={handleSubmit}
         className="max-w-md mx-auto flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
@@ -111,7 +133,7 @@ export function NewsletterForm({
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Your email address"
+          placeholder="Enter your email"
           required
           disabled={status === "loading"}
           className={
@@ -129,7 +151,7 @@ export function NewsletterForm({
           disabled={status === "loading"}
           className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-semibold transition disabled:opacity-70 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-transparent w-full sm:w-auto"
         >
-          {status === "loading" ? "Subscribing…" : "Subscribe"}
+          {status === "loading" ? "Subscribing…" : "Get the Cheat Sheet"}
         </button>
       </form>
       {status === "error" && message && (
@@ -143,28 +165,7 @@ export function NewsletterForm({
           {message}
         </p>
       )}
-      <p
-        className={
-          isLight
-            ? "text-xs sm:text-sm text-gray-600 mt-3 px-2"
-            : isDark
-              ? "text-xs sm:text-sm text-gray-300 mt-3 px-2 [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]"
-              : isFooter
-                ? "text-xs sm:text-sm text-amber-200/80 mt-3 px-2"
-                : "text-xs sm:text-sm text-white/90 mt-3 px-2 drop-shadow-sm"
-        }
-      >
-        {DISCLAIMER}
-      </p>
-      {isFooter && !isDark && !isLight && (
-        <p className="text-xs text-amber-200/70 mt-1">No spam – unsubscribe anytime.</p>
-      )}
-      {isLight && (
-        <p className="text-xs text-gray-500 mt-1">No spam – unsubscribe anytime.</p>
-      )}
-      {isDark && (
-        <p className="text-xs text-gray-300/90 mt-1 [text-shadow:0_1px_2px_rgba(0,0,0,0.6)]">No spam – unsubscribe anytime.</p>
-      )}
+      <p className={smallClass}>{SMALL_TEXT}</p>
     </div>
   );
 }

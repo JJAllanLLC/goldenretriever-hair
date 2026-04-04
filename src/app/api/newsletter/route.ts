@@ -85,7 +85,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       message:
-        "Subscribed! Check inbox for welcome + giveaway entry.",
+        "Subscribed! Check your inbox for your welcome email with the cheat sheet link.",
     });
   } catch (err: unknown) {
     const brevoError = err as {

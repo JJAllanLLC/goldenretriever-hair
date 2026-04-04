@@ -106,14 +106,15 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           </div>
           <div className="mt-12 pt-8 border-t border-amber-100 text-center">
             <p className="text-gray-600 mb-2">
-              P.S. If you&apos;re obsessed with capturing those daily Golden moments, keep an eye out for our upcoming Golden of the Month contest — a community celebration where you can upload your favorite photos, vote for the best, and see winners showcased on the site!
+              P.S. Get the free{" "}
+              <strong>Golden Retriever Owner Cheat Sheet</strong> — daily feeding, sleep, and care in one printable
+              guide.
             </p>
             <p className="text-gray-600 mb-2">
-              Coming soon —{" "}
-              <Link href="/golden-week" className="text-amber-700 font-semibold hover:underline">
-                join the newsletter
+              <Link href="/#newsletter" className="text-amber-700 font-semibold hover:underline">
+                Get the Cheat Sheet
               </Link>{" "}
-              for exclusive updates and launch announcements!
+              when you join the newsletter — instant access in your welcome email.
             </p>
           </div>
           {/* BreadcrumbList schema */}

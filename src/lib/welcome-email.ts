@@ -1,6 +1,6 @@
 /**
  * Welcome email content for new newsletter subscribers.
- * Personal tone, app tease (photo contests & prizes), giveaway hint. No affiliates. Mobile-friendly HTML.
+ * Cheat sheet lead-in, site intro, optional app teaser. No affiliates. Mobile-friendly HTML.
  */
 
 export const WELCOME_EMAIL_SUBJECT = "Welcome to GoldenRetriever.hair!";
@@ -46,7 +46,7 @@ Save it or bookmark it — most owners come back to it often.</p>
 
       <hr/>
       <p class="text" style="font-size: 16px; line-height: 1.6;">Thanks for signing up — you're in the right place. GoldenRetriever.hair is your one-stop for everything Golden: guides, health tips, training, and real-world advice from people who live with Goldens.</p>
-      <p class="text" style="font-size: 16px; line-height: 1.6;">We're building something fun for Golden lovers: our upcoming <strong>Golden Mobile App</strong> will be perfect for sharing photos and entering fun contests with prizes. Giveaways (including a custom mug with your Golden's photo) are coming — stay on this list so you don't miss out.</p>
+      <p class="text" style="font-size: 16px; line-height: 1.6;">We're also building our upcoming <strong>Golden Mobile App</strong> for photos and community — stay on this list for product updates and more practical Golden content.</p>
       <p class="text" style="font-size: 16px; line-height: 1.6;">In the meantime, explore the site: <a href="https://goldenretriever.hair/guides">Guides</a>, <a href="https://goldenretriever.hair/products">Products</a>, and the <a href="https://goldenretriever.hair/blog">Blog</a>.</p>
       <p class="text" style="font-size: 16px; line-height: 1.6;">No spam — just Golden love and useful updates. Unsubscribe anytime.</p>
       <p class="text" style="font-size: 16px; line-height: 1.6;">🐾<br>The GoldenRetriever.hair team</p>

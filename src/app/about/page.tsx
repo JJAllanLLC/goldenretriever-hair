@@ -66,9 +66,10 @@ export default function AboutPage() {
                 </Link>{" "}
                 for relatable stories.
               </p>
-              <p>Don&apos;t forget to subscribe for our newsletter for updates.</p>
               <p>
-                And stay tuned for our upcoming Golden of the Month contest — a fun community way to share your favorite Golden moments!
+                Subscribe to the newsletter for the free{" "}
+                <strong>Golden Retriever Owner Cheat Sheet</strong> (instant access) — plus tips, training advice,
+                and real-world Golden insights.
               </p>
               <p className="text-sm text-gray-600">
                 As an Amazon Associate, GoldenRetriever.hair earns from qualifying purchases at no extra cost to you. The site is owned and operated by JJ Allan LLC.

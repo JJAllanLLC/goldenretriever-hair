@@ -5,9 +5,6 @@ export function Footer() {
     <footer className="bg-amber-900 text-white py-12 mt-20">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <div className="mb-8">
-          <p className="text-lg font-semibold text-amber-100 mb-4">
-            Stay updated with GoldenRetriever.hair
-          </p>
           <NewsletterForm variant="footer" />
         </div>
         <div className="flex flex-col items-center gap-4 text-sm">

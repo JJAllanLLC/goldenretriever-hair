@@ -5,7 +5,7 @@ import { GoldenWeekAnalytics } from "@/components/GoldenWeekAnalytics";
 export const metadata = {
   title: "Golden of the Month | Coming Soon | GoldenRetriever.hair",
   description:
-    "Golden of the Month — our community contest to upload your favorite Golden photos, vote for the best, and see winners showcased. Sign up to be notified at launch.",
+    "Golden of the Month — our community contest to upload your favorite Golden photos, vote for the best, and see winners showcased. Subscribe to the newsletter for the free Golden Retriever Owner Cheat Sheet and site updates.",
 };
 
 export default function GoldenWeekPage() {
@@ -74,21 +74,18 @@ export default function GoldenWeekPage() {
         </div>
 
         <div className="bg-gray-900/80 rounded-xl shadow-md border border-amber-200/30 p-6 md:p-8 [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]">
-          <p className="text-center text-gray-100 font-semibold text-lg mb-6">
-            Get notified when Golden of the Month launches!
-          </p>
           <NewsletterForm
-          variant="dark"
-          trackSuccessEvent={{
-            event: "golden_submit_click",
-            category: "golden_of_month",
-            label: "submit_entry",
-          }}
-        />
+            variant="dark"
+            trackSuccessEvent={{
+              event: "golden_submit_click",
+              category: "golden_of_month",
+              label: "submit_entry",
+            }}
+          />
         </div>
 
         <p className="text-center text-gray-500 text-sm mt-10 mb-4">
-          Already subscribed? You&apos;re all set — we&apos;ll email you the moment Golden of the Month launches.
+          Already subscribed? You&apos;re all set — check your inbox for the cheat sheet and future updates.
         </p>
       </section>
     </main>

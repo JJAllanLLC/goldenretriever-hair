@@ -39,7 +39,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-amber-50/90 py-8 px-4">
+      <section id="newsletter" className="bg-amber-50/90 py-8 px-4 scroll-mt-8">
         <div className="max-w-md mx-auto text-center">
           <NewsletterForm variant="light" />
         </div>
