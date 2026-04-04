@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1800" width="1000" height="1800">
+  <defs>
+    <linearGradient id="hdr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1F2A44"/>
+      <stop offset="100%" style="stop-color:#2a3a5c"/>
+    </linearGradient>
+    <filter id="soft" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1F2A44" flood-opacity="0.08"/>
+    </filter>
+    <style type="text/css"><![CDATA[
+      .t { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+      .h1 { font-size: 42px; font-weight: 800; fill: #F7F4EF; letter-spacing: -0.02em; }
+      .sub { font-size: 22px; font-weight: 600; fill: #C89B3C; letter-spacing: 0.04em; text-transform: uppercase; }
+      .sec-title { font-size: 26px; font-weight: 800; fill: #1F2A44; letter-spacing: -0.02em; }
+      .label { font-size: 14px; font-weight: 700; fill: #C89B3C; text-transform: uppercase; letter-spacing: 0.12em; }
+      .body { font-size: 17px; font-weight: 600; fill: #1F2A44; }
+      .small { font-size: 15px; font-weight: 500; fill: #3d4d66; }
+      .mistake-lbl { font-size: 13px; font-weight: 800; fill: #1F2A44; text-transform: uppercase; letter-spacing: 0.1em; }
+      .mistake { font-size: 16px; font-weight: 700; fill: #8b4513; }
+      .issues-h { font-size: 24px; font-weight: 800; fill: #1F2A44; }
+      .bullet { font-size: 16px; font-weight: 600; fill: #1F2A44; }
+      .foot { font-size: 20px; font-weight: 800; fill: #C89B3C; letter-spacing: 0.02em; }
+      .foot-sub { font-size: 14px; font-weight: 600; fill: #5a6a82; }
+      .cup-note { font-size: 12px; font-weight: 500; fill: #5a6a82; font-style: italic; }
+    ]]></style>
+  </defs>
+
+  <rect width="1000" height="1800" fill="#F7F4EF"/>
+
+  <rect width="1000" height="200" fill="url(#hdr)"/>
+  <text x="500" y="95" text-anchor="middle" class="t h1">Golden Retriever Daily Cheat Sheet</text>
+  <text x="500" y="155" text-anchor="middle" class="t sub">Feeding, sleep &amp; care by age</text>
+  <rect x="380" y="175" width="240" height="4" rx="2" fill="#C89B3C"/>
+
+  <!-- Feeding visual -->
+  <g transform="translate(40, 218)">
+    <text x="0" y="0" class="t issues-h">Daily food (visual guide)</text>
+    <text x="0" y="28" class="t cup-note">Typical total cups/day (adult kibble) - adjust for your dog and vet advice</text>
+    <g transform="translate(0, 50)">
+      <text x="0" y="22" class="t body" style="font-weight:700">Puppy</text>
+      <g transform="translate(130, 0)">
+        <rect x="0" y="0" width="56" height="36" rx="6" fill="#C89B3C" opacity="0.35" stroke="#C89B3C" stroke-width="2"/>
+        <rect x="64" y="0" width="56" height="36" rx="6" fill="#C89B3C" opacity="0.35" stroke="#C89B3C" stroke-width="2"/>
+        <rect x="128" y="0" width="56" height="36" rx="6" fill="#C89B3C" stroke="#1F2A44" stroke-width="2"/>
+      </g>
+      <text x="310" y="24" class="t small">3-4 meals, ~2-2.5 cups total</text>
+
+      <text x="0" y="78" class="t body" style="font-weight:700">Teen</text>
+      <g transform="translate(130, 56)">
+        <rect x="0" y="0" width="56" height="36" rx="6" fill="#C89B3C" opacity="0.35" stroke="#C89B3C" stroke-width="2"/>
+        <rect x="64" y="0" width="56" height="36" rx="6" fill="#C89B3C" stroke="#1F2A44" stroke-width="2"/>
+        <rect x="128" y="0" width="56" height="36" rx="6" fill="#C89B3C" stroke="#1F2A44" stroke-width="2"/>
+      </g>
+      <text x="310" y="80" class="t small">2-3 meals, ~2.5-3.5 cups total</text>
+
+      <text x="0" y="134" class="t body" style="font-weight:700">Adult</text>
+      <g transform="translate(130, 112)">
+        <rect x="0" y="0" width="56" height="36" rx="6" fill="#C89B3C" stroke="#1F2A44" stroke-width="2"/>
+        <rect x="64" y="0" width="56" height="36" rx="6" fill="#C89B3C" stroke="#1F2A44" stroke-width="2"/>
+        <rect x="128" y="0" width="56" height="36" rx="6" fill="#C89B3C" stroke="#1F2A44" stroke-width="2"/>
+        <rect x="192" y="0" width="56" height="36" rx="6" fill="#C89B3C" opacity="0.5" stroke="#C89B3C" stroke-width="2" stroke-dasharray="4 3"/>
+      </g>
+      <text x="310" y="136" class="t small">2 meals, ~3-4 cups total</text>
+
+      <text x="0" y="190" class="t body" style="font-weight:700">Senior</text>
+      <g transform="translate(130, 168)">
+        <rect x="0" y="0" width="56" height="36" rx="6" fill="#C89B3C" stroke="#1F2A44" stroke-width="2"/>
+        <rect x="64" y="0" width="56" height="36" rx="6" fill="#C89B3C" stroke="#1F2A44" stroke-width="2"/>
+        <rect x="128" y="0" width="56" height="36" rx="6" fill="#C89B3C" opacity="0.45" stroke="#C89B3C" stroke-width="2"/>
+      </g>
+      <text x="310" y="192" class="t small">2 meals, adjust to body condition</text>
+    </g>
+    <text x="920" y="248" text-anchor="end" class="t cup-note">Solid = typical range; faded = variable / split meals</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <g transform="translate(40, 478)">
+      <rect width="920" height="232" rx="16" fill="#ffffff" stroke="#C89B3C" stroke-width="3"/>
+      <rect width="8" height="232" rx="4" fill="#1F2A44"/>
+      <text x="32" y="42" class="t sec-title">Puppy (0-6 months)</text>
+      <text x="32" y="74" class="t label">Meals</text>
+      <text x="120" y="74" class="t body">3-4x daily (see cups above)</text>
+      <text x="32" y="102" class="t label">Sleep</text>
+      <text x="120" y="102" class="t body">18-20 hrs, lots of naps</text>
+      <text x="32" y="130" class="t label">Exercise</text>
+      <text x="120" y="130" class="t body">Short play, breaks, avoid forced jumps</text>
+      <rect x="32" y="148" width="856" height="68" rx="10" fill="#F7F4EF" stroke="#C89B3C" stroke-width="2"/>
+      <text x="48" y="174" class="t mistake-lbl">Biggest mistake</text>
+      <text x="48" y="200" class="t mistake">Over-exercising or skipping socialization</text>
+    </g>
+
+    <g transform="translate(40, 722)">
+      <rect width="920" height="232" rx="16" fill="#ffffff" stroke="#C89B3C" stroke-width="3"/>
+      <rect width="8" height="232" rx="4" fill="#1F2A44"/>
+      <text x="32" y="42" class="t sec-title">Teen (6-12 months)</text>
+      <text x="32" y="74" class="t label">Meals</text>
+      <text x="120" y="74" class="t body">2-3x daily (see cups above)</text>
+      <text x="32" y="102" class="t label">Sleep</text>
+      <text x="120" y="102" class="t body">14-18 hrs, growing fast</text>
+      <text x="32" y="130" class="t label">Exercise</text>
+      <text x="120" y="130" class="t body">Longer walks, build slowly, skip marathons</text>
+      <rect x="32" y="148" width="856" height="68" rx="10" fill="#F7F4EF" stroke="#C89B3C" stroke-width="2"/>
+      <text x="48" y="174" class="t mistake-lbl">Biggest mistake</text>
+      <text x="48" y="200" class="t mistake">Treating them like a full-grown adult too early</text>
+    </g>
+
+    <g transform="translate(40, 966)">
+      <rect width="920" height="232" rx="16" fill="#ffffff" stroke="#C89B3C" stroke-width="3"/>
+      <rect width="8" height="232" rx="4" fill="#1F2A44"/>
+      <text x="32" y="42" class="t sec-title">Adult (1-7 years)</text>
+      <text x="32" y="74" class="t label">Meals</text>
+      <text x="120" y="74" class="t body">2x daily (see cups above)</text>
+      <text x="32" y="102" class="t label">Sleep</text>
+      <text x="120" y="102" class="t body">12-14 hrs, routine matters</text>
+      <text x="32" y="130" class="t label">Exercise</text>
+      <text x="120" y="130" class="t body">~1-2 hrs: fetch, swim, sniff walks</text>
+      <rect x="32" y="148" width="856" height="68" rx="10" fill="#F7F4EF" stroke="#C89B3C" stroke-width="2"/>
+      <text x="48" y="174" class="t mistake-lbl">Biggest mistake</text>
+      <text x="48" y="200" class="t mistake">No mental work + extra scoops (weight creep)</text>
+    </g>
+
+    <g transform="translate(40, 1210)">
+      <rect width="920" height="232" rx="16" fill="#ffffff" stroke="#C89B3C" stroke-width="3"/>
+      <rect width="8" height="232" rx="4" fill="#1F2A44"/>
+      <text x="32" y="42" class="t sec-title">Senior (7+ years)</text>
+      <text x="32" y="74" class="t label">Meals</text>
+      <text x="120" y="74" class="t body">2x daily, adjust with vet if weight shifts</text>
+      <text x="32" y="102" class="t label">Sleep</text>
+      <text x="120" y="102" class="t body">More rest, softer bedding</text>
+      <text x="32" y="130" class="t label">Exercise</text>
+      <text x="120" y="130" class="t body">Steady, shorter; swim and flat trails</text>
+      <rect x="32" y="148" width="856" height="68" rx="10" fill="#F7F4EF" stroke="#C89B3C" stroke-width="2"/>
+      <text x="48" y="174" class="t mistake-lbl">Biggest mistake</text>
+      <text x="48" y="200" class="t mistake">Ignoring stiffness as only normal aging</text>
+    </g>
+  </g>
+
+  <g transform="translate(40, 1465)">
+    <text x="0" y="0" class="t issues-h">Common issues by age</text>
+    <circle cx="8" cy="28" r="5" fill="#C89B3C"/>
+    <text x="28" y="34" class="t bullet">Puppy: accidents, chewing, fear periods</text>
+    <circle cx="8" cy="58" r="5" fill="#C89B3C"/>
+    <text x="28" y="64" class="t bullet">Teen: selective hearing, boundary testing</text>
+    <circle cx="8" cy="88" r="5" fill="#C89B3C"/>
+    <text x="28" y="94" class="t bullet">Adult: weight creep, under-stimulation</text>
+    <circle cx="8" cy="118" r="5" fill="#C89B3C"/>
+    <text x="28" y="124" class="t bullet">Senior: joints, senses, lumps (vet checks)</text>
+  </g>
+
+  <rect x="0" y="1655" width="1000" height="145" fill="#1F2A44"/>
+  <text x="500" y="1715" text-anchor="middle" class="t foot">GoldenRetriever.hair</text>
+  <text x="500" y="1755" text-anchor="middle" class="t foot-sub">Share / save / print - confirm amounts with your veterinarian</text>
+</svg>
