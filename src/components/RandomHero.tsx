@@ -81,10 +81,10 @@ export function RandomHero() {
         <div className="absolute inset-0 flex items-center justify-center px-6">
           <div className="max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-2">
-              Everything Golden Retrievers
+              Are You Feeding Your Golden Retriever the Right Amount?
             </h1>
             <p className="text-base md:text-lg text-white/90 font-normal drop-shadow-md mb-4">
-              Get the free Owner Cheat Sheet when you join the newsletter — feeding, sleep, and care at a glance.
+              Get the exact feeding guide by age (puppy → adult → senior) — used by experienced Golden owners.
             </p>
           </div>
         </div>
@@ -109,13 +109,13 @@ export function RandomHero() {
         <div className="absolute inset-0 flex items-center justify-center px-6">
           <div className="max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-2">
-              Everything Golden Retrievers
+              Are You Feeding Your Golden Retriever the Right Amount?
             </h1>
             <p className="text-base md:text-lg text-white/90 font-normal drop-shadow-md mb-4">
-              Get the free Owner Cheat Sheet when you join the newsletter — feeding, sleep, and care at a glance.
+              Get the exact feeding guide by age (puppy → adult → senior) — used by experienced Golden owners.
             </p>
             <p className="text-xl md:text-2xl text-white drop-shadow-md mb-8">
-              Trusted guides, grooming tips, and resources for every stage of Golden life.
+              Get instant access to the cheat sheet — plus tips, training advice, and real-world Golden insights.
             </p>
             <Link
               href="/#newsletter"
