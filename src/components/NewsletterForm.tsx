@@ -3,13 +3,15 @@
 import { useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 
-const HEADLINE = "Free Golden Retriever Cheat Sheet (instant access)";
+const HEADLINE = "Free Golden Retriever Cheat Sheet";
+
+const HEADLINE_SUB = "(instant access)";
 
 const BODY_P1 =
   "Get the exact daily feeding, sleep, and care guide used by experienced Golden owners.";
 
 const BODY_P2 =
-  "Join the newsletter and get immediate access — plus tips, training advice, and real-world Golden insights.";
+  "Join the newsletter for instant access — plus tips, training advice, and real-world insights.";
 
 const SMALL_TEXT = "No spam — unsubscribe anytime.";
 
@@ -77,12 +79,21 @@ export function NewsletterForm({
 
   const headlineClass =
     isLight
-      ? "text-lg sm:text-xl text-amber-900 font-bold mb-3 px-2"
+      ? "text-lg sm:text-xl text-amber-900 font-bold mb-1 px-2"
       : isDark
-        ? "text-lg sm:text-xl text-gray-100 font-bold mb-3 px-2 [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]"
+        ? "text-lg sm:text-xl text-gray-100 font-bold mb-1 px-2 [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]"
         : isFooter
-          ? "text-lg sm:text-xl text-amber-100 font-bold mb-3 px-2"
-          : "text-xl sm:text-2xl text-white font-bold drop-shadow-md mb-3 px-2";
+          ? "text-lg sm:text-xl text-amber-100 font-bold mb-1 px-2"
+          : "text-xl sm:text-2xl text-white font-bold drop-shadow-md mb-1 px-2";
+
+  const headlineSubClass =
+    isLight
+      ? "text-sm sm:text-base text-amber-900 font-medium mb-3 px-2"
+      : isDark
+        ? "text-sm sm:text-base text-gray-100 font-medium mb-3 px-2 [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]"
+        : isFooter
+          ? "text-sm sm:text-base text-amber-100 font-medium mb-3 px-2"
+          : "text-sm sm:text-base text-white font-medium mb-3 px-2 drop-shadow-md";
 
   const bodyClass =
     isLight
@@ -123,6 +134,7 @@ export function NewsletterForm({
   return (
     <div className={`w-full text-center ${isHero || isDark || isLight ? "max-w-md mx-auto" : ""}`}>
       <p className={headlineClass}>{HEADLINE}</p>
+      <p className={headlineSubClass}>{HEADLINE_SUB}</p>
       <p className={bodyClass}>{BODY_P1}</p>
       <p className={bodyClass}>{BODY_P2}</p>
       <form
