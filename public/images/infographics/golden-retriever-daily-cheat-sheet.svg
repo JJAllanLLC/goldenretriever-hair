@@ -19,6 +19,7 @@
       .food-sum { font-size: 15px; font-weight: 500; fill: #2c3a52; }
       .cup-num { font-size: 15px; font-weight: 800; fill: #1F2A44; }
       .cup-num-f { font-size: 14px; font-weight: 700; fill: #8a7d62; }
+      .cup-num-faded { font-size: 13px; font-weight: 600; fill: #9a948c; }
       .mistake-lbl { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; fill: #5a6b82; text-transform: uppercase; letter-spacing: 0.12em; }
       .mistake { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 17px; font-weight: 800; fill: #2a1f14; letter-spacing: -0.01em; }
       .warn { font-size: 24px; font-family: ui-sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
@@ -44,7 +45,7 @@
   <text x="500" y="144" text-anchor="middle" class="t sub">Feeding, sleep &amp; care by age</text>
   <rect x="340" y="168" width="320" height="3" rx="1.5" fill="#C89B3C"/>
 
-  <!-- Food: row pitch 90, blocks 52x36 gap 8, grid origin x=112 -->
+  <!-- Food: fixed block zone = 452 + 38 = 232px; labels x=0; blocks at x=80; summaries x=340 -->
   <g transform="translate(40, 214)">
     <text x="0" y="0" class="t food-h">Daily food (visual)</text>
     <text x="0" y="28" class="t legend">Each block &#8776; 1 cup | Solid = typical | Faded = flexible / split meals</text>
@@ -52,8 +53,8 @@
 
     <g transform="translate(0, 70)">
       <!-- Row 0 Puppy -->
-      <text x="0" y="28" class="t food-label">Puppy</text>
-      <g transform="translate(112, 0)">
+      <text x="0" y="24" class="t food-label">Puppy</text>
+      <g transform="translate(80, 0)">
         <rect x="0" y="0" width="52" height="36" rx="8" fill="#efe6d8" stroke="#c9b89a" stroke-width="1.5"/>
         <text x="26" y="24" text-anchor="middle" class="t cup-num-f">1</text>
         <rect x="60" y="0" width="52" height="36" rx="8" fill="#efe6d8" stroke="#c9b89a" stroke-width="1.5"/>
@@ -61,11 +62,11 @@
         <rect x="120" y="0" width="52" height="36" rx="8" fill="#C89B3C" stroke="#1F2A44" stroke-width="2.5"/>
         <text x="146" y="24" text-anchor="middle" class="t cup-num">3</text>
       </g>
-      <text x="318" y="28" class="t food-sum">3&#8211;4 meals | ~2&#8211;2.5 cups total</text>
+      <text x="340" y="24" class="t food-sum">3&#8211;4 meals | ~2&#8211;2.5 cups total</text>
 
       <!-- Row 1 Teen -->
-      <text x="0" y="118" class="t food-label">Teen</text>
-      <g transform="translate(112, 90)">
+      <text x="0" y="120" class="t food-label">Teen</text>
+      <g transform="translate(80, 96)">
         <rect x="0" y="0" width="52" height="36" rx="8" fill="#ebe2d4" stroke="#c4b59a" stroke-width="1.5"/>
         <text x="26" y="24" text-anchor="middle" class="t cup-num-f">1</text>
         <rect x="60" y="0" width="52" height="36" rx="8" fill="#C89B3C" stroke="#1F2A44" stroke-width="2.5"/>
@@ -73,25 +74,25 @@
         <rect x="120" y="0" width="52" height="36" rx="8" fill="#C89B3C" stroke="#1F2A44" stroke-width="2.5"/>
         <text x="146" y="24" text-anchor="middle" class="t cup-num">3</text>
       </g>
-      <text x="318" y="118" class="t food-sum">2&#8211;3 meals | ~2.5&#8211;3.5 cups total</text>
+      <text x="340" y="120" class="t food-sum">2&#8211;3 meals | ~2.5&#8211;3.5 cups total</text>
 
-      <!-- Row 2 Adult -->
-      <text x="0" y="208" class="t food-label">Adult</text>
-      <g transform="translate(112, 180)">
+      <!-- Row 2 Adult (4th block stays inside 232px zone; text never before x=340) -->
+      <text x="0" y="216" class="t food-label">Adult</text>
+      <g transform="translate(80, 192)">
         <rect x="0" y="0" width="52" height="36" rx="8" fill="#C89B3C" stroke="#1F2A44" stroke-width="2.5"/>
         <text x="26" y="24" text-anchor="middle" class="t cup-num">1</text>
         <rect x="60" y="0" width="52" height="36" rx="8" fill="#C89B3C" stroke="#1F2A44" stroke-width="2.5"/>
         <text x="86" y="24" text-anchor="middle" class="t cup-num">2</text>
         <rect x="120" y="0" width="52" height="36" rx="8" fill="#C89B3C" stroke="#1F2A44" stroke-width="2.5"/>
         <text x="146" y="24" text-anchor="middle" class="t cup-num">3</text>
-        <rect x="180" y="0" width="52" height="36" rx="8" fill="#e8dcc8" stroke="#b8a078" stroke-width="1.5" stroke-dasharray="4 3"/>
-        <text x="206" y="24" text-anchor="middle" class="t cup-num-f">4</text>
+        <rect x="180" y="0" width="52" height="36" rx="8" fill="#f5f3ef" stroke="#d9d4cc" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <text x="206" y="24" text-anchor="middle" class="t cup-num-faded">4</text>
       </g>
-      <text x="318" y="208" class="t food-sum">2 meals | ~3&#8211;4 cups total</text>
+      <text x="340" y="216" class="t food-sum">2 meals | ~3&#8211;4 cups total</text>
 
       <!-- Row 3 Senior -->
-      <text x="0" y="298" class="t food-label">Senior</text>
-      <g transform="translate(112, 270)">
+      <text x="0" y="312" class="t food-label">Senior</text>
+      <g transform="translate(80, 288)">
         <rect x="0" y="0" width="52" height="36" rx="8" fill="#C89B3C" stroke="#1F2A44" stroke-width="2.5"/>
         <text x="26" y="24" text-anchor="middle" class="t cup-num">1</text>
         <rect x="60" y="0" width="52" height="36" rx="8" fill="#C89B3C" stroke="#1F2A44" stroke-width="2.5"/>
@@ -99,7 +100,7 @@
         <rect x="120" y="0" width="52" height="36" rx="8" fill="#e5d9c8" stroke="#b5a386" stroke-width="1.5"/>
         <text x="146" y="24" text-anchor="middle" class="t cup-num-f">3</text>
       </g>
-      <text x="318" y="298" class="t food-sum">2 meals | adjust to body condition</text>
+      <text x="340" y="312" class="t food-sum">2 meals | adjust to body condition</text>
     </g>
   </g>
 
@@ -190,5 +191,5 @@
 
   <rect x="0" y="2110" width="1000" height="90" fill="#1a2438"/>
   <text x="500" y="2150" text-anchor="middle" class="foot">GoldenRetriever.hair</text>
-  <text x="500" y="2176" text-anchor="middle" class="foot-sub">Share / save / print &#8226; Confirm amounts with your veterinarian</text>
+  <text x="500" y="2176" text-anchor="middle" class="foot-sub">Confirm amounts with your veterinarian</text>
 </svg>
