@@ -32,6 +32,19 @@ export function getWelcomeEmailHtml(): string {
         <h1 class="title" style="color: #b45309; font-size: 24px; margin: 0;">GoldenRetriever.hair</h1>
       </div>
       <p class="text" style="font-size: 16px; line-height: 1.6;">Hi there,</p>
+      <p><strong>Before anything else, here's something you can use right away:</strong></p>
+
+      <p>
+👉 <strong>Golden Retriever Owner Cheat Sheet</strong><br/>
+<a href="https://goldenretriever.hair/images/infographics/golden-retriever-daily-cheat-sheet.svg">
+https://goldenretriever.hair/images/infographics/golden-retriever-daily-cheat-sheet.svg
+</a>
+</p>
+
+      <p>This isn't listed publicly — I only share it with subscribers.<br/>
+Save it or bookmark it — most owners come back to it often.</p>
+
+      <hr/>
       <p class="text" style="font-size: 16px; line-height: 1.6;">Thanks for signing up — you're in the right place. GoldenRetriever.hair is your one-stop for everything Golden: guides, health tips, training, and real-world advice from people who live with Goldens.</p>
       <p class="text" style="font-size: 16px; line-height: 1.6;">We're building something fun for Golden lovers: our upcoming <strong>Golden Mobile App</strong> will be perfect for sharing photos and entering fun contests with prizes. Giveaways (including a custom mug with your Golden's photo) are coming — stay on this list so you don't miss out.</p>
       <p class="text" style="font-size: 16px; line-height: 1.6;">In the meantime, explore the site: <a href="https://goldenretriever.hair/guides">Guides</a>, <a href="https://goldenretriever.hair/products">Products</a>, and the <a href="https://goldenretriever.hair/blog">Blog</a>.</p>
