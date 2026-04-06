@@ -5,7 +5,7 @@ import { trackEvent } from "@/lib/analytics";
 
 const HEADLINE = "Most Golden Retriever Owners Are Feeding the Wrong Amount";
 
-const HEADLINE_SUB = "Get the free feeding guide instantly";
+const HEADLINE_SUB = "Get your free feeding guide instantly";
 
 const BODY_P1 =
   "Get the exact feeding guide by age (puppy → adult → senior) so you don't overfeed or underfeed your dog.";
