@@ -54,17 +54,19 @@ export function GuidesCategoryFilter({ guides }: { guides: Guide[] }) {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {visibleGuides.map((guide) => (
           <article key={guide.slug} className="bg-white rounded-xl shadow-sm border border-amber-100 overflow-hidden">
-            {guide.featuredImage && (
-              <div className="relative h-48 bg-amber-100">
+            <div
+              className={`relative w-full aspect-[3/2] ${guide.featuredImage ? "bg-amber-100" : "bg-gray-100"}`}
+            >
+              {guide.featuredImage ? (
                 <Image
                   src={guide.featuredImage}
                   alt={guide.featuredAlt ?? guide.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover object-center"
                 />
-              </div>
-            )}
+              ) : null}
+            </div>
             <div className="p-6">
               {["history-of-the-golden-retriever", "best-dog-food-golden-retrievers-2026", "golden-retriever-grooming-guide", "golden-retriever-shedding-guide", "golden-retriever-training-guide", "should-you-get-two-golden-retrievers"].includes(
                 guide.slug
