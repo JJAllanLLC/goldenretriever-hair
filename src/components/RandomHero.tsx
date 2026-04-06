@@ -119,7 +119,7 @@ export function RandomHero() {
                 href="/#newsletter"
                 className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition"
               >
-                Get the Free Cheat Sheet
+                Get My Free Cheat Sheet
               </Link>
               <Link
                 href="/guides"
