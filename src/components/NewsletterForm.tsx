@@ -10,9 +10,6 @@ const HEADLINE_SUB = "Get the free feeding guide instantly";
 const BODY_P1 =
   "Get the exact feeding guide by age (puppy → adult → senior) so you don't overfeed or underfeed your dog.";
 
-const BODY_P2 =
-  "Includes daily portions, feeding schedule, and simple care tips used by experienced Golden owners.";
-
 const SMALL_TEXT = "No spam. Unsubscribe anytime.";
 
 const SUCCESS_FALLBACK =
@@ -136,7 +133,6 @@ export function NewsletterForm({
       <p className={headlineClass}>{HEADLINE}</p>
       <p className={headlineSubClass}>{HEADLINE_SUB}</p>
       <p className={bodyClass}>{BODY_P1}</p>
-      <p className={bodyClass}>{BODY_P2}</p>
       <form
         onSubmit={handleSubmit}
         className="max-w-md mx-auto flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
@@ -145,7 +141,7 @@ export function NewsletterForm({
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email to get the cheat sheet"
+          placeholder="Enter your email"
           required
           disabled={status === "loading"}
           className={
