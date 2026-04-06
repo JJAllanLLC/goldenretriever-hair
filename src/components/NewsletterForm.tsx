@@ -3,17 +3,17 @@
 import { useState } from "react";
 import { trackEvent } from "@/lib/analytics";
 
-const HEADLINE = "Free Golden Retriever Cheat Sheet";
+const HEADLINE = "Most Golden Retriever Owners Are Feeding the Wrong Amount";
 
-const HEADLINE_SUB = "(instant access)";
+const HEADLINE_SUB = "Get the free feeding guide instantly";
 
 const BODY_P1 =
-  "Get the exact daily feeding, sleep, and care guide used by experienced Golden owners.";
+  "Get the exact feeding guide by age (puppy → adult → senior) so you don't overfeed or underfeed your dog.";
 
 const BODY_P2 =
-  "Join the newsletter for instant access — plus tips, training advice, and real-world insights.";
+  "Includes daily portions, feeding schedule, and simple care tips used by experienced Golden owners.";
 
-const SMALL_TEXT = "No spam — unsubscribe anytime.";
+const SMALL_TEXT = "No spam. Unsubscribe anytime.";
 
 const SUCCESS_FALLBACK =
   "Subscribed! Check your inbox for your welcome email with the cheat sheet link.";
@@ -145,7 +145,7 @@ export function NewsletterForm({
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
+          placeholder="Enter your email to get the cheat sheet"
           required
           disabled={status === "loading"}
           className={
@@ -163,7 +163,7 @@ export function NewsletterForm({
           disabled={status === "loading"}
           className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-semibold transition disabled:opacity-70 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-transparent w-full sm:w-auto"
         >
-          {status === "loading" ? "Subscribing…" : "Get the Cheat Sheet"}
+          {status === "loading" ? "Subscribing…" : "Get My Free Cheat Sheet"}
         </button>
       </form>
       {status === "error" && message && (
