@@ -111,11 +111,8 @@ export function RandomHero() {
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-2">
               Everything You Need for Your Golden Retriever
             </h1>
-            <p className="text-base md:text-lg text-white/90 font-normal drop-shadow-md mb-4">
+            <p className="text-base md:text-lg text-white/90 font-normal drop-shadow-md mb-8">
               Feeding guides, grooming tips, training advice, and real-world insights for every stage of Golden life.
-            </p>
-            <p className="text-xl md:text-2xl text-white drop-shadow-md mb-8">
-              Get instant access to the cheat sheet — plus tips, training advice, and real-world Golden insights.
             </p>
             <div className="flex flex-col items-center gap-3">
               <Link
