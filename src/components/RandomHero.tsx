@@ -81,10 +81,10 @@ export function RandomHero() {
         <div className="absolute inset-0 flex items-center justify-center px-6">
           <div className="max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-2">
-              Are You Feeding Your Golden Retriever the Right Amount?
+              Everything You Need for Your Golden Retriever
             </h1>
             <p className="text-base md:text-lg text-white/90 font-normal drop-shadow-md mb-4">
-              Get the exact feeding guide by age (puppy → adult → senior) — used by experienced Golden owners.
+              Feeding guides, grooming tips, training advice, and real-world insights for every stage of Golden life.
             </p>
           </div>
         </div>
@@ -109,20 +109,28 @@ export function RandomHero() {
         <div className="absolute inset-0 flex items-center justify-center px-6">
           <div className="max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-playfair font-bold text-white drop-shadow-md mb-2">
-              Are You Feeding Your Golden Retriever the Right Amount?
+              Everything You Need for Your Golden Retriever
             </h1>
             <p className="text-base md:text-lg text-white/90 font-normal drop-shadow-md mb-4">
-              Get the exact feeding guide by age (puppy → adult → senior) — used by experienced Golden owners.
+              Feeding guides, grooming tips, training advice, and real-world insights for every stage of Golden life.
             </p>
             <p className="text-xl md:text-2xl text-white drop-shadow-md mb-8">
               Get instant access to the cheat sheet — plus tips, training advice, and real-world Golden insights.
             </p>
-            <Link
-              href="/#newsletter"
-              className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition"
-            >
-              Get the Cheat Sheet
-            </Link>
+            <div className="flex flex-col items-center gap-3">
+              <Link
+                href="/#newsletter"
+                className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition"
+              >
+                Get the Free Cheat Sheet
+              </Link>
+              <Link
+                href="/guides"
+                className="text-sm text-white/85 underline underline-offset-2 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent rounded-sm"
+              >
+                or browse our guides
+              </Link>
+            </div>
           </div>
         </div>
       </div>
