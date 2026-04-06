@@ -53,13 +53,13 @@ export function BlogCategoryFilter({ posts }: { posts: PostMeta[] }) {
         {visiblePosts.map((post) => (
           <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-amber-100 overflow-hidden">
             {post.featuredImage && (
-              <div className="relative h-48 bg-amber-100">
+              <div className="relative w-full aspect-[3/2] bg-amber-100">
                 <Image
                   src={post.featuredImage}
                   alt={post.featuredAlt ?? post.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover object-center"
                 />
               </div>
             )}
