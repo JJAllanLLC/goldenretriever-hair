@@ -127,14 +127,15 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
         <article className="mt-8 bg-white rounded-xl shadow-2xl overflow-hidden">
           <div className="px-6 py-10 md:px-10">
             {metadata.featuredImage && (
-              <div className="mb-8 -mx-6 md:-mx-10">
-                <div className="relative w-full aspect-video md:aspect-[21/9]">
+              <div className="mb-8 -mx-6 md:-mx-10 overflow-hidden bg-amber-50">
+                <div className="flex w-full justify-center items-center px-2 py-3 md:px-4 md:py-5">
                   <Image
                     src={metadata.featuredImage}
                     alt={metadata.featuredAlt ?? metadata.title ?? "Guide"}
-                    fill
+                    width={1200}
+                    height={800}
                     sizes="(max-width: 768px) 100vw, 896px"
-                    className="object-cover"
+                    className="h-auto max-h-[min(72vh,680px)] w-auto max-w-full object-contain object-center"
                   />
                 </div>
               </div>
