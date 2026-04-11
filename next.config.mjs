@@ -12,6 +12,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/best-grooming-tools-for-golden-retrievers/',
+        destination: '/guides/best-brushes-golden-retrievers',
+        permanent: true,
+      },
+      {
         source: '/history-of-the-golden-retriever',
         destination: '/guides/history-of-the-golden-retriever',
         permanent: true,
