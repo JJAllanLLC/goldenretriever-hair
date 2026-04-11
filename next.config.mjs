@@ -8,7 +8,7 @@ const nextConfig = {
     return [
       {
         source: '/best-grooming-tools-for-golden-retrievers',
-        destination: '/guides/best-brushes-for-golden-retrievers',
+        destination: '/guides/best-brushes-golden-retrievers',
         permanent: true,
       },
       {
