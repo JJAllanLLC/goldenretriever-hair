@@ -283,6 +283,18 @@ const products = [
     category: "Toys",
   },
   {
+    title: "Benebone Small 4-Pack (Best Value Chew Toy Bundle)",
+    description:
+      "4-pack of durable Benebone chews designed for small dogs and puppies — multiple shapes and flavors to prevent boredom.",
+    personalComment:
+      "Great option if your Golden Retriever puppy gets bored quickly with the same chew. This 4-pack includes multiple shapes and flavors, which helps keep them engaged and rotating between toys instead of going back to your hands. Designed for smaller dogs and puppies, but still durable enough for regular chewing. A strong value pick if you want variety without constantly buying new toys. 🐾",
+    amazonLink: "https://amzn.to/4c49W70",
+    image: "/images/products/benebone-4pack.jpeg",
+    imageAlt:
+      "Benebone Small 4-Pack durable dog chew toys for puppies and small dogs",
+    category: "Toys",
+  },
+  {
     title: "Natural Dog Company Snout Soother Balm – Dog Nose Balm for Dry Cracked Snouts",
     description:
       "Moisturizing winter nose care with coconut oil & shea butter – helps with nasal hyperkeratosis (dry, thick, crusty nose).",
