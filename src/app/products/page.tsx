@@ -271,6 +271,18 @@ const products = [
     category: "Toys",
   },
   {
+    title: "Benebone Puppy 2-Pack Maplestick/Zaggler (Best for Gentle Puppy Chewers)",
+    description:
+      "Softer puppy chew toy 2-pack made for gentle chewers under 15 lbs, with real bacon and real maplewood flavor.",
+    personalComment:
+      "A better fit for younger Golden Retriever puppies that are still in the early chewing stage and not ready for a tougher adult chew yet. The softer design is made for modest chewers and gives puppies a safe way to satisfy teething and mouthy behavior. This 2-pack gives you variety right away, which helps when puppies get bored with the same chew too quickly. A good step before moving up to tougher long-lasting chews. 🐾",
+    amazonLink: "https://amzn.to/4c4H26J",
+    image: "/images/products/benebone2.jpeg",
+    imageAlt:
+      "Benebone Puppy 2-Pack Maplestick and Zaggler durable chew toys for gentle puppy chewers",
+    category: "Toys",
+  },
+  {
     title: "Natural Dog Company Snout Soother Balm – Dog Nose Balm for Dry Cracked Snouts",
     description:
       "Moisturizing winter nose care with coconut oil & shea butter – helps with nasal hyperkeratosis (dry, thick, crusty nose).",

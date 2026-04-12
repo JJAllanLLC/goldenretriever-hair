@@ -12,6 +12,8 @@ type Product = {
   category: string;
   personalComment?: string;
   image?: string;
+  /** When set, used as the product image `alt` (otherwise `title` is used). */
+  imageAlt?: string;
 };
 
 const categories = ["All", "Puppy", "Grooming", "Toys", "Food/Treats", "Health", "Training", "Essentials", "Books & Resources"] as const;
@@ -129,7 +131,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
               <div className="relative h-40 bg-white border border-gray-200 rounded-lg mb-4 overflow-hidden">
                 <Image
                   src={product.image}
-                  alt={product.title}
+                  alt={product.imageAlt ?? product.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-contain"
