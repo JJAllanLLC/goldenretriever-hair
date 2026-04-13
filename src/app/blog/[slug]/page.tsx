@@ -7,6 +7,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import Image from "next/image";
 import { getMDXComponents } from "@/components/mdx-components";
 import { BlogPageAnalytics } from "@/components/BlogPageAnalytics";
+import { buildArticleSocialMetadata } from "@/lib/mdx-article-metadata";
 
 async function getPost(slug: string) {
   try {
@@ -34,26 +35,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const title = post.metadata.title ?? "Golden Retriever Blog Post";
   const description = post.metadata.description ?? "Golden Retriever care, training, and health insights.";
-  const featuredImage = post.metadata.featuredImage;
+  const canonicalFromFrontmatter =
+    typeof post.metadata.canonical === "string" && post.metadata.canonical.trim().length > 0
+      ? post.metadata.canonical.trim()
+      : `/blog/${slug}`;
 
-  return {
+  return buildArticleSocialMetadata({
     title,
     description,
-    openGraph: featuredImage
-      ? {
-          title,
-          description,
-          images: [
-            {
-              url: featuredImage.startsWith("/") ? `https://goldenretriever.hair${featuredImage}` : featuredImage,
-              width: 800,
-              height: 600,
-              alt: post.metadata.featuredAlt ?? title,
-            },
-          ],
-        }
-      : undefined,
-  };
+    canonicalPath: canonicalFromFrontmatter.startsWith("/")
+      ? canonicalFromFrontmatter
+      : `/${canonicalFromFrontmatter}`,
+    featuredImage: post.metadata.featuredImage,
+    featuredAlt: post.metadata.featuredAlt,
+  });
 }
 
 export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {

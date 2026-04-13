@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getMDXComponents } from "@/components/mdx-components";
 import { GuidePageAnalytics } from "@/components/GuidePageAnalytics";
+import { buildArticleSocialMetadata } from "@/lib/mdx-article-metadata";
 
 async function getGuide(slug: string) {
   try {
@@ -36,54 +37,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description =
     guide.metadata.description ??
     "In-depth Golden Retriever guide with practical tips for responsible ownership, health, training, and care.";
-  const featuredImage = guide.metadata.featuredImage;
-  const canonicalPath = `/guides/${slug}`;
-  const guideAbsoluteUrl = `https://goldenretriever.hair${canonicalPath}`;
-  const imageAbsolute =
-    typeof featuredImage === "string" && featuredImage.length > 0
-      ? featuredImage.startsWith("/")
-        ? `https://goldenretriever.hair${featuredImage}`
-        : featuredImage
-      : undefined;
 
-  const base = {
+  return buildArticleSocialMetadata({
     title,
     description,
+    canonicalPath: `/guides/${slug}`,
+    featuredImage: guide.metadata.featuredImage,
+    featuredAlt: guide.metadata.featuredAlt,
     robots: slug === "nutrition" ? { index: false, follow: true } : undefined,
-    alternates: {
-      canonical: canonicalPath,
-    },
-  };
-
-  if (!imageAbsolute) {
-    return base;
-  }
-
-  return {
-    ...base,
-    openGraph: {
-      title,
-      description,
-      url: guideAbsoluteUrl,
-      siteName: "GoldenRetriever.hair",
-      locale: "en_US",
-      type: "article" as const,
-      images: [
-        {
-          url: imageAbsolute,
-          width: 1200,
-          height: 630,
-          alt: guide.metadata.featuredAlt ?? title,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image" as const,
-      title,
-      description,
-      images: [imageAbsolute],
-    },
-  };
+  });
 }
 
 export default async function GuideDetailPage({ params }: { params: Promise<{ slug: string }> }) {
