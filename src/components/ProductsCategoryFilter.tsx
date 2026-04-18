@@ -179,7 +179,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
               href={product.amazonLink}
               target="_blank"
               rel="noopener noreferrer nofollow sponsored"
-              className="text-sm text-gray-600 hover:text-blue-700 hover:underline"
+              className="inline-block mt-2 px-3 py-2 bg-amber-100 text-amber-800 font-semibold rounded-md hover:bg-amber-200 transition-colors"
               onClick={() => trackEvent("affiliate_click", { event_category: "affiliate", event_label: product.title })}
             >
               {product.amazonLinkLabel ?? "View on Amazon"}
