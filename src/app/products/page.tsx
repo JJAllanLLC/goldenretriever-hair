@@ -116,6 +116,18 @@ const products = [
     category: "Essentials",
   },
   {
+    title: "MidWest Exercise Pen (30\" Height)",
+    description:
+      "Best for: safe daytime play and controlled space. Durable folding pen — 30\" height for boundaries without feeling trapped.",
+    personalComment:
+      "Durable folding playpen that gives your puppy room to move while staying contained. We've used these successfully with our own Golden Retriever puppies — the 30\" height is more than enough to prevent jumping while they learn boundaries. Works great alongside a crate to create a full enclosed setup for the first 30 days. 🐾",
+    amazonLink: "https://amzn.to/4clB95m",
+    image: "/images/products/pen.jpeg",
+    imageAlt: "MidWest folding metal exercise pen for puppies, 30 inch height",
+    amazonLinkLabel: "Check price on Amazon →",
+    category: "Essentials",
+  },
+  {
     title: "ChomChom Roller Pet Hair Remover",
     description:
       "Reusable roller removes embedded pet hair from couches, clothes, and car seats – no sticky tape needed.",

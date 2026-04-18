@@ -14,6 +14,8 @@ type Product = {
   image?: string;
   /** When set, used as the product image `alt` (otherwise `title` is used). */
   imageAlt?: string;
+  /** Override default affiliate link label (defaults to “View on Amazon”). */
+  amazonLinkLabel?: string;
 };
 
 const categories = ["All", "Puppy", "Grooming", "Toys", "Food/Treats", "Health", "Training", "Essentials", "Books & Resources"] as const;
@@ -180,7 +182,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
               className="text-sm text-gray-600 hover:text-blue-700 hover:underline"
               onClick={() => trackEvent("affiliate_click", { event_category: "affiliate", event_label: product.title })}
             >
-              View on Amazon
+              {product.amazonLinkLabel ?? "View on Amazon"}
             </a>
           </article>
         )})}
