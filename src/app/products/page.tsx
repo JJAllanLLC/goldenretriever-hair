@@ -159,6 +159,16 @@ const products = [
     category: "Essentials",
   },
   {
+    title: "Laifug Orthopedic Memory Foam Dog Bed (XL 50\")",
+    description:
+      "Best for: large breed comfort and joint support. Supportive orthopedic bed designed for Golden Retrievers and other large dogs. Helps reduce pressure on joints and improves sleep quality — especially as your dog grows. A great long-term upgrade many owners switch to after basic beds wear out.",
+    amazonLink: "https://amzn.to/3QwiVFv",
+    image: "/images/products/ortho-bed.jpeg",
+    imageAlt: "Golden Retriever lying comfortably on an orthopedic memory foam dog bed",
+    amazonLinkLabel: "Check price on Amazon →",
+    category: "Essentials",
+  },
+  {
     title: "Amazon Basics Dog Poop Bags with Dispenser and Leash Clip",
     description:
       "Simple, reliable, and budget-friendly — gets the job done every time and at a great price.",
