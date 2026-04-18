@@ -14,7 +14,7 @@ type Product = {
   image?: string;
   /** When set, used as the product image `alt` (otherwise `title` is used). */
   imageAlt?: string;
-  /** Override default affiliate link label (defaults to “View on Amazon”). */
+  /** Override default affiliate link label (defaults to “Check price on Amazon →”). */
   amazonLinkLabel?: string;
 };
 
@@ -182,7 +182,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
               className="inline-block mt-4 px-3 py-2 bg-amber-200 text-amber-900 font-semibold rounded-md hover:bg-amber-300 transition-colors shadow-sm"
               onClick={() => trackEvent("affiliate_click", { event_category: "affiliate", event_label: product.title })}
             >
-              {product.amazonLinkLabel ?? "View on Amazon"}
+              {product.amazonLinkLabel ?? "Check price on Amazon →"}
             </a>
           </article>
         )})}
