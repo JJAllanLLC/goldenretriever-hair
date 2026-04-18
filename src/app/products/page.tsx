@@ -15,6 +15,7 @@ const products = [
     personalComment:
       "Our Goldens switched to this food about one year ago and they still love it. Gentle on stomachs and is keeping their coats shiny! 🐾",
     amazonLink: "https://amzn.to/45GjTnt",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/hills_science_food.png",
     category: "Food/Treats",
   },
@@ -24,6 +25,7 @@ const products = [
     personalComment:
       "Helped with Cosmo’s digestion issues that he had since he was a pup. Reliability issues at times being in stock. 🐾",
     amazonLink: "https://amzn.to/4kcP5Rk",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/purina_proplan.png",
     category: "Food/Treats",
   },
@@ -34,6 +36,7 @@ const products = [
     personalComment:
       "We have happily fed our goldens with Multi-Protein Chicken, Turkey and Lamb Meals Formulas. Reliable all-ages option! 🐾",
     amazonLink: "https://amzn.to/46mR3IW",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/canidae.png",
     category: "Food/Treats",
   },
@@ -44,6 +47,7 @@ const products = [
     personalComment:
       "Great for picky eaters, and we noticed shinier coats after a few weeks. Has been successfully used to feed our puppies. 🐾",
     amazonLink: "https://amzn.to/4kcWikm",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/fromm.png",
     category: "Food/Treats",
   },
@@ -53,6 +57,7 @@ const products = [
       "Airtight dog food storage container that keeps kibble fresh, prevents moisture, and protects against pests. Ideal for storing large-breed dog food bags.",
     personalComment: "Great for keeping large bags of dog food fresh and organized.",
     amazonLink: "https://amzn.to/4thEWGn",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/food_storage.jpeg",
     category: "Food/Treats",
   },
@@ -62,6 +67,7 @@ const products = [
       "Slow feeder dog bowl that helps prevent fast eating, supports better digestion, and reduces risk of bloating. Ideal for Golden Retrievers that eat too quickly.",
     personalComment: "Great for slowing down meals and improving feeding habits.",
     amazonLink: "https://amzn.to/4rYY3Ur",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/slow_feeder.jpeg",
     category: "Food/Treats",
   },
@@ -72,6 +78,7 @@ const products = [
     personalComment:
       "Our go-to “high value” treat. We save these for moments when we really need them to listen, like recall training or new tricks. Our Goldens go nuts for these. Use sparingly! 🐾",
     amazonLink: "https://amzn.to/3MbOin7",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/stewart.jpeg",
     category: "Training",
   },
@@ -82,6 +89,7 @@ const products = [
     personalComment:
       "Great for training sessions. They’re small, soft, and come in flavors like chicken or peanut butter. Low calorie, so you can give multiple in a row. 🐾",
     amazonLink: "https://amzn.to/4q830cM",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/zukes.jpeg",
     category: "Training",
   },
@@ -92,6 +100,7 @@ const products = [
     personalComment:
       "A must-have during training — works great for stains and odors. 🐾",
     amazonLink: "https://amzn.to/4a29NyA",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/stain.png",
     category: "Training",
   },
@@ -102,6 +111,7 @@ const products = [
     personalComment:
       "Helpful during early potty training when accidents are still happening. The extra-large size gives growing Golden puppies more room and helps protect floors. 🐾",
     amazonLink: "https://amzn.to/3NmK5Ob",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/puppy_pads.jpeg",
     category: "Puppy",
   },
@@ -112,6 +122,7 @@ const products = [
     personalComment:
       "Reliable folding crate for home or travel – our Goldens love the space! 🐾",
     amazonLink: "https://amzn.to/4rq298l",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/midwest.png",
     category: "Essentials",
   },
@@ -132,6 +143,7 @@ const products = [
     personalComment:
       "Not a gimmick – does the trick by easily getting Golden hair off furniture and other surfaces. Our lifesaver for shedding season! 🐾",
     amazonLink: "https://amzn.to/46qen8L",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/chomchom.jpeg",
     category: "Essentials",
   },
@@ -142,6 +154,7 @@ const products = [
     personalComment:
       "I highly recommend this one especially if your Golden is an aggressive chewer. There is no way he is going to damage this bed. Ours is over 7 years old and still looks like new. This one is built to last! 🐾",
     amazonLink: "https://amzn.to/4tc2L33",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/kuranda.png",
     category: "Essentials",
   },
@@ -152,6 +165,7 @@ const products = [
     personalComment:
       "Our everyday essential for Golden walks – leak-proof, easy-tear, and affordable. Stock up! 🐾",
     amazonLink: "https://amzn.to/4a2RdX1",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/bags.png",
     category: "Essentials",
   },
@@ -162,6 +176,7 @@ const products = [
     personalComment:
       "Still going strong after 3 years — protects the seats and lets them ride in style. Just pick one that matches your vehicle and enjoy the ride. 🐾",
     amazonLink: "https://amzn.to/4ronE9o",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/cover.jpeg",
     category: "Essentials",
   },
@@ -172,6 +187,7 @@ const products = [
     personalComment:
       "Fantastic for first-time puppy parents; positive and easy to follow. 🐾",
     amazonLink: "https://amzn.to/4qUQXAK",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/dunbar.jpeg",
     category: "Books & Resources",
   },
@@ -182,6 +198,7 @@ const products = [
     personalComment:
       "A classic by the Monks of New Skete, with timeless advice on structure, trust, and routine. Essential for new Golden puppy parents! 🐾",
     amazonLink: "https://amzn.to/4tc3u48",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/monks.jpeg",
     category: "Books & Resources",
   },
@@ -192,6 +209,7 @@ const products = [
     personalComment:
       "Used to achieve a professional looking groom. Great for getting out tangles and mats! 🐾",
     amazonLink: "https://amzn.to/4alOERg",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/mars.png",
     category: "Grooming",
   },
@@ -201,6 +219,7 @@ const products = [
     personalComment:
       "A rake actually works better than a comb. Takes out the undercoat before it goes all over the house! We use a PSI 808 rake but it looks like that model is no longer available. While we have not personally tested this one it appears it should do the job. 🐾",
     amazonLink: "https://amzn.to/3Z92oss",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/furminator.jpeg",
     category: "Grooming",
   },
@@ -210,6 +229,7 @@ const products = [
     personalComment:
       "Does a good job and the self cleaning option makes it a breeze. 🐾",
     amazonLink: "https://amzn.to/3OghJ80",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/hertzko.jpeg",
     category: "Grooming",
   },
@@ -220,6 +240,7 @@ const products = [
     personalComment:
       "I love this nail grinder. If your dog is not having it when it comes to nail clipping, a nail grinder is a great option. I absolutely LOVE this one. And it has a light which helps more than you would think. Casfuy hits a quality / price point that is hard to beat !! 🐾",
     amazonLink: "https://amzn.to/45GP2Hp",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/casfuy.png",
     category: "Grooming",
   },
@@ -230,6 +251,7 @@ const products = [
     personalComment:
       "Our favorite shampoo for keeping Golden coats clean and conditioned – gentle, low-suds, rinses clean with no residue. Luna's coat is always shiny after bath time! 🐾",
     amazonLink: "https://amzn.to/4rowap5",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/allsuper.png",
     category: "Grooming",
   },
@@ -240,6 +262,7 @@ const products = [
     personalComment:
       "Handy by the door for muddy paws and quick wipe-downs when you want less pollen and grit tracked inside. 🐾",
     amazonLink: "https://amzn.to/4s91ckF",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/paw_wipes.jpeg",
     category: "Grooming",
   },
@@ -248,6 +271,7 @@ const products = [
     description:
       "Moisturizing balm for dry, cracked paw pads and rough nose skin, formulated with beeswax and cocoa butter to soothe and protect. Helps shield pads from cold weather, salt, ice-melt, and rough surfaces while supporting a healthier moisture barrier. Useful for seasonal dryness or routine care after long walks on pavement or trails.",
     amazonLink: "https://amzn.to/4vaOKUm",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/paw_balm.jpeg",
     category: "Grooming",
   },
@@ -258,6 +282,7 @@ const products = [
     personalComment:
       "Just don't drop any on the floor as it can make it super slippery. 🐾 Pro-level detangler for Goldens' thick coats!",
     amazonLink: "https://amzn.to/4q8rGle",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/ice.png",
     category: "Grooming",
   },
@@ -268,6 +293,7 @@ const products = [
     personalComment:
       "Using a pet hair remover regularly helps keep your home cleaner and reduces airborne allergens. It also makes cuddling your golden a little less…furry. Produces low noise and our Goldens love getting groomed with this! Mine is 4 years old and is still going strong. 🐾",
     amazonLink: "https://amzn.to/4qV9v3V",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/neakasa.png",
     category: "Grooming",
   },
@@ -277,6 +303,7 @@ const products = [
     personalComment:
       "One of our dogs all-time favorites for tough chewers. Lasts a very long time! 🐾",
     amazonLink: "https://amzn.to/49Ro6av",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/benebone.png",
     category: "Toys",
   },
@@ -287,6 +314,7 @@ const products = [
     personalComment:
       "A better fit for younger Golden Retriever puppies that are still in the early chewing stage and not ready for a tougher adult chew yet. The softer design is made for modest chewers and gives puppies a safe way to satisfy teething and mouthy behavior. This 2-pack gives you variety right away, which helps when puppies get bored with the same chew too quickly. A good step before moving up to tougher long-lasting chews. 🐾",
     amazonLink: "https://amzn.to/4c4H26J",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/benebone2.jpeg",
     imageAlt:
       "Benebone Puppy 2-Pack Maplestick and Zaggler durable chew toys for gentle puppy chewers",
@@ -299,6 +327,7 @@ const products = [
     personalComment:
       "Great option if your Golden Retriever puppy gets bored quickly with the same chew. This 4-pack includes multiple shapes and flavors, which helps keep them engaged and rotating between toys instead of going back to your hands. Designed for smaller dogs and puppies, but still durable enough for regular chewing. A strong value pick if you want variety without constantly buying new toys. 🐾",
     amazonLink: "https://amzn.to/4c49W70",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/benebone-4pack.jpeg",
     imageAlt:
       "Benebone Small 4-Pack durable dog chew toys for puppies and small dogs",
@@ -311,6 +340,7 @@ const products = [
     personalComment:
       "Great for Goldens with dry or crusty noses – natural ingredients soothe and heal. Our pack loves it during dry seasons! 🐾",
     amazonLink: "https://amzn.to/4c2ZWLv",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/balm.jpeg",
     category: "Health",
   },
@@ -321,6 +351,7 @@ const products = [
     personalComment:
       "Goldens are very susceptible to ear infections. This flush will keep their ears healthy – our go-to for clean, happy ears! 🐾",
     amazonLink: "https://amzn.to/4t7BfUe",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/flush.png",
     category: "Health",
   },
@@ -331,6 +362,7 @@ const products = [
     personalComment:
       "A revolutionary solution for anxious Goldens. The wrap-around design applies soothing pressure – our pack stays calmer during fireworks and storms. Highly recommend for stressful events! 🐾",
     amazonLink: "https://amzn.to/4rphVjU",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/thunder.jpeg",
     category: "Health",
   },
@@ -341,6 +373,7 @@ const products = [
     personalComment:
       "Essential protection for our Goldens during outdoor adventures – vet-recommended and reliable against fleas, ticks, and mosquitoes. Keeps them safe and happy! 🐾",
     amazonLink: "https://amzn.to/3NNTcXW",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/tick.png",
     category: "Health",
   },
@@ -349,6 +382,7 @@ const products = [
     description:
       "Gentle antimicrobial spray that helps clean wounds, soothe irritated skin, and support healing for issues like hot spots, cuts, and skin irritation. Safe, non-toxic, and a great addition to your Golden Retriever first-aid kit.",
     amazonLink: "https://amzn.to/4viPOFV",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/hot_spot.png",
     category: "Health",
   },
@@ -357,6 +391,7 @@ const products = [
     description:
       "Veterinarian-recommended enzymatic toothpaste that helps reduce plaque and tartar while freshening breath. Safe for daily use and ideal for maintaining long-term dental health in Golden Retrievers.",
     amazonLink: "https://amzn.to/47vXWbG",
+    amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/toothpaste.jpeg",
     category: "Health",
   },
