@@ -158,7 +158,7 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
                 {product.title}
               </a>
             </h3>
-            <p className="text-gray-700 mb-4">{product.description}</p>
+            <p className="text-gray-700 mb-4 whitespace-pre-line">{product.description}</p>
             {comment && (
               <div className="mb-4 text-gray-700">
                 <p className={isExpandable && !isExpanded ? "line-clamp-3" : undefined}>

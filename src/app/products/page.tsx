@@ -118,7 +118,7 @@ const products = [
   {
     title: "MidWest Exercise Pen (30\" Height)",
     description:
-      "Best for: safe daytime play and controlled space. Durable folding playpen that gives your puppy room to move while staying contained. We've used these successfully with our own Golden Retriever puppies, and the 30\" height is more than enough to prevent jumping while they learn boundaries. Works great alongside a crate to create a full enclosed setup for the first 30 days.",
+      "Best for: safe daytime play and controlled space.\n\nDurable folding playpen that gives your puppy room to move while staying contained.\n\nWe've used these successfully with our own Golden Retriever puppies, and the 30\" height is more than enough to prevent jumping while they learn boundaries. Works great alongside a crate to create a full enclosed setup for the first 30 days.",
     amazonLink: "https://amzn.to/4clB95m",
     image: "/images/products/pen.jpeg",
     imageAlt: "MidWest folding metal exercise pen for puppies, 30 inch height",
