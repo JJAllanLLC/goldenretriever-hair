@@ -105,6 +105,15 @@ const products = [
     category: "Training",
   },
   {
+    title: "PetSafe Deluxe Easy Walk Harness",
+    description:
+      "Trainer-recommended no-pull harness designed to gently discourage pulling without choking or gagging. The front-clip design gives you better control during walks, making it ideal for strong dogs like Golden Retrievers.\n\nHelps make daily walks easier and more enjoyable while reducing strain on your dog's neck.",
+    amazonLink: "https://amzn.to/4u2HJUh",
+    amazonLinkLabel: "Check price on Amazon →",
+    image: "/images/products/harness.png",
+    category: "Training",
+  },
+  {
     title: "Extra Large Puppy Training Pads (50 Pack)",
     description:
       "Extra-large puppy pads with quick-dry absorbency and leak protection for easier early potty training cleanup.",
