@@ -178,6 +178,15 @@ const products = [
     category: "Essentials",
   },
   {
+    title: "WeatherTech PetRamp",
+    description:
+      "Portable non-slip dog ramp designed to help large Golden Retrievers get into SUVs, trucks, beds, and couches more safely and comfortably.\n\nEspecially helpful for senior Goldens, dogs with arthritis or hip issues, and any dog that struggles with jumping. The traction grip surface and sturdy build make it a strong long-term support option.",
+    amazonLink: "https://amzn.to/4tVIYo7",
+    amazonLinkLabel: "Check price on Amazon →",
+    image: "/images/products/dog_ramp.jpeg",
+    category: "Essentials",
+  },
+  {
     title: "Amazon Basics Dog Poop Bags with Dispenser and Leash Clip",
     description:
       "Simple, reliable, and budget-friendly — gets the job done every time and at a great price.",
