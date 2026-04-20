@@ -72,6 +72,15 @@ const products = [
     category: "Food/Treats",
   },
   {
+    title: "Neater Feeder Deluxe Elevated Dog Bowl (Large Breed)",
+    description:
+      "Raised, mess-proof feeding station designed for larger dogs like Golden Retrievers. Helps keep spilled food and water contained while providing a more comfortable eating position.\n\nGreat for reducing daily mess and making feeding time cleaner and easier.",
+    amazonLink: "https://amzn.to/48dIlxS",
+    amazonLinkLabel: "Check price on Amazon →",
+    image: "/images/products/elevated_feeder.jpeg",
+    category: "Food/Treats",
+  },
+  {
     title: "Stewart Pro-Treat Beef Liver Freeze-Dried Dog Treats",
     description:
       "Single-ingredient freeze-dried beef liver – high-value rewards for training.",
