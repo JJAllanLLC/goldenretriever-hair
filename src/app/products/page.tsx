@@ -157,6 +157,17 @@ const products = [
     category: "Essentials",
   },
   {
+    title: "Bissell Pet Hair Eraser Handheld Vacuum",
+    description:
+      "Compact handheld vacuum designed specifically for pet hair cleanup. Perfect for removing Golden Retriever hair from couches, stairs, and car interiors.",
+    personalComment:
+      "We've used this for years—it's reliable, easy to use, and great for quick cleanups between deeper vacuuming.",
+    amazonLink: "https://amzn.to/3OFIN14",
+    amazonLinkLabel: "Check price on Amazon →",
+    image: "/images/products/hand_vac.png",
+    category: "Essentials",
+  },
+  {
     title: "Kuranda Chewproof Elevated Dog Bed",
     description:
       "Durable aluminum frame and chewproof fabric – elevated for comfort and easy cleaning.",
