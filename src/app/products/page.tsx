@@ -382,6 +382,19 @@ const products = [
     category: "Toys",
   },
   {
+    title: "KONG Classic Stuffable Dog Toy",
+    description:
+      "Durable rubber toy that can be stuffed with treats or food to keep Golden Retriever puppies busy during crate time, quiet time, or supervised play.",
+    personalComment:
+      "Great for mental enrichment, boredom, and redirecting puppy energy.",
+    amazonLink: "https://amzn.to/3Ri8vJW",
+    amazonLinkLabel: "Check price on Amazon →",
+    image: "/images/products/kong.jpeg",
+    imageAlt:
+      "KONG Classic Stuffable Dog Toy for Golden Retriever puppies",
+    category: "Toys",
+  },
+  {
     title: "Natural Dog Company Snout Soother Balm – Dog Nose Balm for Dry Cracked Snouts",
     description:
       "Moisturizing winter nose care with coconut oil & shea butter – helps with nasal hyperkeratosis (dry, thick, crusty nose).",
