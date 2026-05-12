@@ -232,6 +232,8 @@ const products = [
     title: "Before and After Getting Your Puppy by Dr. Ian Dunbar",
     description:
       "The Positive Approach to Raising a Happy, Healthy, and Well-Behaved Dog.",
+    expertTip:
+      "Expert tip: This book may be available free with an eligible Audible trial.",
     personalComment:
       "Fantastic for first-time puppy parents; positive and easy to follow. 🐾",
     amazonLink: "https://amzn.to/4qUQXAK",
@@ -243,6 +245,8 @@ const products = [
     title: "The Art of Raising a Puppy (Revised Edition) by Monks of New Skete",
     description:
       "Timeless advice on structure, trust, and routine for raising a happy, well-behaved puppy.",
+    expertTip:
+      "Expert tip: This book may be available free with an eligible Audible trial.",
     personalComment:
       "A classic by the Monks of New Skete, with timeless advice on structure, trust, and routine. Essential for new Golden puppy parents! 🐾",
     amazonLink: "https://amzn.to/4tc3u48",

@@ -16,6 +16,8 @@ type Product = {
   imageAlt?: string;
   /** Override default affiliate link label (defaults to “Check price on Amazon →”). */
   amazonLinkLabel?: string;
+  /** Optional short callout (e.g. Audible note for select books). */
+  expertTip?: string;
 };
 
 const categories = ["All", "Puppy", "Grooming", "Toys", "Food/Treats", "Health", "Training", "Essentials", "Books & Resources"] as const;
@@ -175,6 +177,11 @@ export function ProductsCategoryFilter({ products }: { products: Product[] }) {
                 )}
               </div>
             )}
+            {product.expertTip ? (
+              <p className="mb-4 text-sm text-gray-600 leading-snug bg-amber-50/90 border border-amber-100 rounded-md px-3 py-2">
+                {product.expertTip}
+              </p>
+            ) : null}
             <a
               href={product.amazonLink}
               target="_blank"
