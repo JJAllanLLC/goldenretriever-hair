@@ -472,6 +472,18 @@ const products = [
     image: "/images/products/toothpaste.jpeg",
     category: "Health",
   },
+  {
+    title: "The Green Pet Shop Large Cool Pet Pad",
+    description:
+      "A large self-cooling, pressure-activated pet mat designed for dogs from 46–80 lbs, with non-toxic gel and no water or electricity required.",
+    personalComment:
+      "Helpful for giving your Golden a cooler place to rest indoors after hot-weather walks, yard time, or outdoor adventures. 🐾",
+    amazonLink: "https://amzn.to/4eT4ZQe",
+    amazonLinkLabel: "Check price on Amazon →",
+    image: "/images/products/green-pet-shop-large-cool-pet-pad.jpeg",
+    imageAlt: "The Green Pet Shop large self-cooling pet pad for dogs",
+    category: "Health",
+  },
 ];
 
 export default function ProductsPage() {
