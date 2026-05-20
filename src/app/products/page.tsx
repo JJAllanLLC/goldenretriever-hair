@@ -236,7 +236,7 @@ const products = [
       "Helpful for summer walks and outdoor adventures when your Golden needs easy access to water on the go. 🐾",
     amazonLink: "https://amzn.to/4dCa8K2",
     amazonLinkLabel: "Check price on Amazon →",
-    image: "/images/products/lesotc-dog-travel-water-bottle.jpg",
+    image: "/images/products/lesotc-dog-travel-water-bottle.jpeg",
     imageAlt: "lesotc large dog travel water bottle with pull-out drinking bowl for outdoor outings",
     category: "Essentials",
   },
