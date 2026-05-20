@@ -229,6 +229,18 @@ const products = [
     category: "Essentials",
   },
   {
+    title: "lesotc Large Dog Travel Water Bottle with Pull-Out Bowl",
+    description:
+      "A large-capacity 77 oz travel water bottle with a pull-out drinking bowl, designed for hikes, beach days, road trips, park visits, and hot-weather outings with larger dogs.",
+    personalComment:
+      "Helpful for summer walks and outdoor adventures when your Golden needs easy access to water on the go. 🐾",
+    amazonLink: "https://amzn.to/4dCa8K2",
+    amazonLinkLabel: "Check price on Amazon →",
+    image: "/images/products/lesotc-dog-travel-water-bottle.jpg",
+    imageAlt: "lesotc large dog travel water bottle with pull-out drinking bowl for outdoor outings",
+    category: "Essentials",
+  },
+  {
     title: "Before and After Getting Your Puppy by Dr. Ian Dunbar",
     description:
       "The Positive Approach to Raising a Happy, Healthy, and Well-Behaved Dog.",
