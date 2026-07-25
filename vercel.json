@@ -58,6 +58,12 @@
     {"source": "/the-most-popular-golden-retriever-names-of-2023", "destination": "/blog", "permanent": true},
     {"source": "/crate-training-a-golden-retriever/", "destination": "/guides", "permanent": true},
     {"source": "/crate-training-a-golden-retriever", "destination": "/guides", "permanent": true},
+    {"source": "/guides/golden-retriever-weight-guide", "destination": "/guides/golden-retriever-weight-obesity", "permanent": true},
+    {"source": "/guides/golden-retriever-weight-guide/", "destination": "/guides/golden-retriever-weight-obesity", "permanent": true},
+    {"source": "/guides/golden-retriever-training-guide", "destination": "/guides/golden-retriever-basic-obedience-training-guide", "permanent": true},
+    {"source": "/guides/golden-retriever-training-guide/", "destination": "/guides/golden-retriever-basic-obedience-training-guide", "permanent": true},
+    {"source": "/guides/golden-retriever-puppy-development", "destination": "/guides/puppy-care", "permanent": true},
+    {"source": "/guides/golden-retriever-puppy-development/", "destination": "/guides/puppy-care", "permanent": true},
     {"source": "/", "destination": "/blog", "has": [{"type": "query", "key": "p"}], "permanent": true},
     {"source": "/category/:path*", "destination": "/guides", "permanent": true}
   ]

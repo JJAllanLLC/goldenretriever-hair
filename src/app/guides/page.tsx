@@ -50,7 +50,7 @@ async function getGuides(): Promise<GuideMeta[]> {
     "best-dog-food-golden-retrievers-2026",
     "golden-retriever-grooming-guide",
     "golden-retriever-shedding-guide",
-    "golden-retriever-training-guide",
+    "golden-retriever-basic-obedience-training-guide",
     "should-you-get-two-golden-retrievers",
   ];
 

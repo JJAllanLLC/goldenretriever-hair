@@ -38,6 +38,36 @@ const nextConfig = {
         destination: '/guides/history-of-the-golden-retriever',
         permanent: true,
       },
+      {
+        source: '/guides/golden-retriever-weight-guide',
+        destination: '/guides/golden-retriever-weight-obesity',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-weight-guide/',
+        destination: '/guides/golden-retriever-weight-obesity',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-training-guide',
+        destination: '/guides/golden-retriever-basic-obedience-training-guide',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-training-guide/',
+        destination: '/guides/golden-retriever-basic-obedience-training-guide',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-puppy-development',
+        destination: '/guides/puppy-care',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-puppy-development/',
+        destination: '/guides/puppy-care',
+        permanent: true,
+      },
     ];
   },
 };
