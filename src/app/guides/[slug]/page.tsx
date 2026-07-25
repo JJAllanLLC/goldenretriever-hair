@@ -40,6 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return buildArticleSocialMetadata({
     title,
+    seoTitle: guide.metadata.seoTitle,
     description,
     canonicalPath: `/guides/${slug}`,
     featuredImage: guide.metadata.featuredImage,

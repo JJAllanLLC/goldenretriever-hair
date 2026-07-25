@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | GoldenRetriever.hair",
+  title: "Privacy Policy",
   description:
     "Privacy Policy for GoldenRetriever.hair, explaining how we collect, use, and protect visitor data, including cookies and analytics.",
 };

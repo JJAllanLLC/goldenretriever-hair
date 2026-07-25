@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { ProductsCategoryFilter } from "@/components/ProductsCategoryFilter";
 
 export const metadata = {
-  title: "Best Products for Golden Retrievers | GoldenRetriever.hair",
+  title: "Best Products for Golden Retrievers",
   description:
     "Curated best products for Golden Retrievers: food, brushes, crates, toys, and more. Hand-picked by owners (Amazon Associates). Find what works for your Golden.",
 };

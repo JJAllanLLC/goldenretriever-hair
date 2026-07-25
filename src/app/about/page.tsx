@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "About Us | Golden Retriever Tips & Community | GoldenRetriever.hair",
+  title: "About Us | Golden Retriever Tips & Community",
   description:
     "Meet the team behind GoldenRetriever.hair — your hub for Golden Retriever guides, puppy tips, training, products, and heartwarming stories. Start here.",
 };

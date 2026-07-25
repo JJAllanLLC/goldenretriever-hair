@@ -42,6 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return buildArticleSocialMetadata({
     title,
+    seoTitle: post.metadata.seoTitle,
     description,
     canonicalPath: canonicalFromFrontmatter.startsWith("/")
       ? canonicalFromFrontmatter

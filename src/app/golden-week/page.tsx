@@ -3,7 +3,7 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 import { GoldenWeekAnalytics } from "@/components/GoldenWeekAnalytics";
 
 export const metadata = {
-  title: "Golden of the Month | Coming Soon | GoldenRetriever.hair",
+  title: "Golden of the Month | Coming Soon",
   description:
     "Golden of the Month — our community contest to upload your favorite Golden photos, vote for the best, and see winners showcased. Subscribe to the newsletter for the free Golden Retriever Owner Cheat Sheet and site updates.",
 };

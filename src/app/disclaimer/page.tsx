@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Disclaimer | GoldenRetriever.hair",
+  title: "Disclaimer",
   description:
     "Legal disclaimer for GoldenRetriever.hair. Learn how our educational content should be used and why it does not replace veterinary advice.",
 };

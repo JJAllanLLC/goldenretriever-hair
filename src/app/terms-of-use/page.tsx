@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | GoldenRetriever.hair",
+  title: "Terms of Use",
   description:
     "Terms of Use for GoldenRetriever.hair, outlining conditions for using the site, intellectual property, and limitations of liability.",
 };

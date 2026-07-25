@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Affiliate Disclosure | GoldenRetriever.hair",
+  title: "Affiliate Disclosure",
   description:
     "Affiliate disclosure for GoldenRetriever.hair, including information about Amazon Associates and how affiliate links support the site.",
 };
