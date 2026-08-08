@@ -6,6 +6,9 @@ const withMDX = createMDX();
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   transpilePackages: ['next-mdx-remote'],
+  // Let middleware handle trailing-slash → final-destination in one hop for
+  // legacy URLs. Without this, Next strips `/old/` → `/old` before redirects.
+  skipTrailingSlashRedirect: true,
   async redirects() {
     return [
       {
@@ -24,6 +27,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/history-of-the-golden-retriever/',
+        destination: '/guides/history-of-the-golden-retriever',
+        permanent: true,
+      },
+      {
         source: '/golden-retriever-history',
         destination: '/guides/history-of-the-golden-retriever',
         permanent: true,
@@ -34,8 +42,28 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/history-of-the-golden-retriever/',
-        destination: '/guides/history-of-the-golden-retriever',
+        source: '/guides/nutrition',
+        destination: '/guides/best-dog-food-golden-retrievers-2026',
+        permanent: true,
+      },
+      {
+        source: '/guides/nutrition/',
+        destination: '/guides/best-dog-food-golden-retrievers-2026',
+        permanent: true,
+      },
+      {
+        source: '/recommended-products-for-your-golden-retriever',
+        destination: '/products',
+        permanent: true,
+      },
+      {
+        source: '/recommended-products-for-your-golden-retriever/',
+        destination: '/products',
+        permanent: true,
+      },
+      {
+        source: '/blog/',
+        destination: '/blog',
         permanent: true,
       },
       {

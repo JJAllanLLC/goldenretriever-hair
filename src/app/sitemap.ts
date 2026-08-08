@@ -72,7 +72,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error("Error reading blog posts:", error);
   }
 
-  // Dynamic guides
+  // Dynamic guides — exclude redirect-only / non-canonical stubs
+  const redirectOnlyGuideSlugs = new Set(["nutrition"]);
   const guides: MetadataRoute.Sitemap = [];
   try {
     const guidesDirectory = path.join(process.cwd(), "src", "app", "guides", "posts");
@@ -81,6 +82,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     for (const file of mdxFiles) {
       const slug = file.replace(/\.mdx$/, "");
+      if (redirectOnlyGuideSlugs.has(slug)) continue;
       guides.push({
         url: `${baseUrl}/guides/${slug}`,
         lastModified: today,

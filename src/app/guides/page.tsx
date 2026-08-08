@@ -24,23 +24,28 @@ async function getGuides(): Promise<GuideMeta[]> {
   const files = await fs.readdir(guidesDir);
   const mdxFiles = files.filter((file) => file.endsWith(".mdx"));
 
-  const guides = await Promise.all(
-    mdxFiles.map(async (file) => {
-      const slug = file.replace(/\.mdx$/, "");
-      const filePath = path.join(guidesDir, file);
-      const source = await fs.readFile(filePath, "utf8");
-      const { data } = matter(source);
+  // Exclude redirect-only stubs (e.g. /guides/nutrition → best dog food)
+  const redirectOnlyGuideSlugs = new Set(["nutrition"]);
 
-      return {
-        title: data.title ?? "Untitled Guide",
-        description: data.description ?? "",
-        date: data.date ?? "",
-        slug,
-        category: data.category ?? "General",
-        featuredImage: data.featuredImage,
-        featuredAlt: data.featuredAlt,
-      };
-    })
+  const guides = await Promise.all(
+    mdxFiles
+      .map((file) => file.replace(/\.mdx$/, ""))
+      .filter((slug) => !redirectOnlyGuideSlugs.has(slug))
+      .map(async (slug) => {
+        const filePath = path.join(guidesDir, `${slug}.mdx`);
+        const source = await fs.readFile(filePath, "utf8");
+        const { data } = matter(source);
+
+        return {
+          title: data.title ?? "Untitled Guide",
+          description: data.description ?? "",
+          date: data.date ?? "",
+          slug,
+          category: data.category ?? "General",
+          featuredImage: data.featuredImage,
+          featuredAlt: data.featuredAlt,
+        };
+      })
   );
 
   const sorted = guides.sort((a, b) => (a.date < b.date ? 1 : -1));
