@@ -38,9 +38,6 @@ export const metadata: Metadata = {
   creator: "JJ Allan LLC",
   publisher: "JJ Allan LLC",
   metadataBase: new URL("https://goldenretriever.hair"),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "Golden Retriever Guides, Tips & Products | GoldenRetriever.hair",
     description:

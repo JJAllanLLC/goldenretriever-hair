@@ -7,6 +7,9 @@ export const metadata = {
   title: "Golden Retriever Blog | Care Tips, Health, Training",
   description:
     "Latest Golden Retriever advice on puppy care, health, training, and grooming. Read expert tips, practical guides, and trusted owner resources every week.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 type PostMeta = {

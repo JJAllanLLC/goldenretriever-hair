@@ -24,6 +24,9 @@ export async function generateMetadata() {
   return {
     title,
     description,
+    alternates: {
+      canonical: "/breeders",
+    },
     openGraph: featuredImage
       ? {
           title,

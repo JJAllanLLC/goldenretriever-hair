@@ -6,6 +6,9 @@ export const metadata = {
   title: "Golden of the Month | Coming Soon",
   description:
     "Golden of the Month — our community contest to upload your favorite Golden photos, vote for the best, and see winners showcased. Subscribe to the newsletter for the free Golden Retriever Owner Cheat Sheet and site updates.",
+  alternates: {
+    canonical: "/golden-week",
+  },
 };
 
 export default function GoldenWeekPage() {
