@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "audit:titles": "node scripts/audit-titles.mjs"
+    "audit:titles": "node scripts/audit-titles.mjs",
+    "indexnow:dry-run": "node scripts/submit-indexnow.mjs --dry-run",
+    "indexnow:submit": "node scripts/submit-indexnow.mjs --submit"
   },
   "dependencies": {
     "@getbrevo/brevo": "^3.0.1",
