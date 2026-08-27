@@ -365,13 +365,15 @@ const products = [
     category: "Grooming",
   },
   {
-    title: "Benebone Wishbone Durable Dog Chew Toy for Aggressive Chewers",
-    description: "Real-flavored nylon wishbone – long-lasting for tough chewers.",
+    title: "Benebone Wishbone Durable Dog Chew Toy",
+    description:
+      "Real-flavored nylon wishbone chew. Choose the size on the current product label and use it as a supervised legal chew—not a match for every powerful chewer.",
     personalComment:
-      "One of our dogs all-time favorites for tough chewers. Lasts a very long time! 🐾",
+      "One of our dogs’ all-time favorites for a supervised chew session. Nylon is hard, so inspect regularly and replace when worn; dogs with dental concerns may need a softer option. 🐾",
     amazonLink: "https://amzn.to/49Ro6av",
     amazonLinkLabel: "Check price on Amazon →",
     image: "/images/products/benebone.png",
+    imageAlt: "Benebone Wishbone Durable Dog Chew Toy",
     category: "Toys",
   },
   {
