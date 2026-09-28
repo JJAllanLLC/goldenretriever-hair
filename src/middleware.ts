@@ -7,6 +7,7 @@ import type { NextRequest } from "next/server";
  *
  * Paired with next.config `skipTrailingSlashRedirect` so Next does not
  * strip `/old/` → `/old` before these rules can fire.
+ * www.goldenretriever.hair is folded into the same response.
  */
 const LEGACY_REDIRECTS: Record<string, string> = {
   "/guides/nutrition": "/guides/best-dog-food-golden-retrievers-2026",
@@ -24,32 +25,50 @@ function rawPathname(request: NextRequest): string {
   }
 }
 
+const APEX_HOST = "goldenretriever.hair";
+
+function publicHost(request: NextRequest): string {
+  const raw =
+    request.headers.get("x-forwarded-host") || request.headers.get("host") || "";
+  return raw.split(",")[0]?.trim().split(":")[0]?.toLowerCase() ?? "";
+}
+
 function redirectPreservingQuery(request: NextRequest, pathname: string) {
   const url = new URL(request.url);
   url.pathname = pathname;
-  // NextResponse.redirect requires an absolute URL; query string is preserved.
+  url.hash = "";
+
+  const host = publicHost(request);
+  // Production hosts must leave on the HTTPS apex in this same response.
+  // Preview and local hosts keep their own origin so those deployments stay testable.
+  if (host === APEX_HOST || host === `www.${APEX_HOST}`) {
+    url.protocol = "https:";
+    url.hostname = APEX_HOST;
+    url.port = "";
+  }
+
   return NextResponse.redirect(url, 308);
 }
 
 export function middleware(request: NextRequest) {
   const pathname = rawPathname(request);
+  const host = publicHost(request);
+  let target = pathname;
 
   if (pathname.length > 1 && pathname.endsWith("/")) {
     const withoutSlash = pathname.slice(0, -1);
-    const legacyDestination = LEGACY_REDIRECTS[withoutSlash];
-    if (legacyDestination) {
-      return redirectPreservingQuery(request, legacyDestination);
-    }
-    // Preserve site-wide no-trailing-slash canonicalization.
-    return redirectPreservingQuery(request, withoutSlash);
+    target = LEGACY_REDIRECTS[withoutSlash] ?? withoutSlash;
+  } else if (LEGACY_REDIRECTS[pathname]) {
+    target = LEGACY_REDIRECTS[pathname];
   }
 
-  const legacyDestination = LEGACY_REDIRECTS[pathname];
-  if (legacyDestination) {
-    return redirectPreservingQuery(request, legacyDestination);
+  const pathNeedsRedirect = target !== pathname;
+  const hostNeedsRedirect = host === `www.${APEX_HOST}`;
+  if (!pathNeedsRedirect && !hostNeedsRedirect) {
+    return NextResponse.next();
   }
 
-  return NextResponse.next();
+  return redirectPreservingQuery(request, target);
 }
 
 export const config = {

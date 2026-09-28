@@ -3,11 +3,13 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 import Image from "next/image";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getMDXComponents } from "@/components/mdx-components";
 import { GuidePageAnalytics } from "@/components/GuidePageAnalytics";
 import { buildArticleSocialMetadata } from "@/lib/mdx-article-metadata";
+
+const NUTRITION_CANONICAL = "/guides/best-dog-food-golden-retrievers-2026";
 
 async function getGuide(slug: string) {
   try {
@@ -42,7 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title,
     seoTitle: guide.metadata.seoTitle,
     description,
-    canonicalPath: `/guides/${slug}`,
+    canonicalPath: slug === "nutrition" ? NUTRITION_CANONICAL : `/guides/${slug}`,
     featuredImage: guide.metadata.featuredImage,
     featuredAlt: guide.metadata.featuredAlt,
     robots: slug === "nutrition" ? { index: false, follow: true } : undefined,
@@ -51,6 +53,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function GuideDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  if (slug === "nutrition") {
+    permanentRedirect(NUTRITION_CANONICAL);
+  }
   const guide = await getGuide(slug);
   if (!guide) notFound();
 

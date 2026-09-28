@@ -13,57 +13,57 @@ const nextConfig = {
     return [
       {
         source: '/best-grooming-tools-for-golden-retrievers',
-        destination: '/guides/best-brushes-golden-retrievers',
+        destination: 'https://goldenretriever.hair/guides/best-brushes-golden-retrievers',
         permanent: true,
       },
       {
         source: '/best-grooming-tools-for-golden-retrievers/',
-        destination: '/guides/best-brushes-golden-retrievers',
+        destination: 'https://goldenretriever.hair/guides/best-brushes-golden-retrievers',
         permanent: true,
       },
       {
         source: '/history-of-the-golden-retriever',
-        destination: '/guides/history-of-the-golden-retriever',
+        destination: 'https://goldenretriever.hair/guides/history-of-the-golden-retriever',
         permanent: true,
       },
       {
         source: '/history-of-the-golden-retriever/',
-        destination: '/guides/history-of-the-golden-retriever',
+        destination: 'https://goldenretriever.hair/guides/history-of-the-golden-retriever',
         permanent: true,
       },
       {
         source: '/golden-retriever-history',
-        destination: '/guides/history-of-the-golden-retriever',
+        destination: 'https://goldenretriever.hair/guides/history-of-the-golden-retriever',
         permanent: true,
       },
       {
         source: '/history-golden-retriever',
-        destination: '/guides/history-of-the-golden-retriever',
+        destination: 'https://goldenretriever.hair/guides/history-of-the-golden-retriever',
         permanent: true,
       },
       {
         source: '/guides/nutrition',
-        destination: '/guides/best-dog-food-golden-retrievers-2026',
+        destination: 'https://goldenretriever.hair/guides/best-dog-food-golden-retrievers-2026',
         permanent: true,
       },
       {
         source: '/guides/nutrition/',
-        destination: '/guides/best-dog-food-golden-retrievers-2026',
+        destination: 'https://goldenretriever.hair/guides/best-dog-food-golden-retrievers-2026',
         permanent: true,
       },
       {
         source: '/recommended-products-for-your-golden-retriever',
-        destination: '/products',
+        destination: 'https://goldenretriever.hair/products',
         permanent: true,
       },
       {
         source: '/recommended-products-for-your-golden-retriever/',
-        destination: '/products',
+        destination: 'https://goldenretriever.hair/products',
         permanent: true,
       },
       {
         source: '/blog/',
-        destination: '/blog',
+        destination: 'https://goldenretriever.hair/blog',
         permanent: true,
       },
       {
