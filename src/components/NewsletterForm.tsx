@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { trackEvent } from "@/lib/analytics";
+import { getCurrentPagePath, trackEvent } from "@/lib/analytics";
 
 const HEADLINE = "Most Golden Retriever Owners Are Feeding the Wrong Amount";
 
@@ -20,11 +20,11 @@ type Status = "idle" | "loading" | "success" | "error";
 export function NewsletterForm({
   variant = "footer",
   onSuccess,
-  trackSuccessEvent,
+  analyticsSource,
 }: {
   variant?: "footer" | "hero" | "standalone" | "dark" | "light";
   onSuccess?: () => void;
-  trackSuccessEvent?: { event: string; category: string; label: string };
+  analyticsSource: "home_inline" | "site_footer" | "golden_week";
 }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
@@ -57,12 +57,13 @@ export function NewsletterForm({
       );
       setEmail("");
       onSuccess?.();
-      if (trackSuccessEvent) {
-        trackEvent(trackSuccessEvent.event, {
-          event_category: trackSuccessEvent.category,
-          event_label: trackSuccessEvent.label,
-        });
-      }
+      trackEvent("sign_up", {
+        method: "newsletter",
+        event_category: "newsletter",
+        event_label: analyticsSource,
+        form_location: analyticsSource,
+        page_path: getCurrentPagePath(),
+      });
     } catch {
       setStatus("error");
       setMessage("Something went wrong. Please try again.");
@@ -139,6 +140,9 @@ export function NewsletterForm({
       >
         <input
           type="email"
+          aria-label="Email address"
+          autoComplete="email"
+          inputMode="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"

@@ -4,6 +4,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { AffiliateClickAnalytics } from "@/components/AffiliateClickAnalytics";
 import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
@@ -118,6 +119,7 @@ export default function RootLayout({
         )}
       </head>
       <body className="font-sans antialiased bg-white text-gray-900">
+        <AffiliateClickAnalytics />
         <Script
           id="clarity-script"
           strategy="afterInteractive"

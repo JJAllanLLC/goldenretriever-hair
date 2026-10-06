@@ -77,14 +77,7 @@ export default function GoldenWeekPage() {
         </div>
 
         <div className="bg-gray-900/80 rounded-xl shadow-md border border-amber-200/30 p-6 md:p-8 [text-shadow:0_1px_3px_rgba(0,0,0,0.6)]">
-          <NewsletterForm
-            variant="dark"
-            trackSuccessEvent={{
-              event: "golden_submit_click",
-              category: "golden_of_month",
-              label: "submit_entry",
-            }}
-          />
+          <NewsletterForm variant="dark" analyticsSource="golden_week" />
         </div>
 
         <p className="text-center text-gray-500 text-sm mt-10 mb-4">
