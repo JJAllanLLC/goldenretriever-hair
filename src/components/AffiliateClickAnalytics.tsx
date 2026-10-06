@@ -6,6 +6,7 @@ import {
   trackEvent,
   type AnalyticsEventParams,
 } from "@/lib/analytics";
+import { getAffiliateProductName } from "@/lib/affiliate-products";
 
 const AMAZON_SHORT_LINK_HOST = "amzn.to";
 
@@ -36,7 +37,9 @@ export function AffiliateClickAnalytics() {
       if (url.hostname.toLowerCase() !== AMAZON_SHORT_LINK_HOST) return;
 
       const affiliateLinkId = getAffiliateLinkId(url);
-      const productName = anchor.dataset.affiliateProduct?.trim() || undefined;
+      const productName =
+        anchor.dataset.affiliateProduct?.trim() ||
+        getAffiliateProductName(affiliateLinkId);
       const linkPlacement =
         anchor.dataset.affiliatePlacement?.trim() ||
         (anchor.closest("article") ? "article_link" : "site_link");

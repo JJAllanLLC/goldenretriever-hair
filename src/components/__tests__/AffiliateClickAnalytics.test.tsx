@@ -24,7 +24,7 @@ describe("AffiliateClickAnalytics", () => {
       <>
         <AffiliateClickAnalytics />
         <article>
-          <a href="https://amzn.to/4rt7coR" target="_blank" rel="nofollow sponsored noopener">
+          <a href="https://amzn.to/3Z92oss" target="_blank" rel="nofollow sponsored noopener">
             <span>Check price on Amazon</span>
           </a>
         </article>
@@ -50,11 +50,12 @@ describe("AffiliateClickAnalytics", () => {
     expect(trackEventMock).toHaveBeenCalledOnce();
     expect(trackEventMock).toHaveBeenCalledWith("affiliate_click", {
       event_category: "affiliate",
-      event_label: "4rt7coR",
+      event_label: "FURminator Grooming Rake",
       page_path: "/guides/golden-retriever-feeding-chart",
       link_domain: "amzn.to",
-      affiliate_link_id: "4rt7coR",
+      affiliate_link_id: "3Z92oss",
       link_placement: "article_link",
+      product_name: "FURminator Grooming Rake",
     });
     expect(JSON.stringify(trackEventMock.mock.calls)).not.toContain("private@example.com");
     expect(JSON.stringify(trackEventMock.mock.calls)).not.toContain("email=");
@@ -84,6 +85,14 @@ describe("AffiliateClickAnalytics", () => {
 
     expect(keyboardClick.defaultPrevented).toBe(false);
     expect(trackEventMock).toHaveBeenCalledOnce();
+    expect(trackEventMock).toHaveBeenCalledWith("affiliate_click", {
+      event_category: "affiliate",
+      event_label: "4abc123",
+      page_path: "/guides/golden-retriever-feeding-chart",
+      link_domain: "amzn.to",
+      affiliate_link_id: "4abc123",
+      link_placement: "site_link",
+    });
 
     act(() => {
       getByRole("link", { name: "Other product" }).dispatchEvent(

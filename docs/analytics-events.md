@@ -13,7 +13,8 @@ and pointer/touch-generated clicks without preventing navigation.
 - `link_domain`: always `amzn.to`
 - `affiliate_link_id`: the stable short-link code, without a query string
 - `link_placement`: `article_link`, `product_title`, `product_cta`, or `site_link`
-- `product_name`: present only where the product is already structured data
+- `product_name`: canonical non-PII name from structured Products data or the
+  maintained short-link mapping; unknown links remain unresolved
 - `event_label`: product name when known; otherwise the short-link code
 
 ## `product_click`
