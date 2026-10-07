@@ -135,6 +135,9 @@ describe("feeding-chart nutrition update", () => {
     expect(pageSource).toContain("FEEDING_CHART_FAQS.map(({ question, answer })");
     expect(pageSource).toContain("FEEDING_CHART_FAQS.map((faq)");
     expect(pageSource).toContain('\"@type\": \"FAQPage\"');
+    expect(pageSource).toContain('className="mt-12 border-t border-amber-100 pt-8"');
+    expect(pageSource).toContain('className="mb-3 text-xl font-bold text-amber-900"');
+    expect(pageSource).toContain("last:border-b-0 last:pb-0");
   });
 
   it("uses the feeding-page-specific signup copy without changing the shared form", () => {

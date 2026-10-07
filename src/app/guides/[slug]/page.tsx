@@ -160,12 +160,14 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
             <div className="prose prose-lg max-w-none text-gray-900 prose-headings:text-amber-900 prose-headings:font-bold prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900">
               <MDXRemote source={content} components={components} />
               {isFeedingChart && (
-                <section aria-labelledby="feeding-chart-faqs">
-                  <h2 id="feeding-chart-faqs">Frequently Asked Questions</h2>
+                <section className="mt-12 border-t border-amber-100 pt-8" aria-labelledby="feeding-chart-faqs">
+                  <h2 id="feeding-chart-faqs" className="mb-8 text-3xl font-bold text-amber-900">
+                    Frequently Asked Questions
+                  </h2>
                   {FEEDING_CHART_FAQS.map((faq) => (
-                    <div key={faq.question}>
-                      <h3>{faq.question}</h3>
-                      <p>
+                    <div key={faq.question} className="mb-8 border-b border-amber-100 pb-8 last:mb-0 last:border-b-0 last:pb-0">
+                      <h3 className="mb-3 text-xl font-bold text-amber-900">{faq.question}</h3>
+                      <p className="my-0 leading-8 text-gray-800">
                         {faq.answer}
                         {faq.source && (
                           <>
