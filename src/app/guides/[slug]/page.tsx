@@ -7,6 +7,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getMDXComponents } from "@/components/mdx-components";
 import { GuidePageAnalytics } from "@/components/GuidePageAnalytics";
+import { FEEDING_CHART_FAQS } from "@/lib/feeding-chart-faqs";
 import { buildArticleSocialMetadata } from "@/lib/mdx-article-metadata";
 
 const NUTRITION_CANONICAL = "/guides/best-dog-food-golden-retrievers-2026";
@@ -61,6 +62,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
 
   const { content, metadata } = guide;
   const components = getMDXComponents({}, { ...metadata, date: undefined });
+  const isFeedingChart = slug === "golden-retriever-feeding-chart";
 
   return (
     <main className="bg-amber-50/40 text-gray-900">
@@ -109,11 +111,31 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
                   : metadata.featuredImage)
               : undefined,
             datePublished: metadata.date ?? undefined,
+            dateModified: metadata.updated ?? metadata.date ?? undefined,
             author: { "@type": "Organization", name: "GoldenRetriever.hair" },
             publisher: { "@type": "Organization", name: "GoldenRetriever.hair", url: "https://goldenretriever.hair" },
           }),
         }}
       />
+      {isFeedingChart && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: FEEDING_CHART_FAQS.map(({ question, answer }) => ({
+                "@type": "Question",
+                name: question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: answer,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
       <section className="max-w-4xl mx-auto px-4 py-16">
         <GuidePageAnalytics title={metadata.title ?? "Guide"} />
         <Link href="/guides" className="text-amber-700 font-semibold hover:underline">
@@ -137,13 +159,41 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
             )}
             <div className="prose prose-lg max-w-none text-gray-900 prose-headings:text-amber-900 prose-headings:font-bold prose-a:text-amber-700 prose-a:underline prose-strong:text-amber-900">
               <MDXRemote source={content} components={components} />
+              {isFeedingChart && (
+                <section aria-labelledby="feeding-chart-faqs">
+                  <h2 id="feeding-chart-faqs">Frequently Asked Questions</h2>
+                  {FEEDING_CHART_FAQS.map((faq) => (
+                    <div key={faq.question}>
+                      <h3>{faq.question}</h3>
+                      <p>
+                        {faq.answer}
+                        {faq.source && (
+                          <>
+                            {" "}
+                            <a href={faq.source.href}>{faq.source.label}</a>
+                          </>
+                        )}
+                      </p>
+                    </div>
+                  ))}
+                </section>
+              )}
             </div>
             <div className="mt-12 pt-8 border-t border-amber-100 text-center">
-              <p className="text-gray-600 mb-2">
-                P.S. Get the free{" "}
-                <strong>Golden Retriever Owner Cheat Sheet</strong> — daily feeding, sleep, and care in one printable
-                guide.
-              </p>
+              {isFeedingChart ? (
+                <>
+                  <h2 className="text-xl font-bold text-amber-900 mb-2">Keep Your Golden&apos;s Daily Care on Track</h2>
+                  <p className="text-gray-600 mb-2">
+                    Get the free Golden Retriever Owner Cheat Sheet for a printable daily-care reference.
+                  </p>
+                </>
+              ) : (
+                <p className="text-gray-600 mb-2">
+                  P.S. Get the free{" "}
+                  <strong>Golden Retriever Owner Cheat Sheet</strong> — daily feeding, sleep, and care in one printable
+                  guide.
+                </p>
+              )}
               <p className="text-gray-600 mb-2">
                 <Link href="/#newsletter" className="text-amber-700 font-semibold hover:underline">
                   Get the Cheat Sheet
