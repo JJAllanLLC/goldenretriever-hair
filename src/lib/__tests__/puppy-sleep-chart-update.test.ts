@@ -81,6 +81,7 @@ describe("puppy sleep chart accuracy and signup", () => {
     );
     expect(signupSource).toContain("meals, and everyday care from puppyhood to senior years.");
     expect(signupSource).toContain('buttonLabel="Email me the free cheat sheet"');
+    expect(signupSource).toContain("wrapButtonLabelBelow375");
     expect(signupSource).toContain('analyticsSource="puppy_sleep_chart"');
     expect(signupSource).toContain("showSmallText={false}");
     expect(signupSource).not.toContain("Unsubscribe");

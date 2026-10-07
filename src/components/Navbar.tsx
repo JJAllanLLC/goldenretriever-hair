@@ -31,11 +31,21 @@ export function Navbar() {
           {/* Mobile Hamburger */}
           <div className="md:hidden">
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-700 focus:outline-none"
-              aria-label="Toggle menu"
+              type="button"
+              onClick={() => setMobileMenuOpen((open) => !open)}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+              aria-controls="mobile-navigation"
+              aria-expanded={mobileMenuOpen}
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg
+                aria-hidden="true"
+                className="h-6 w-6"
+                fill="none"
+                focusable="false"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
                 {mobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -48,7 +58,11 @@ export function Navbar() {
 
         {/* Mobile Dropdown */}
         {mobileMenuOpen && (
-          <nav className="md:hidden bg-amber-50 border-t border-amber-200">
+          <nav
+            id="mobile-navigation"
+            aria-label="Mobile navigation"
+            className="md:hidden bg-amber-50 border-t border-amber-200"
+          >
             <div className="px-2 pt-2 pb-3 space-y-1">
               <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
               <Link href="/blog" className="block px-3 py-2 text-gray-700 hover:text-amber-700 font-medium" onClick={() => { trackEvent("blog_click", { event_category: "navigation", event_label: "Blog" }); setMobileMenuOpen(false); }}>Blog</Link>

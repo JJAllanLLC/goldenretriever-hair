@@ -17,6 +17,7 @@ export function SleepGuideNewsletterSignup() {
         variant="light"
         analyticsSource="puppy_sleep_chart"
         buttonLabel="Email me the free cheat sheet"
+        wrapButtonLabelBelow375
         formLabel="Puppy sleep guide newsletter signup"
         showIntro={false}
         showSmallText={false}

@@ -22,6 +22,7 @@ export function NewsletterForm({
   onSuccess,
   analyticsSource,
   buttonLabel = "Get My Free Cheat Sheet",
+  wrapButtonLabelBelow375 = false,
   formLabel,
   showIntro = true,
   showSmallText = true,
@@ -30,6 +31,7 @@ export function NewsletterForm({
   onSuccess?: () => void;
   analyticsSource: "home_inline" | "site_footer" | "golden_week" | "puppy_sleep_chart";
   buttonLabel?: string;
+  wrapButtonLabelBelow375?: boolean;
   formLabel?: string;
   showIntro?: boolean;
   showSmallText?: boolean;
@@ -174,7 +176,11 @@ export function NewsletterForm({
         <button
           type="submit"
           disabled={status === "loading"}
-          className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-semibold transition disabled:opacity-70 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-transparent w-full sm:w-auto"
+          className={`bg-amber-600 hover:bg-amber-700 text-white py-4 rounded-full font-semibold transition disabled:opacity-70 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-transparent w-full sm:w-auto ${
+            wrapButtonLabelBelow375
+              ? "px-4 whitespace-normal leading-tight min-[375px]:px-3 min-[375px]:whitespace-nowrap sm:px-8"
+              : "px-8 whitespace-nowrap"
+          }`}
         >
           {status === "loading" ? "Subscribing…" : buttonLabel}
         </button>

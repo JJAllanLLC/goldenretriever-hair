@@ -97,6 +97,7 @@ describe("NewsletterForm analytics", () => {
         variant="light"
         analyticsSource="puppy_sleep_chart"
         buttonLabel="Email me the free cheat sheet"
+        wrapButtonLabelBelow375
         showIntro={false}
         showSmallText={false}
       />
@@ -105,7 +106,9 @@ describe("NewsletterForm analytics", () => {
     expect(screen.queryByText("Most Golden Retriever Owners Are Feeding the Wrong Amount")).not.toBeInTheDocument();
     expect(screen.queryByText("No spam. Unsubscribe anytime.")).not.toBeInTheDocument();
     await user.type(screen.getByRole("textbox", { name: "Email address" }), "reader@example.com");
-    await user.click(screen.getByRole("button", { name: "Email me the free cheat sheet" }));
+    const submitButton = screen.getByRole("button", { name: "Email me the free cheat sheet" });
+    expect(submitButton).toHaveClass("whitespace-normal", "min-[375px]:whitespace-nowrap");
+    await user.click(submitButton);
 
     expect(await screen.findByText("Subscribed! Check your inbox.")).toBeInTheDocument();
     expect(trackEventMock).toHaveBeenCalledWith("sign_up", {
@@ -133,6 +136,7 @@ describe("NewsletterForm analytics", () => {
         variant="light"
         analyticsSource="puppy_sleep_chart"
         buttonLabel="Email me the free cheat sheet"
+        wrapButtonLabelBelow375
         showIntro={false}
         showSmallText={false}
       />
