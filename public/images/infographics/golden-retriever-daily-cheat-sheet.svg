@@ -22,6 +22,8 @@
       .food-focus { font-size: 12.5px; font-weight: 600; fill: #6b5c48; letter-spacing: 0.03em; }
       .food-sum { font-size: 15px; font-weight: 500; fill: #3d4d66; }
       .food-sum-strong { font-size: 16px; font-weight: 900; fill: #0f1728; letter-spacing: -0.02em; }
+      .sleep-note { font-size: 13px; font-weight: 600; fill: #3d4d66; }
+      .source-link { font-size: 13px; font-weight: 700; fill: #8a5a12; text-decoration: underline; }
       .cup-num { font-size: 16px; font-weight: 800; fill: #141c2e; }
       .cup-num-f { font-size: 15px; font-weight: 700; fill: #6b5c42; }
       .cup-num-faded { font-size: 14px; font-weight: 600; fill: #8a8378; }
@@ -53,68 +55,41 @@
   <!-- Header -->
   <rect width="1000" height="252" fill="url(#hdr)"/>
   <text x="500" y="72" text-anchor="middle" class="t h1">Golden Retriever Owner Cheat Sheet</text>
-  <text x="500" y="118" text-anchor="middle" class="t hook">Exactly what your Golden needs at every stage (in 60 seconds)</text>
+  <text x="500" y="118" text-anchor="middle" class="t hook">A quick reference for your Golden&#8217;s daily care</text>
   <text x="500" y="158" text-anchor="middle" class="t sub-support">Feeding, sleep &amp; care by age</text>
   <rect x="280" y="182" width="440" height="3" rx="1.5" fill="#C89B3C"/>
 
-  <!-- Food: blocks 60 wide, gap 10, row pitch 142; summaries x=372 -->
+  <!-- Feeding alignment: recipe-specific amounts and age-appropriate meal frequency -->
   <g transform="translate(40, 272)">
-    <text x="0" y="14" class="t food-focus">If you only follow one thing on this page, make it this &#128071;</text>
-    <text x="0" y="42" class="t food-h">How much to feed (visual)</text>
-    <text x="0" y="68" class="t legend">Each block &#8776; 1 cup | Solid = typical | Faded = flexible / split meals</text>
-    <text x="0" y="90" class="t food-note">Typical large-breed kibble. Confirm with your vet.</text>
+    <text x="0" y="42" class="t food-h">Meals and Daily Food Amounts</text>
+    <text x="0" y="70" class="t food-sum">Use the exact food&#8217;s label and calories per cup or gram.</text>
+    <text x="0" y="94" class="t food-note">General meal-frequency starting points; adjust with your vet.</text>
 
     <g transform="translate(0, 112)">
-      <!-- Row 0 Puppy -->
-      <text x="0" y="30" class="t food-label">Puppy</text>
-      <g transform="translate(80, 0)">
-        <rect class="cup-muted" x="0" y="0" width="60" height="44" rx="10"/>
-        <text x="30" y="29" text-anchor="middle" class="t cup-num-f">1</text>
-        <rect class="cup-muted" x="70" y="0" width="60" height="44" rx="10"/>
-        <text x="100" y="29" text-anchor="middle" class="t cup-num-f">2</text>
-        <rect class="cup-gold" x="140" y="0" width="60" height="44" rx="10"/>
-        <text x="170" y="29" text-anchor="middle" class="t cup-num">3</text>
-      </g>
-      <text x="372" y="30" class="t food-sum">3&#8211;4 meals | <tspan class="food-sum-strong">~2&#8211;2.5 cups total</tspan></text>
+      <rect class="card-bg" width="920" height="340" rx="14"/>
 
-      <!-- Row 1 Teen -->
-      <text x="0" y="172" class="t food-label">Teen</text>
-      <g transform="translate(80, 142)">
-        <rect class="cup-muted2" x="0" y="0" width="60" height="44" rx="10"/>
-        <text x="30" y="29" text-anchor="middle" class="t cup-num-f">1</text>
-        <rect class="cup-gold" x="70" y="0" width="60" height="44" rx="10"/>
-        <text x="100" y="29" text-anchor="middle" class="t cup-num">2</text>
-        <rect class="cup-gold" x="140" y="0" width="60" height="44" rx="10"/>
-        <text x="170" y="29" text-anchor="middle" class="t cup-num">3</text>
-      </g>
-      <text x="372" y="172" class="t food-sum">2&#8211;3 meals | <tspan class="food-sum-strong">~2.5&#8211;3.5 cups total</tspan></text>
+      <text x="24" y="38" class="t food-label">Puppy</text>
+      <text x="180" y="32" class="t food-sum">8&#8211;12 weeks: <tspan class="food-sum-strong">3&#8211;4 meals</tspan></text>
+      <text x="180" y="60" class="t food-sum">3 to under 6 months: <tspan class="food-sum-strong">3 meals</tspan></text>
+      <line class="between" x1="24" y1="85" x2="896" y2="85"/>
 
-      <!-- Row 2 Adult -->
-      <text x="0" y="314" class="t food-label">Adult</text>
-      <g transform="translate(80, 284)">
-        <rect class="cup-gold" x="0" y="0" width="60" height="44" rx="10"/>
-        <text x="30" y="29" text-anchor="middle" class="t cup-num">1</text>
-        <rect class="cup-gold" x="70" y="0" width="60" height="44" rx="10"/>
-        <text x="100" y="29" text-anchor="middle" class="t cup-num">2</text>
-        <rect class="cup-gold" x="140" y="0" width="60" height="44" rx="10"/>
-        <text x="170" y="29" text-anchor="middle" class="t cup-num">3</text>
-        <rect class="cup-faded" x="210" y="0" width="60" height="44" rx="10"/>
-        <text x="240" y="29" text-anchor="middle" class="t cup-num-faded">4</text>
-      </g>
-      <text x="372" y="314" class="t food-sum">2 meals | <tspan class="food-sum-strong">~3&#8211;4 cups total</tspan></text>
+      <text x="24" y="132" class="t food-label">Older puppy</text>
+      <text x="180" y="132" class="t food-sum">From about 6 months: <tspan class="food-sum-strong">usually 2 meals</tspan></text>
+      <line class="between" x1="24" y1="170" x2="896" y2="170"/>
 
-      <!-- Row 3 Senior -->
-      <text x="0" y="456" class="t food-label">Senior</text>
-      <g transform="translate(80, 426)">
-        <rect class="cup-gold" x="0" y="0" width="60" height="44" rx="10"/>
-        <text x="30" y="29" text-anchor="middle" class="t cup-num">1</text>
-        <rect class="cup-gold" x="70" y="0" width="60" height="44" rx="10"/>
-        <text x="100" y="29" text-anchor="middle" class="t cup-num">2</text>
-        <rect class="cup-senior3" x="140" y="0" width="60" height="44" rx="10"/>
-        <text x="170" y="29" text-anchor="middle" class="t cup-num-f">3</text>
-      </g>
-      <text x="372" y="456" class="t food-sum">2 meals | <tspan class="food-sum-strong">adjust to body condition</tspan></text>
+      <text x="24" y="217" class="t food-label">Adult</text>
+      <text x="180" y="217" class="t food-sum">Usually 2 meals; portions depend on calories and body condition</text>
+      <line class="between" x1="24" y1="255" x2="896" y2="255"/>
+
+      <text x="24" y="302" class="t food-label">Senior</text>
+      <text x="180" y="302" class="t food-sum">Usually 2 meals; individualize portions and monitor muscle</text>
     </g>
+
+    <text x="0" y="486" class="t food-sum-strong">Divide the daily amount among meals. Count treats and extras.</text>
+    <text x="0" y="526" class="t sleep-note">Sleep needs vary. Give quiet rest opportunities; check unusual changes with your vet.</text>
+    <a href="https://goldenretriever.hair/guides/golden-retriever-puppy-sleep-chart">
+      <text x="0" y="550" class="t source-link">Puppy sleep guidance</text>
+    </a>
   </g>
 
   <!-- Age cards: h=318, mistake y=224 h=80 -->
@@ -123,11 +98,11 @@
       <rect class="card-bg" width="920" height="318" rx="14"/>
       <rect class="card-band" x="0" y="0" width="8" height="318" rx="0"/>
       <text x="36" y="50" class="t">
-        <tspan class="sec-emoji">&#128054;</tspan><tspan class="sec-main" dx="6">Puppy </tspan><tspan class="sec-sub">(0&#8211;6 months)</tspan>
+        <tspan class="sec-emoji">&#128054;</tspan><tspan class="sec-main" dx="6">Puppy </tspan><tspan class="sec-sub">(8 weeks&#8211;6 months)</tspan>
       </text>
       <text x="36" y="78" class="stage-tag">Most work</text>
-      <text x="36" y="108"><tspan class="lbl">Meals: </tspan><tspan class="val">3&#8211;4x daily</tspan></text>
-      <text x="36" y="134"><tspan class="lbl">Sleep: </tspan><tspan class="val">18&#8211;20 hrs</tspan></text>
+      <text x="36" y="108"><tspan class="lbl">Meals: </tspan><tspan class="val">3&#8211;4 early; 3 until about 6 months</tspan></text>
+      <text x="36" y="134"><tspan class="lbl">Sleep: </tspan><tspan class="val">Frequent naps; needs vary</tspan></text>
       <text x="36" y="160"><tspan class="lbl">Exercise: </tspan><tspan class="val">Short play, no forced jumps</tspan></text>
       <text x="36" y="186"><tspan class="lbl">Sessions: </tspan><tspan class="val">5&#8211;10 min</tspan></text>
       <text x="36" y="212"><tspan class="lbl">Daily rhythm: </tspan><tspan class="val">Eat &#8594; nap &#8594; play</tspan></text>
@@ -146,8 +121,8 @@
         <tspan class="sec-emoji">&#9889;</tspan><tspan class="sec-main" dx="6">Teen </tspan><tspan class="sec-sub">(6&#8211;12 months)</tspan>
       </text>
       <text x="36" y="78" class="stage-tag">Most frustrating</text>
-      <text x="36" y="108"><tspan class="lbl">Meals: </tspan><tspan class="val">2&#8211;3x daily</tspan></text>
-      <text x="36" y="134"><tspan class="lbl">Sleep: </tspan><tspan class="val">14&#8211;18 hrs</tspan></text>
+      <text x="36" y="108"><tspan class="lbl">Meals: </tspan><tspan class="val">Usually 2 meals daily</tspan></text>
+      <text x="36" y="134"><tspan class="lbl">Sleep: </tspan><tspan class="val">Daytime naps + overnight sleep</tspan></text>
       <text x="36" y="160"><tspan class="lbl">Exercise: </tspan><tspan class="val">Build gradually</tspan></text>
       <text x="36" y="186"><tspan class="lbl">Walks: </tspan><tspan class="val">20&#8211;40 min</tspan></text>
       <text x="36" y="212"><tspan class="lbl">Daily rhythm: </tspan><tspan class="val">Eat &#8594; train &#8594; exercise</tspan></text>
@@ -167,7 +142,7 @@
       </text>
       <text x="36" y="78" class="stage-tag">Most stable</text>
       <text x="36" y="108"><tspan class="lbl">Meals: </tspan><tspan class="val">2x daily</tspan></text>
-      <text x="36" y="134"><tspan class="lbl">Sleep: </tspan><tspan class="val">12&#8211;14 hrs</tspan></text>
+      <text x="36" y="134"><tspan class="lbl">Sleep: </tspan><tspan class="val">Overnight sleep + daytime naps</tspan></text>
       <text x="36" y="160"><tspan class="lbl">Exercise: </tspan><tspan class="val">1&#8211;2 hrs daily</tspan></text>
       <text x="36" y="186"><tspan class="lbl">Daily rhythm: </tspan><tspan class="val">2 meals + activity blocks</tspan></text>
       <rect class="mistake-box" x="28" y="232" width="864" height="80" rx="12"/>
@@ -186,7 +161,7 @@
       </text>
       <text x="36" y="78" class="stage-tag">Most overlooked</text>
       <text x="36" y="108"><tspan class="lbl">Meals: </tspan><tspan class="val">2x daily (adjust)</tspan></text>
-      <text x="36" y="134"><tspan class="lbl">Sleep: </tspan><tspan class="val">Increased rest</tspan></text>
+      <text x="36" y="134"><tspan class="lbl">Sleep: </tspan><tspan class="val">Monitor changes in sleep and energy</tspan></text>
       <text x="36" y="160"><tspan class="lbl">Exercise: </tspan><tspan class="val">Short, low-impact</tspan></text>
       <text x="36" y="186"><tspan class="lbl">Daily rhythm: </tspan><tspan class="val">Gentle routine + rest</tspan></text>
       <rect class="mistake-box" x="28" y="232" width="864" height="80" rx="12"/>

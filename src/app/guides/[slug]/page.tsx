@@ -7,6 +7,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getMDXComponents } from "@/components/mdx-components";
 import { GuidePageAnalytics } from "@/components/GuidePageAnalytics";
+import { SleepGuideNewsletterSignup } from "@/components/SleepGuideNewsletterSignup";
 import { FEEDING_CHART_FAQS } from "@/lib/feeding-chart-faqs";
 import { buildArticleSocialMetadata } from "@/lib/mdx-article-metadata";
 
@@ -61,8 +62,12 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   if (!guide) notFound();
 
   const { content, metadata } = guide;
-  const components = getMDXComponents({}, { ...metadata, date: undefined });
   const isFeedingChart = slug === "golden-retriever-feeding-chart";
+  const isPuppySleepChart = slug === "golden-retriever-puppy-sleep-chart";
+  const components = getMDXComponents(
+    isPuppySleepChart ? { SleepGuideNewsletter: SleepGuideNewsletterSignup } : {},
+    { ...metadata, date: undefined }
+  );
 
   return (
     <main className="bg-amber-50/40 text-gray-900">
@@ -181,28 +186,30 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
                 </section>
               )}
             </div>
-            <div className="mt-12 pt-8 border-t border-amber-100 text-center">
-              {isFeedingChart ? (
-                <>
-                  <h2 className="text-xl font-bold text-amber-900 mb-2">Keep Your Golden&apos;s Daily Care on Track</h2>
+            {!isPuppySleepChart && (
+              <div className="mt-12 pt-8 border-t border-amber-100 text-center">
+                {isFeedingChart ? (
+                  <>
+                    <h2 className="text-xl font-bold text-amber-900 mb-2">Keep Your Golden&apos;s Daily Care on Track</h2>
+                    <p className="text-gray-600 mb-2">
+                      Get the free Golden Retriever Owner Cheat Sheet for a printable daily-care reference.
+                    </p>
+                  </>
+                ) : (
                   <p className="text-gray-600 mb-2">
-                    Get the free Golden Retriever Owner Cheat Sheet for a printable daily-care reference.
+                    P.S. Get the free{" "}
+                    <strong>Golden Retriever Owner Cheat Sheet</strong> — daily feeding, sleep, and care in one printable
+                    guide.
                   </p>
-                </>
-              ) : (
+                )}
                 <p className="text-gray-600 mb-2">
-                  P.S. Get the free{" "}
-                  <strong>Golden Retriever Owner Cheat Sheet</strong> — daily feeding, sleep, and care in one printable
-                  guide.
+                  <Link href="/#newsletter" className="text-amber-700 font-semibold hover:underline">
+                    Get the Cheat Sheet
+                  </Link>{" "}
+                  when you join the newsletter — instant access in your welcome email.
                 </p>
-              )}
-              <p className="text-gray-600 mb-2">
-                <Link href="/#newsletter" className="text-amber-700 font-semibold hover:underline">
-                  Get the Cheat Sheet
-                </Link>{" "}
-                when you join the newsletter — instant access in your welcome email.
-              </p>
-            </div>
+              </div>
+            )}
           </div>
         </article>
       </section>

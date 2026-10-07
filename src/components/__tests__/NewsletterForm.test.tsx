@@ -78,4 +78,71 @@ describe("NewsletterForm analytics", () => {
     await waitFor(() => expect(fetchMock).toHaveBeenCalledOnce());
     expect(trackEventMock).not.toHaveBeenCalled();
   });
+
+  it("uses the sleep-chart button and placement only after an HTTP 200 response", async () => {
+    fetchMock.mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: async () => ({ message: "Subscribed! Check your inbox." }),
+    });
+    const user = userEvent.setup();
+    window.history.replaceState(
+      {},
+      "",
+      "/guides/golden-retriever-puppy-sleep-chart?utm_source=private#daily-routine"
+    );
+
+    render(
+      <NewsletterForm
+        variant="light"
+        analyticsSource="puppy_sleep_chart"
+        buttonLabel="Email me the free cheat sheet"
+        showIntro={false}
+        showSmallText={false}
+      />
+    );
+
+    expect(screen.queryByText("Most Golden Retriever Owners Are Feeding the Wrong Amount")).not.toBeInTheDocument();
+    expect(screen.queryByText("No spam. Unsubscribe anytime.")).not.toBeInTheDocument();
+    await user.type(screen.getByRole("textbox", { name: "Email address" }), "reader@example.com");
+    await user.click(screen.getByRole("button", { name: "Email me the free cheat sheet" }));
+
+    expect(await screen.findByText("Subscribed! Check your inbox.")).toBeInTheDocument();
+    expect(trackEventMock).toHaveBeenCalledWith("sign_up", {
+      method: "newsletter",
+      event_category: "newsletter",
+      event_label: "puppy_sleep_chart",
+      form_location: "puppy_sleep_chart",
+      page_path: "/guides/golden-retriever-puppy-sleep-chart",
+    });
+    expect(JSON.stringify(trackEventMock.mock.calls)).not.toContain("reader@example.com");
+    expect(JSON.stringify(trackEventMock.mock.calls)).not.toContain("utm_source");
+  });
+
+  it("keeps the sleep-chart signup in place and emits no event after an API error", async () => {
+    fetchMock.mockResolvedValue({
+      ok: false,
+      status: 500,
+      json: async () => ({ error: "Something went wrong. Please try again." }),
+    });
+    const user = userEvent.setup();
+    window.history.replaceState({}, "", "/guides/golden-retriever-puppy-sleep-chart");
+
+    render(
+      <NewsletterForm
+        variant="light"
+        analyticsSource="puppy_sleep_chart"
+        buttonLabel="Email me the free cheat sheet"
+        showIntro={false}
+        showSmallText={false}
+      />
+    );
+
+    await user.type(screen.getByRole("textbox", { name: "Email address" }), "reader@example.com");
+    await user.click(screen.getByRole("button", { name: "Email me the free cheat sheet" }));
+
+    expect(await screen.findByText("Something went wrong. Please try again.")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Email me the free cheat sheet" })).toBeInTheDocument();
+    expect(trackEventMock).not.toHaveBeenCalled();
+  });
 });

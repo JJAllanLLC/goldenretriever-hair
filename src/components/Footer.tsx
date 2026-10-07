@@ -1,12 +1,10 @@
-import { NewsletterForm } from "./NewsletterForm";
+import { FooterNewsletter } from "./FooterNewsletter";
 
 export function Footer() {
   return (
     <footer className="bg-amber-900 text-white py-12 mt-20">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <div className="mb-8">
-          <NewsletterForm variant="footer" analyticsSource="site_footer" />
-        </div>
+        <FooterNewsletter />
         <div className="flex flex-col items-center gap-4 text-sm">
           <p>
             © 2026 GoldenRetriever.hair — Part of the{" "}

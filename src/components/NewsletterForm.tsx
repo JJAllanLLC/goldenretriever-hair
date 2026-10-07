@@ -21,10 +21,18 @@ export function NewsletterForm({
   variant = "footer",
   onSuccess,
   analyticsSource,
+  buttonLabel = "Get My Free Cheat Sheet",
+  formLabel,
+  showIntro = true,
+  showSmallText = true,
 }: {
   variant?: "footer" | "hero" | "standalone" | "dark" | "light";
   onSuccess?: () => void;
-  analyticsSource: "home_inline" | "site_footer" | "golden_week";
+  analyticsSource: "home_inline" | "site_footer" | "golden_week" | "puppy_sleep_chart";
+  buttonLabel?: string;
+  formLabel?: string;
+  showIntro?: boolean;
+  showSmallText?: boolean;
 }) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
@@ -131,11 +139,16 @@ export function NewsletterForm({
 
   return (
     <div className={`w-full text-center ${isHero || isDark || isLight ? "max-w-md mx-auto" : ""}`}>
-      <p className={headlineClass}>{HEADLINE}</p>
-      <p className={headlineSubClass}>{HEADLINE_SUB}</p>
-      <p className={bodyClass}>{BODY_P1}</p>
+      {showIntro && (
+        <>
+          <p className={headlineClass}>{HEADLINE}</p>
+          <p className={headlineSubClass}>{HEADLINE_SUB}</p>
+          <p className={bodyClass}>{BODY_P1}</p>
+        </>
+      )}
       <form
         onSubmit={handleSubmit}
+        aria-label={formLabel}
         className="max-w-md mx-auto flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
       >
         <input
@@ -163,7 +176,7 @@ export function NewsletterForm({
           disabled={status === "loading"}
           className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full font-semibold transition disabled:opacity-70 whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-transparent w-full sm:w-auto"
         >
-          {status === "loading" ? "Subscribing…" : "Get My Free Cheat Sheet"}
+          {status === "loading" ? "Subscribing…" : buttonLabel}
         </button>
       </form>
       {status === "error" && message && (
@@ -177,7 +190,7 @@ export function NewsletterForm({
           {message}
         </p>
       )}
-      <p className={smallClass}>{SMALL_TEXT}</p>
+      {showSmallText && <p className={smallClass}>{SMALL_TEXT}</p>}
     </div>
   );
 }
