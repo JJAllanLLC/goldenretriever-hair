@@ -66,7 +66,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
   const isPuppySleepChart = slug === "golden-retriever-puppy-sleep-chart";
   const components = getMDXComponents(
     isPuppySleepChart ? { SleepGuideNewsletter: SleepGuideNewsletterSignup } : {},
-    { ...metadata, date: undefined }
+    { ...metadata, date: undefined, author: "By JJ Allan (goldenretriever.hair)" }
   );
 
   return (
@@ -117,7 +117,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
               : undefined,
             datePublished: metadata.date ?? undefined,
             dateModified: metadata.updated ?? metadata.date ?? undefined,
-            author: { "@type": "Organization", name: "GoldenRetriever.hair" },
+            author: { "@type": "Person", name: "JJ Allan" },
             publisher: { "@type": "Organization", name: "GoldenRetriever.hair", url: "https://goldenretriever.hair" },
           }),
         }}
