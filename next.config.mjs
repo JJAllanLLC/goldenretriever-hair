@@ -116,6 +116,36 @@ const nextConfig = {
         destination: '/guides/golden-retriever-ear-infections',
         permanent: true,
       },
+      {
+        source: '/guides/golden-retriever-skin-allergies',
+        destination: '/guides/golden-retriever-allergies-guide',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-skin-allergies/',
+        destination: '/guides/golden-retriever-allergies-guide',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-itching-at-night',
+        destination: '/guides/golden-retriever-allergies-guide',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-itching-at-night/',
+        destination: '/guides/golden-retriever-allergies-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/why-do-golden-retrievers-itch-so-much',
+        destination: '/guides/golden-retriever-allergies-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/why-do-golden-retrievers-itch-so-much/',
+        destination: '/guides/golden-retriever-allergies-guide',
+        permanent: true,
+      },
     ];
   },
 };
