@@ -146,6 +146,16 @@ const nextConfig = {
         destination: '/guides/golden-retriever-allergies-guide',
         permanent: true,
       },
+      {
+        source: '/guides/golden-retriever-socialization-timeline-chart',
+        destination: '/guides/golden-retriever-socialization-guide',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-socialization-timeline-chart/',
+        destination: '/guides/golden-retriever-socialization-guide',
+        permanent: true,
+      },
     ];
   },
 };
