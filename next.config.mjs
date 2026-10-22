@@ -96,6 +96,26 @@ const nextConfig = {
         destination: '/guides/puppy-care',
         permanent: true,
       },
+      {
+        source: '/guides/golden-retriever-ear-cleaning-guide',
+        destination: '/guides/golden-retriever-ear-infections',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-ear-cleaning-guide/',
+        destination: '/guides/golden-retriever-ear-infections',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-scratching-ears-constantly',
+        destination: '/guides/golden-retriever-ear-infections',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-scratching-ears-constantly/',
+        destination: '/guides/golden-retriever-ear-infections',
+        permanent: true,
+      },
     ];
   },
 };
