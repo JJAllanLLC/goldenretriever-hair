@@ -19,25 +19,25 @@ export default function Home() {
           Start Here for Golden Retriever Owners
         </h2>
         <div className="grid grid-cols-2 gap-4">
-          <Link
+          <Link prefetch={false}
             href="/guides/golden-retriever-feeding-chart"
             className="bg-amber-100 border border-amber-200 rounded-xl p-6 text-center font-semibold text-amber-900 shadow-sm active:scale-[0.98] transition-transform"
           >
             Feeding Chart
           </Link>
-          <Link
+          <Link prefetch={false}
             href="/guides/golden-retriever-grooming-guide"
             className="bg-amber-100 border border-amber-200 rounded-xl p-6 text-center font-semibold text-amber-900 shadow-sm active:scale-[0.98] transition-transform"
           >
             Grooming Guide
           </Link>
-          <Link
+          <Link prefetch={false}
             href="/breeders"
             className="bg-amber-100 border border-amber-200 rounded-xl p-6 text-center font-semibold text-amber-900 shadow-sm active:scale-[0.98] transition-transform"
           >
             Find a Golden Retriever Breeder
           </Link>
-          <Link
+          <Link prefetch={false}
             href="/products"
             className="bg-amber-100 border border-amber-200 rounded-xl p-6 text-center font-semibold text-amber-900 shadow-sm active:scale-[0.98] transition-transform"
           >

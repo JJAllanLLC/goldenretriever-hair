@@ -115,13 +115,13 @@ export function RandomHero() {
               Feeding guides, grooming tips, training advice, and real-world insights for every stage of Golden life.
             </p>
             <div className="flex flex-col items-center gap-3">
-              <Link
+              <Link prefetch={false}
                 href="/#newsletter"
                 className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition"
               >
                 Get My Free Cheat Sheet
               </Link>
-              <Link
+              <Link prefetch={false}
                 href="/guides"
                 className="text-sm text-white/85 underline underline-offset-2 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent rounded-sm"
               >

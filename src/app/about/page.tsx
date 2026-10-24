@@ -40,7 +40,7 @@ export default function AboutPage() {
               </p>
               <p>
                 Behind the scenes: A team of passionate Golden Retriever experts (nutritionists, trainers, long-time breeders, and owners) reached out to JJ Allan of JJ Allan LLC to help build, support, and maintain the site. They wanted a trusted, modern platform to share breed-specific knowledge and community resources. You can learn more about JJ Allan LLC at{" "}
-                <Link
+                <Link prefetch={false}
                   href="https://jjallanllc.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -56,15 +56,15 @@ export default function AboutPage() {
               </p>
               <p>
                 Ready to dive in? Explore the{" "}
-                <Link href="/guides" className="text-amber-700 underline hover:text-amber-900">
+                <Link prefetch={false} href="/guides" className="text-amber-700 underline hover:text-amber-900">
                   Guides
                 </Link>{" "}
                 for in-depth advice,{" "}
-                <Link href="/products" className="text-amber-700 underline hover:text-amber-900">
+                <Link prefetch={false} href="/products" className="text-amber-700 underline hover:text-amber-900">
                   Products
                 </Link>{" "}
                 for carefully tested recommendations, or{" "}
-                <Link href="/blog" className="text-amber-700 underline hover:text-amber-900">
+                <Link prefetch={false} href="/blog" className="text-amber-700 underline hover:text-amber-900">
                   Blog
                 </Link>{" "}
                 for relatable stories.

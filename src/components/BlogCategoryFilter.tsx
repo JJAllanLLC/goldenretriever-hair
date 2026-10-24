@@ -71,7 +71,7 @@ export function BlogCategoryFilter({ posts }: { posts: PostMeta[] }) {
               <p className="text-gray-700 mb-4 line-clamp-3">
                 {post.description}
               </p>
-              <Link href={`/blog/${post.slug}`} className="text-amber-700 font-semibold hover:underline">
+              <Link prefetch={false} href={`/blog/${post.slug}`} className="text-amber-700 font-semibold hover:underline">
                 Read post
               </Link>
             </div>

@@ -59,7 +59,7 @@ export function HeroCarousel() {
                   Discover expert guides, health tips, hand-picked products, and more for owners and
                   admirers alike.
                 </p>
-                <Link
+                <Link prefetch={false}
                   href="/guides"
                   className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition"
                 >
@@ -90,7 +90,7 @@ export function HeroCarousel() {
                   Discover expert guides, health tips, hand-picked products, and more for owners and
                   admirers alike.
                 </p>
-                <Link
+                <Link prefetch={false}
                   href="/guides"
                   className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition"
                 >
@@ -121,7 +121,7 @@ export function HeroCarousel() {
                   Discover expert guides, health tips, hand-picked products, and more for owners and
                   admirers alike.
                 </p>
-                <Link
+                <Link prefetch={false}
                   href="/guides"
                   className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition"
                 >
@@ -152,7 +152,7 @@ export function HeroCarousel() {
                   Discover expert guides, health tips, hand-picked products, and more for owners and
                   admirers alike.
                 </p>
-                <Link
+                <Link prefetch={false}
                   href="/guides"
                   className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition"
                 >

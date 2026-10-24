@@ -64,7 +64,7 @@ export default async function BreedersPage() {
         }}
       />
       <section className="max-w-4xl mx-auto px-4 py-16">
-        <Link href="/guides" className="text-amber-700 font-semibold hover:underline">
+        <Link prefetch={false} href="/guides" className="text-amber-700 font-semibold hover:underline">
           ← Guides
         </Link>
         <article className="mt-8 bg-white rounded-xl shadow-2xl overflow-hidden">
@@ -94,7 +94,7 @@ export default async function BreedersPage() {
                 guide.
               </p>
               <p className="text-gray-600 mb-2">
-                <Link href="/#newsletter" className="text-amber-700 font-semibold hover:underline">
+                <Link prefetch={false} href="/#newsletter" className="text-amber-700 font-semibold hover:underline">
                   Get the Cheat Sheet
                 </Link>{" "}
                 when you join the newsletter — instant access in your welcome email.

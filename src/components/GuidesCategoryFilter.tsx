@@ -79,7 +79,7 @@ export function GuidesCategoryFilter({ guides }: { guides: Guide[] }) {
                 {guide.title}
               </h3>
               <p className="text-gray-700 mb-4 line-clamp-3">{guide.description}</p>
-              <Link href={`/guides/${guide.slug}`} className="text-amber-700 font-semibold hover:underline">
+              <Link prefetch={false} href={`/guides/${guide.slug}`} className="text-amber-700 font-semibold hover:underline">
                 Read guide
               </Link>
             </div>
