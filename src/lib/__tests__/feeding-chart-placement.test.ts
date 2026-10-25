@@ -95,8 +95,8 @@ describe("feeding-chart nutrition update", () => {
     expect(adultTableLastRow).toBeGreaterThan(adultHeading);
     expect(comparisonHeading).toBeGreaterThan(adultTableLastRow);
     expect(conversionHeading).toBeGreaterThan(comparisonHeading);
-    expect(source.match(/https:\/\/amzn\.to\/45GjTnt/g)).toHaveLength(1);
-    expect(source.match(/https:\/\/amzn\.to\/4kcP5Rk/g)).toHaveLength(1);
+    expect(source.match(/https:\/\/amzn\.to\/45GjTnt/g)).toHaveLength(2);
+    expect(source.match(/https:\/\/amzn\.to\/4kcP5Rk/g)).toHaveLength(2);
     expect(source).toContain("View Hill’s adult food on Amazon");
     expect(source).toContain("View Purina adult food on Amazon");
     expect(source).toContain(
@@ -115,7 +115,7 @@ describe("feeding-chart nutrition update", () => {
     expect(source.match(/<table className=/g)).toHaveLength(4);
     expect(source.match(/<caption>/g)).toHaveLength(4);
     expect(source.match(/role="region" aria-label=/g)).toHaveLength(4);
-    expect(source.match(/https:\/\/amzn\.to\/48dIlxS/g)).toHaveLength(2);
+    expect(source.match(/https:\/\/amzn\.to\/48dIlxS/g)).toHaveLength(3);
     expect(source).toContain(
       "Ask your veterinarian whether an elevated bowl is appropriate for your dog."
     );
