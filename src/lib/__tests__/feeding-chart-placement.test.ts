@@ -111,10 +111,10 @@ describe("feeding-chart nutrition update", () => {
   });
 
   it("keeps tables mobile-readable and the elevated-feeder language neutral", () => {
-    expect(source.match(/className="overflow-x-auto my-6"/g)).toHaveLength(4);
-    expect(source.match(/<table className=/g)).toHaveLength(4);
-    expect(source.match(/<caption>/g)).toHaveLength(4);
-    expect(source.match(/role="region" aria-label=/g)).toHaveLength(4);
+    expect(source.match(/className="overflow-x-auto my-6"/g)).toHaveLength(5);
+    expect(source.match(/<table className=/g)).toHaveLength(5);
+    expect(source.match(/<caption>/g)).toHaveLength(5);
+    expect(source.match(/role="region" aria-label=/g)).toHaveLength(5);
     expect(source.match(/https:\/\/amzn\.to\/48dIlxS/g)).toBeNull();
     expect(source).not.toContain("elevated_feeder");
     expect(source).not.toContain("more comfortable eating position");
