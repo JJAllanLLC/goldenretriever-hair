@@ -26,7 +26,7 @@ describe("feeding-chart nutrition update", () => {
     expect(metadata.date).toBe("2026-02-01");
     expect(metadata.updated).toBe("2026-10-06");
     expect(metadata.canonical).toBe("/guides/golden-retriever-feeding-chart");
-    expect(source).toContain("Nutrition sources checked October 6, 2026.");
+    expect(source).toContain("Nutrition sources checked October 25, 2026.");
     expect(pageSource).toContain("dateModified: metadata.updated ?? metadata.date ?? undefined");
   });
 
@@ -95,8 +95,8 @@ describe("feeding-chart nutrition update", () => {
     expect(adultTableLastRow).toBeGreaterThan(adultHeading);
     expect(comparisonHeading).toBeGreaterThan(adultTableLastRow);
     expect(conversionHeading).toBeGreaterThan(comparisonHeading);
-    expect(source.match(/https:\/\/amzn\.to\/45GjTnt/g)).toHaveLength(1);
-    expect(source.match(/https:\/\/amzn\.to\/4kcP5Rk/g)).toHaveLength(1);
+    expect(source.match(/https:\/\/amzn\.to\/45GjTnt/g)).toHaveLength(2);
+    expect(source.match(/https:\/\/amzn\.to\/4kcP5Rk/g)).toHaveLength(2);
     expect(source).toContain("View Hill’s adult food on Amazon");
     expect(source).toContain("View Purina adult food on Amazon");
     expect(source).toContain(
@@ -115,10 +115,8 @@ describe("feeding-chart nutrition update", () => {
     expect(source.match(/<table className=/g)).toHaveLength(4);
     expect(source.match(/<caption>/g)).toHaveLength(4);
     expect(source.match(/role="region" aria-label=/g)).toHaveLength(4);
-    expect(source.match(/https:\/\/amzn\.to\/48dIlxS/g)).toHaveLength(2);
-    expect(source).toContain(
-      "Ask your veterinarian whether an elevated bowl is appropriate for your dog."
-    );
+    expect(source.match(/https:\/\/amzn\.to\/48dIlxS/g)).toBeNull();
+    expect(source).not.toContain("elevated_feeder");
     expect(source).not.toContain("more comfortable eating position");
     expect(source).not.toContain("reducing cleanup");
   });
