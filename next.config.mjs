@@ -117,6 +117,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/guides/golden-retriever-grooming-schedule',
+        destination: '/guides/golden-retriever-grooming-guide',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-grooming-schedule/',
+        destination: '/guides/golden-retriever-grooming-guide',
+        permanent: true,
+      },
+      {
         source: '/guides/golden-retriever-feeding-wrong-amount',
         destination: '/guides/golden-retriever-feeding-chart',
         permanent: true,
