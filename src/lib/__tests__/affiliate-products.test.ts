@@ -28,7 +28,7 @@ describe("affiliate product mapping", () => {
     });
     const uniqueIds = [...new Set(ids)];
 
-    expect(ids).toHaveLength(141);
+    expect(ids).toHaveLength(139);
     expect(uniqueIds).toHaveLength(41);
     expect(uniqueIds.filter((id) => !getAffiliateProductName(id))).toEqual([]);
   });
