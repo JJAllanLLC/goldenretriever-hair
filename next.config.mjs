@@ -117,6 +117,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/guides/golden-retriever-feeding-schedule-guide',
+        destination: '/guides/golden-retriever-feeding-chart',
+        permanent: true,
+      },
+      {
+        source: '/guides/golden-retriever-feeding-schedule-guide/',
+        destination: '/guides/golden-retriever-feeding-chart',
+        permanent: true,
+      },
+      {
         source: '/guides/golden-retriever-skin-allergies',
         destination: '/guides/golden-retriever-allergies-guide',
         permanent: true,
